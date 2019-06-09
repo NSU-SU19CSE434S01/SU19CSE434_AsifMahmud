@@ -1,0 +1,170 @@
+.container{
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #EAEBEF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+}
+
+.leftcontainer{
+    flex: 1;
+    background-color: #445275;
+    padding: 50px; 
+    color: #fdfdfd;
+
+}
+
+.rightcontainer{
+    flex: 2;
+    background-color: #EAEBEF;
+}
+
+.profileimg{
+    border: solid 3px #74CED7;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    
+}
+.profileimg img{
+    width: 100%;
+}
+
+
+
+.leftcontainerheader{
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-top: 50px;
+}
+
+.rightcontainerheader{
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding-top: 50px;
+}
+
+.boxestoflex{
+    display: flex;
+    align-items: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.boxestoflex img{
+    margin-right: 20px;
+    
+}
+
+.contactbox h4{
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+.contactbox p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #c9c9c9;
+}
+
+.leftcontainer hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-color: #c9c9c9;
+ 
+}
+
+.statementbox p{
+    color: #c9c9c9;
+}
+
+.achievementbox p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #c9c9c9;
+}
+
+.achievementbox h3{
+    margin:0px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.languagebox h3{
+    margin:0px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.namebanner{
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    border-top: #445275 4px solid;
+    border-bottom: #445275 4px solid;
+    background-color: #74CED7;
+}
+
+.namebanner h1{
+    color: #445275;
+    text-transform: uppercase;
+    font-size: 55px;
+    letter-spacing: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
+.namebanner h3{
+    color: #445275;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    word-spacing: 5px; 
+
+}
+
+.rightcontainerbox{
+    
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.rightcontainerbox h3{
+    margin:0px;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.rightcontainerbox p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+.rightcontainer hr{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.rightcontainer h4{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top:10px;
+    margin-bottom:10px; 
+}
+
+.boxestoflex2{
+    display: flex;
+    justify-content: space-between;
+}

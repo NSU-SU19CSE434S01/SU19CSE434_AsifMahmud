@@ -1,0 +1,5 @@
+highlight: #74CED7
+
+leftcontainer: 	#445275
+
+rightcontainer: #EAEBEF
