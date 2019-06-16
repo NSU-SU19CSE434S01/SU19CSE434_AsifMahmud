@@ -25,6 +25,24 @@ public class MainController {
 	private TextField userPhoneNumber;
 	@FXML
 	private TextField userEmail;
+	@FXML
+	private TextField award1Name;
+	@FXML
+	private TextField award1Position;
+	@FXML
+	private TextField award1Year;
+	@FXML
+	private TextField award2Name;
+	@FXML
+	private TextField award2Position;
+	@FXML
+	private TextField award2Year;
+	@FXML
+	private TextField award3Name;
+	@FXML
+	private TextField award3Position;
+	@FXML
+	private TextField award3Year;
 	
 	//Input error labels
 	@FXML
@@ -39,6 +57,24 @@ public class MainController {
 	private Label userEmailErrorLabel;
 	@FXML
 	private Label userStatementErrorLabel;
+	@FXML
+	private Label award1NameErrorLabel;
+	@FXML
+	private Label award1PositionErrorLabel;
+	@FXML
+	private Label award1YearErrorLabel;
+	@FXML
+	private Label award2NameErrorLabel;
+	@FXML
+	private Label award2PositionErrorLabel;
+	@FXML
+	private Label award2YearErrorLabel;
+	@FXML
+	private Label award3NameErrorLabel;
+	@FXML
+	private Label award3PositionErrorLabel;
+	@FXML
+	private Label award3YearErrorLabel;
 	
 	
 	@FXML
@@ -48,12 +84,28 @@ public class MainController {
 	public void generateCv(ActionEvent event) throws IOException {
 		
 		//Assign user inputs to string variables
+		
+		//Generic inputs
 		String userNameV = userName.getText();
 		String userQualificationTitleV = userQualificationTitle.getText();
 		String userAddressV = userAddress.getText();
 		String userPhoneNumberV = userPhoneNumber.getText();
 		String userEmailV = userEmail.getText();
 		String userStatementV = userStatement.getText();
+		
+		//Academic achievement inputs
+		String award1NameV = award1Name.getText();
+		String award1PositionV = award1Position.getText();
+		String award1YearV = award1Year.getText();
+		String award2NameV = award2Name.getText();
+		String award2PositionV = award2Position.getText();
+		String award2YearV = award2Year.getText();
+		String award3NameV = award3Name.getText();
+		String award3PositionV = award3Position.getText();
+		String award3YearV = award3Year.getText();
+	
+	
+	
 		
 		
 		//Error determining variable for all user inputs
@@ -93,6 +145,82 @@ public class MainController {
 			userStatementErrorLabel.setText("Please fill this up");
 			noInputError = false;
 		}else {userStatementErrorLabel.setText("");}
+		
+		//Academic achievements error messages
+		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
+			
+			if(validText(award1NameV) == false) {
+				award1NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else if(isEmpty(award1NameV) == true) {
+				award1NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else {award1NameErrorLabel.setText("");}
+			
+			if(isEmpty(award1PositionV) == true) {
+				award1PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {award1PositionErrorLabel.setText("");}
+			
+			if(validYear(award1YearV) == false) {
+				award1YearErrorLabel.setText("Put in right year");
+				noInputError = false;
+			}else {award1YearErrorLabel.setText("");}
+		}else {
+			award1NameErrorLabel.setText("");
+			award1PositionErrorLabel.setText("");
+			award1YearErrorLabel.setText("");
+		}
+		
+		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
+			
+			if(validText(award2NameV) == false) {
+				award2NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else if(isEmpty(award2NameV) == true) {
+				award2NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else {award2NameErrorLabel.setText("");}
+			
+			if(isEmpty(award2PositionV) == true) {
+				award2PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {award2PositionErrorLabel.setText("");}
+			
+			if(validYear(award2YearV) == false) {
+				award2YearErrorLabel.setText("Put in right year");
+				noInputError = false;
+			}else {award2YearErrorLabel.setText("");}
+		}else {
+			award2NameErrorLabel.setText("");
+			award2PositionErrorLabel.setText("");
+			award2YearErrorLabel.setText("");
+		}
+		
+		if(award3NameV.length() !=0 || award3PositionV.length() !=0 || award3YearV.length() !=0 ) {
+			
+			if(validText(award3NameV) == false) {
+				award3NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else if(isEmpty(award3NameV) == true) {
+				award3NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else {award3NameErrorLabel.setText("");}
+			
+			if(isEmpty(award3PositionV) == true) {
+				award3PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {award3PositionErrorLabel.setText("");}
+			
+			if(validYear(award3YearV) == false) {
+				award3YearErrorLabel.setText("Put in right year");
+				noInputError = false;
+			}else {award3YearErrorLabel.setText("");}
+		}else {
+			award3NameErrorLabel.setText("");
+			award3PositionErrorLabel.setText("");
+			award3YearErrorLabel.setText("");
+		}
 		
 		
 		
@@ -160,25 +288,25 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: 2015</p>\r\n" + 
-				"                        <h3>Microsoft Young Developer</h3>\r\n" + 
-				"                        <p>Position: 2nd</p>\r\n" + 
+				"                        <p>Year: "+award1YearV+"</p>\r\n" + 
+				"                        <h3>"+award1NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+award1PositionV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: 2017</p>\r\n" + 
-				"                        <h3>Google Programing Competition</h3>\r\n" + 
-				"                        <p>Position: 4th</p>\r\n" + 
+				"                        <p>Year: "+award2YearV+"</p>\r\n" + 
+				"                        <h3>"+award2NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+award2PositionV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: 2019</p>\r\n" + 
-				"                        <h3>Social Youth Award</h3>\r\n" + 
-				"                        <p>Position: 1st</p>\r\n" + 
+				"                        <p>Year: "+award3YearV+"</p>\r\n" + 
+				"                        <h3>"+award3NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+award3PositionV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
