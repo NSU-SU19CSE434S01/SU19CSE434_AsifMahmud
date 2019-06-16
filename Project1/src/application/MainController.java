@@ -43,6 +43,32 @@ public class MainController {
 	private TextField award3Position;
 	@FXML
 	private TextField award3Year;
+	@FXML
+	private TextField language1;
+	@FXML
+	private TextField language2;
+	@FXML
+	private TextField underGradDegreeName;
+	@FXML
+	private TextField underGradUnivarsityName;
+	@FXML
+	private TextField underGradGraduationYear;
+	@FXML
+	private TextField underGradGarePoint;
+	@FXML
+	private TextField hscOrALevelCollegeName;
+	@FXML
+	private TextField hscOrALevelGraduationYear;
+	@FXML
+	private TextField hscOrALevelGradePoint;
+	@FXML
+	private TextField sscOrOLevelSchoolName;
+	@FXML
+	private TextField sscOrOLevelGraduationYear;
+	@FXML
+	private TextField sscOrOLevelGradePoint;
+	
+	
 	
 	//Input error labels
 	@FXML
@@ -75,6 +101,30 @@ public class MainController {
 	private Label award3PositionErrorLabel;
 	@FXML
 	private Label award3YearErrorLabel;
+	@FXML
+	private Label language1ErrorLabel;
+	@FXML
+	private Label language2ErrorLabel;
+	@FXML
+	private Label underGradDegreeNameErrorLabel;
+	@FXML
+	private Label underGradUnivarsityNameErrorLabel;
+	@FXML
+	private Label underGradGraduationYearErrorLabel;
+	@FXML
+	private Label underGradGarePointErrorLabel;
+	@FXML
+	private Label hscOrALevelCollegeNameErrorLabel;
+	@FXML
+	private Label hscOrALevelGraduationYearErrorLabel;
+	@FXML
+	private Label hscOrALevelGradePointErrorLabel;
+	@FXML
+	private Label sscOrOLevelSchoolNameErrorLabel;
+	@FXML
+	private Label sscOrOLevelGraduationYearErrorLabel;
+	@FXML
+	private Label sscOrOLevelGradePointErrorLabel;
 	
 	
 	@FXML
@@ -103,11 +153,25 @@ public class MainController {
 		String award3NameV = award3Name.getText();
 		String award3PositionV = award3Position.getText();
 		String award3YearV = award3Year.getText();
-	
-	
-	
 		
+		//Language inputs
+		String language1V = language1.getText();
+		String language2V = language2.getText();
 		
+		//Education inputs
+		String underGradDegreeNameV = underGradDegreeName.getText();
+		String underGradUnivarsityNameV = underGradUnivarsityName.getText();
+		String underGradGraduationYearV = underGradGraduationYear.getText();
+		String underGradGarePointV = underGradGarePoint.getText();
+		String hscOrALevelCollegeNameV = hscOrALevelCollegeName.getText();
+		String hscOrALevelGraduationYearV = hscOrALevelGraduationYear.getText();
+		String hscOrALevelGradePointV = hscOrALevelGradePoint.getText();
+		String sscOrOLevelSchoolNameV = sscOrOLevelSchoolName.getText();
+		String sscOrOLevelGraduationYearV = sscOrOLevelGraduationYear.getText();
+		String sscOrOLevelGradePointV = sscOrOLevelGradePoint.getText();
+		
+	
+	
 		//Error determining variable for all user inputs
 		boolean noInputError = true;
 		
@@ -146,7 +210,7 @@ public class MainController {
 			noInputError = false;
 		}else {userStatementErrorLabel.setText("");}
 		
-		//Academic achievements error messages
+		//Academic achievements input error messages
 		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
 			
 			if(validText(award1NameV) == false) {
@@ -221,6 +285,86 @@ public class MainController {
 			award3PositionErrorLabel.setText("");
 			award3YearErrorLabel.setText("");
 		}
+		
+		//Language input error messages
+		if(validText(language1V) == false) {
+			language1ErrorLabel.setText("Put in primary language");
+			noInputError = false;
+		}else if(isEmpty(language1V) == true) {
+			language1ErrorLabel.setText("Put in primary language");
+			noInputError = false;
+		}else {language1ErrorLabel.setText("");}
+		
+		if(validText(language2V) == false) {
+			language2ErrorLabel.setText("Put in secondary language");
+			noInputError = false;
+		}else if(isEmpty(language2V) == true) {
+			language2ErrorLabel.setText("Put in secondary language");
+			noInputError = false;
+		}else {language2ErrorLabel.setText("");}
+		
+		//Education input error messages
+		if(validText(underGradDegreeNameV) == false) {
+			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
+			noInputError = false;
+		}else if(isEmpty(underGradDegreeNameV) == true) {
+			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
+			noInputError = false;
+		}else {underGradDegreeNameErrorLabel.setText("");}
+		
+		if(validText(underGradUnivarsityNameV) == false) {
+			underGradUnivarsityNameErrorLabel.setText("Put in appropriate university name");
+			noInputError = false;
+		}else if(isEmpty(underGradUnivarsityNameV) == true) {
+			underGradUnivarsityNameErrorLabel.setText("Put in appropriate univarsity name");
+			noInputError = false;
+		}else {underGradUnivarsityNameErrorLabel.setText("");}
+		
+		if(validYear(underGradGraduationYearV) == false) {
+			underGradGraduationYearErrorLabel.setText("Put in right year");
+			noInputError = false;
+		}else {underGradGraduationYearErrorLabel.setText("");}
+		
+		if(validGrade(underGradGarePointV) == false) {
+			underGradGarePointErrorLabel.setText("Put in appropriate grade");
+			noInputError = false;
+		}else {underGradGarePointErrorLabel.setText("");}
+		
+		if(validText(hscOrALevelCollegeNameV) == false) {
+			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
+			noInputError = false;
+		}else if(isEmpty(hscOrALevelCollegeNameV) == true) {
+			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
+			noInputError = false;
+		}else {hscOrALevelCollegeNameErrorLabel.setText("");}
+		
+		if(validYear(hscOrALevelGraduationYearV) == false) {
+			hscOrALevelGraduationYearErrorLabel.setText("Put in right year");
+			noInputError = false;
+		}else {hscOrALevelGraduationYearErrorLabel.setText("");}
+		
+		if(validGrade(hscOrALevelGradePointV) == false) {
+			hscOrALevelGradePointErrorLabel.setText("Put in appropriate grade");
+			noInputError = false;
+		}else {hscOrALevelGradePointErrorLabel.setText("");}
+		
+		if(validText(sscOrOLevelSchoolNameV) == false) {
+			sscOrOLevelSchoolNameErrorLabel.setText("Put in appropriate school name");
+			noInputError = false;
+		}else if(isEmpty(sscOrOLevelSchoolNameV) == true) {
+			sscOrOLevelSchoolNameErrorLabel.setText("Put in appropriate school name");
+			noInputError = false;
+		}else {sscOrOLevelSchoolNameErrorLabel.setText("");}
+		
+		if(validYear(sscOrOLevelGraduationYearV) == false) {
+			sscOrOLevelGraduationYearErrorLabel.setText("Put in right year");
+			noInputError = false;
+		}else {sscOrOLevelGraduationYearErrorLabel.setText("");}
+		
+		if(validGrade(sscOrOLevelGradePointV) == false) {
+			sscOrOLevelGradePointErrorLabel.setText("Put in appropriate grade");
+			noInputError = false;
+		}else {sscOrOLevelGradePointErrorLabel.setText("");}
 		
 		
 		
@@ -526,7 +670,7 @@ public class MainController {
 	//Used to validate user name grade point
 	public boolean validGrade(String input) {
 		
-		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{2}");
+		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{1,3}");
 		Matcher m = p.matcher(input);
 		return m.matches();
 	}

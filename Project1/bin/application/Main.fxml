@@ -60,9 +60,34 @@
       </Label>
       <Label fx:id="award3YearErrorLabel" layoutX="338.0" layoutY="122.0" prefWidth="300.0" textFill="#da0000" />
       <Label fx:id="award2YearErrorLabel" layoutX="14.0" layoutY="759.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="338.0" layoutY="186.0" prefWidth="200.0" promptText="Language1" />
-      <Label layoutX="338.0" layoutY="211.0" prefWidth="200.0" textFill="#da0000" />
-      <TextField layoutX="338.0" layoutY="229.0" prefWidth="200.0" promptText="Language2" />
-      <Label layoutX="338.0" layoutY="252.0" prefWidth="200.0" textFill="#da0000" />
+      <TextField fx:id="language1" layoutX="338.0" layoutY="186.0" prefWidth="200.0" promptText="Language1" />
+      <Label fx:id="language1ErrorLabel" layoutX="338.0" layoutY="211.0" prefWidth="200.0" textFill="#da0000" />
+      <TextField fx:id="language2" layoutX="338.0" layoutY="229.0" prefWidth="200.0" promptText="Language2" />
+      <Label fx:id="language2ErrorLabel" layoutX="338.0" layoutY="252.0" prefWidth="200.0" textFill="#da0000" />
+      <Label layoutX="338.0" layoutY="282.0" text="Education">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="underGradDegreeName" layoutX="338.0" layoutY="312.0" prefWidth="300.0" promptText="Under Grad Degree Name" />
+      <Label fx:id="underGradDegreeNameErrorLabel" layoutX="338.0" layoutY="337.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradUnivarsityName" layoutX="338.0" layoutY="354.0" prefWidth="300.0" promptText="Under Grad Univarsity Name" />
+      <Label fx:id="underGradUnivarsityNameErrorLabel" layoutX="338.0" layoutY="379.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradGraduationYear" layoutX="338.0" layoutY="396.0" prefWidth="300.0" promptText="Under Grad Graduation Year" />
+      <Label fx:id="underGradGraduationYearErrorLabel" layoutX="338.0" layoutY="421.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradGarePoint" layoutX="338.0" layoutY="440.0" prefWidth="300.0" promptText="Under Grad Gare Point" />
+      <Label fx:id="underGradGarePointErrorLabel" layoutX="338.0" layoutY="465.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelCollegeName" layoutX="338.0" layoutY="482.0" prefWidth="300.0" promptText="HSC/A Level College Name" />
+      <Label fx:id="hscOrALevelCollegeNameErrorLabel" layoutX="338.0" layoutY="507.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelGraduationYear" layoutX="338.0" layoutY="524.0" prefWidth="300.0" promptText="HSC/A Level Graduation Year" />
+      <Label fx:id="hscOrALevelGraduationYearErrorLabel" layoutX="338.0" layoutY="549.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelGradePoint" layoutX="338.0" layoutY="566.0" prefWidth="300.0" promptText="HSC/A Level Grade Point" />
+      <Label fx:id="hscOrALevelGradePointErrorLabel" layoutX="338.0" layoutY="591.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelSchoolName" layoutX="338.0" layoutY="608.0" prefWidth="300.0" promptText="SSC / O Level School Name" />
+      <Label fx:id="sscOrOLevelSchoolNameErrorLabel" layoutX="338.0" layoutY="633.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelGraduationYear" layoutX="338.0" layoutY="650.0" prefWidth="300.0" promptText="SSC / O Level Graduation Year" />
+      <Label fx:id="sscOrOLevelGraduationYearErrorLabel" layoutX="338.0" layoutY="675.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelGradePoint" layoutX="338.0" layoutY="692.0" prefWidth="300.0" promptText="SSC / O Level Grade Point" />
+      <Label fx:id="sscOrOLevelGradePointErrorLabel" layoutX="338.0" layoutY="717.0" prefWidth="300.0" textFill="#da0000" />
    </children>
 </AnchorPane>
