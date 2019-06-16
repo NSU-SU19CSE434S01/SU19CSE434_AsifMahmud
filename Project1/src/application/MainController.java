@@ -79,6 +79,22 @@ public class MainController {
 			noInputError = false;
 		}else {userAddressErrorLabel.setText("");}
 		
+		if(validPhoneNumber(userPhoneNumberV) == false) {
+			userPhoneNumberErrorLabel.setText("Put in appropriate phone number");
+			noInputError = false;
+		}else {userPhoneNumberErrorLabel.setText("");}
+		
+		if(validEmail(userEmailV) == false) {
+			userEmailErrorLabel.setText("Put in appropriate email");
+			noInputError = false;
+		}else {userEmailErrorLabel.setText("");}
+		
+		if(isEmpty(userStatementV) == true) {
+			userStatementErrorLabel.setText("Please fill this up");
+			noInputError = false;
+		}else {userStatementErrorLabel.setText("");}
+		
+		
 		
 		
 		if(noInputError == true) {
@@ -121,14 +137,14 @@ public class MainController {
 				"                    <div><img src=\"Images/phone.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Phone</h4>\r\n" + 
-				"                        <p>+880 1671324427</p>\r\n" + 
+				"                        <p>"+userPhoneNumberV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/mail.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Mail</h4>\r\n" + 
-				"                        <p>asifmahmud.officials@gmail.com</p>\r\n" + 
+				"                        <p>"+userEmailV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"\r\n" + 
@@ -136,7 +152,7 @@ public class MainController {
 				"            <div class=\"statementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">STATEMENT</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta soluta tenetur natus aspernatur dolorem harum minus quas ipsum magnam! Dicta ad inventore error excepturi dolor amet sapiente quae cupiditate laborum.</p>\r\n" + 
+				"                <p>"+userStatementV+"</p>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"achievementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">ACADEMIC ACIEVEMENTS</h2>\r\n" + 
