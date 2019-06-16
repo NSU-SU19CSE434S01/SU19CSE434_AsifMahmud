@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javafx.event.ActionEvent;
@@ -65,7 +66,7 @@ public class MainController {
 			noInputError = false;
 		}else {userNameErrorLabel.setText("");}
 		
-		if(validTitle(userQualificationTitleV) == false) {
+		if(validText(userQualificationTitleV) == false) {
 			userTitleErrorLabel.setText("Put in appropriate title");
 			noInputError = false;
 		}else if(isEmpty(userQualificationTitleV) == true) {
@@ -334,22 +335,56 @@ public class MainController {
 		}
 	}
 	
-	
+	//Used to validate user name. Learned from stack overflow.
 	public boolean validName(String input) {
 		
-		return Pattern.matches("^[\\p{L} .'-]+$", input);
+		return Pattern.matches("^[\\p{L} .'-]+$", input);  
 	}
 	
-	public boolean validTitle(String input) {
+	//Used to validate user text
+	public boolean validText(String input) {
 		
 		return Pattern.matches("^[a-zA-Z\\s]*$", input);
 	}
 	
+	//Used to check empty string
 	public boolean isEmpty(String input) {
 		
 		if (input.equals("") == true) {
 			return true;
 		}else return false;
+	}
+	
+	//Used to validate phone number
+	public boolean validPhoneNumber(String input) {
+		
+		Pattern p = Pattern.compile("[0-9]{9,13}");
+		Matcher m = p.matcher(input);
+		return m.matches();
+	}
+	
+	//Used to validate email
+	public boolean validEmail(String input) {
+		
+		Pattern p = Pattern.compile("[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\\.[A-Za-z]{2,4}");
+		Matcher m = p.matcher(input);
+		return m.matches();
+	}
+	
+	//Used to validate year
+	public boolean validYear(String input) {
+		
+		Pattern p = Pattern.compile("20[0-9]{2}|19[0-9]{2}");
+		Matcher m = p.matcher(input);
+		return m.matches();
+	}
+	
+	//Used to validate user name grade point
+	public boolean validGrade(String input) {
+		
+		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{2}");
+		Matcher m = p.matcher(input);
+		return m.matches();
 	}
 	
 
