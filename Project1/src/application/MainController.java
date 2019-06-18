@@ -67,6 +67,24 @@ public class MainController {
 	private TextField sscOrOLevelGraduationYear;
 	@FXML
 	private TextField sscOrOLevelGradePoint;
+	@FXML
+	private TextField company1Name;
+	@FXML
+	private TextField company1Position;
+	@FXML
+	private TextField company1YearsWorked;
+	@FXML
+	private TextField company2Name;
+	@FXML
+	private TextField company2Position;
+	@FXML
+	private TextField company2YearsWorked;
+	@FXML
+	private TextField company3Name;
+	@FXML
+	private TextField company3Position;
+	@FXML
+	private TextField company3YearsWorked;
 	
 	
 	
@@ -125,6 +143,24 @@ public class MainController {
 	private Label sscOrOLevelGraduationYearErrorLabel;
 	@FXML
 	private Label sscOrOLevelGradePointErrorLabel;
+	@FXML
+	private Label company1NameErrorLabel;
+	@FXML
+	private Label company1PositionErrorLabel;
+	@FXML
+	private Label company1YearsWorkedErrorLabel;
+	@FXML
+	private Label company2NameErrorLabel;
+	@FXML
+	private Label company2PositionErrorLabel;
+	@FXML
+	private Label company2YearsWorkedErrorLabel;
+	@FXML
+	private Label company3NameErrorLabel;
+	@FXML
+	private Label company3PositionErrorLabel;
+	@FXML
+	private Label company3YearsWorkedErrorLabel;
 	
 	
 	@FXML
@@ -459,11 +495,11 @@ public class MainController {
 				"                <hr>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/language.png\" alt=\"\"></div>\r\n" + 
-				"                    <div><h3>Bangla</h3></div>\r\n" + 
+				"                    <div><h3>"+language1V+"</h3></div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/language.png\" alt=\"\"></div>\r\n" + 
-				"                    <div><h3>English</h3></div>\r\n" + 
+				"                    <div><h3>"+language2V+"</h3></div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
 				"        </div>\r\n" + 
@@ -478,28 +514,28 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>computer science and engineering</h3>\r\n" + 
-				"                        <p>North South University</p>\r\n" + 
-				"                        <p>Graduation Year: 2019 </p>\r\n" + 
-				"                        <p>Grade Point: 3.5</p>\r\n" + 
+				"                        <h3>"+underGradDegreeNameV+"</h3>\r\n" + 
+				"                        <p>"+underGradUnivarsityNameV+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+underGradGraduationYearV+"</p>\r\n" + 
+				"                        <p>Grade Point: "+underGradGarePointV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h3>hsc / a level</h3>\r\n" + 
-				"                        <p>Dhaka Imperial College</p>\r\n" + 
-				"                        <p>Graduation Year: 2014 </p>\r\n" + 
-				"                        <p>Grade Point: 5.0</p>\r\n" + 
+				"                        <p>"+hscOrALevelCollegeNameV+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+hscOrALevelGraduationYearV+"</p>\r\n" + 
+				"                        <p>Grade Point: "+hscOrALevelGradePointV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h3>ssc / o level</h3>\r\n" + 
-				"                        <p>Khilgaon High School</p>\r\n" + 
-				"                        <p>Graduation Year: 2012 </p>\r\n" + 
-				"                        <p>Grade Point: 5.0</p>\r\n" + 
+				"                        <p>"+sscOrOLevelSchoolNameV+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+sscOrOLevelGraduationYearV+"</p>\r\n" + 
+				"                        <p>Grade Point: "+sscOrOLevelGradePointV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 

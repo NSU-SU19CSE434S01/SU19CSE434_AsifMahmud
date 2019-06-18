@@ -9,85 +9,155 @@
 
 <AnchorPane prefHeight="820.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button layoutX="1103.0" layoutY="761.0" mnemonicParsing="false" onAction="#generateCv" text="Generate CV" />
-      <TextField fx:id="userQualificationTitle" layoutX="14.0" layoutY="56.0" prefWidth="300.0" promptText="Career Goal Title" />
-      <TextField fx:id="userName" layoutX="14.0" layoutY="14.0" prefWidth="300.0" promptText="User Name" />
-      <Label fx:id="userNameErrorLabel" layoutX="14.0" layoutY="39.0" prefWidth="300.0" textFill="#da0000" />
-      <Label fx:id="userTitleErrorLabel" layoutX="14.0" layoutY="81.0" prefWidth="300.0" textFill="#da0000" />
-      <Label layoutX="14.0" layoutY="112.0" text="Contact Information">
+      <Button layoutX="1086.0" layoutY="760.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="35.0" prefWidth="100.0" text="Generate CV" />
+      <TextField fx:id="userQualificationTitle" layoutX="14.0" layoutY="99.0" prefWidth="300.0" promptText="Career Goal Title" />
+      <TextField fx:id="userName" layoutX="14.0" layoutY="57.0" prefWidth="300.0" promptText="User Name" />
+      <Label fx:id="userNameErrorLabel" layoutX="14.0" layoutY="82.0" prefWidth="300.0" textFill="#da0000" />
+      <Label fx:id="userTitleErrorLabel" layoutX="14.0" layoutY="124.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="14.0" layoutY="155.0" text="Contact Information">
          <font>
-            <Font name="Verdana Bold" size="14.0" />
+            <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="userAddress" layoutX="14.0" layoutY="143.0" prefWidth="300.0" promptText="Address" />
-      <Label fx:id="userAddressErrorLabel" layoutX="14.0" layoutY="168.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="userPhoneNumber" layoutX="14.0" layoutY="185.0" prefWidth="300.0" promptText="Phone Number" />
-      <Label fx:id="userPhoneNumberErrorLabel" layoutX="14.0" layoutY="210.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="userEmail" layoutX="14.0" layoutY="227.0" prefWidth="300.0" promptText="Email" />
-      <Label fx:id="userEmailErrorLabel" layoutX="14.0" layoutY="252.0" prefWidth="300.0" textFill="#da0000" />
-      <Label layoutX="14.0" layoutY="282.0" text="Statement">
+      <TextField fx:id="userAddress" layoutX="14.0" layoutY="186.0" prefWidth="300.0" promptText="Address" />
+      <Label fx:id="userAddressErrorLabel" layoutX="14.0" layoutY="211.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="userPhoneNumber" layoutX="14.0" layoutY="228.0" prefWidth="300.0" promptText="Phone Number" />
+      <Label fx:id="userPhoneNumberErrorLabel" layoutX="14.0" layoutY="253.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="userEmail" layoutX="14.0" layoutY="270.0" prefWidth="300.0" promptText="Email" />
+      <Label fx:id="userEmailErrorLabel" layoutX="14.0" layoutY="295.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="14.0" layoutY="325.0" text="Statement">
          <font>
-            <Font name="Verdana Bold" size="14.0" />
+            <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="userStatement" layoutX="14.0" layoutY="312.0" prefHeight="150.0" prefWidth="300.0" promptText="Put in text" />
-      <Label fx:id="userStatementErrorLabel" layoutX="14.0" layoutY="462.0" prefWidth="300.0" textFill="#da0000" />
-      <Label layoutX="14.0" layoutY="494.0" text="Acadecmic Achivements">
+      <TextArea fx:id="userStatement" layoutX="14.0" layoutY="355.0" prefHeight="150.0" prefWidth="300.0" promptText="Put in text" />
+      <Label fx:id="userStatementErrorLabel" layoutX="14.0" layoutY="505.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="14.0" layoutY="537.0" text="Acadecmic Achivements">
          <font>
-            <Font name="Verdana Bold" size="14.0" />
+            <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="award1Name" layoutX="14.0" layoutY="524.0" prefWidth="300.0" promptText="Award1 Name" />
-      <Label fx:id="award1NameErrorLabel" layoutX="14.0" layoutY="549.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award1Position" layoutX="14.0" layoutY="566.0" prefWidth="300.0" promptText="Award1 Position" />
-      <Label fx:id="award1PositionErrorLabel" layoutX="14.0" layoutY="591.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award1Year" layoutX="14.0" layoutY="608.0" prefWidth="300.0" promptText="Award1 Year" />
-      <Label fx:id="award1YearErrorLabel" layoutX="14.0" layoutY="633.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award2Name" layoutX="14.0" layoutY="650.0" prefWidth="300.0" promptText="Award2 Name" />
-      <Label fx:id="award2NameErrorLabel" layoutX="14.0" layoutY="675.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award2Position" layoutX="14.0" layoutY="692.0" prefWidth="300.0" promptText="Award2 Position" />
-      <Label fx:id="award2PositionErrorLabel" layoutX="14.0" layoutY="717.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award2Year" layoutX="14.0" layoutY="734.0" prefWidth="300.0" promptText="Award2 Year" />
-      <TextField fx:id="award3Name" layoutX="338.0" layoutY="14.0" prefWidth="300.0" promptText="Award3 Name" />
-      <Label fx:id="award3NameErrorLabel" layoutX="338.0" layoutY="39.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award3Position" layoutX="338.0" layoutY="56.0" prefWidth="300.0" promptText="Award3 Position" />
-      <Label fx:id="award3PositionErrorLabel" layoutX="338.0" layoutY="81.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="award3Year" layoutX="338.0" layoutY="99.0" prefWidth="300.0" promptText="Award3 year" />
-      <Label layoutX="338.0" layoutY="159.0" text="Languages">
+      <TextField fx:id="award1Name" layoutX="14.0" layoutY="567.0" prefWidth="300.0" promptText="Award1 Name" />
+      <Label fx:id="award1NameErrorLabel" layoutX="14.0" layoutY="592.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award1Position" layoutX="14.0" layoutY="609.0" prefWidth="300.0" promptText="Award1 Position" />
+      <Label fx:id="award1PositionErrorLabel" layoutX="14.0" layoutY="634.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award1Year" layoutX="14.0" layoutY="651.0" prefWidth="300.0" promptText="Award1 Year" />
+      <Label fx:id="award1YearErrorLabel" layoutX="14.0" layoutY="676.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award2Name" layoutX="14.0" layoutY="693.0" prefWidth="300.0" promptText="Award2 Name" />
+      <Label fx:id="award2NameErrorLabel" layoutX="14.0" layoutY="718.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award2Position" layoutX="14.0" layoutY="735.0" prefWidth="300.0" promptText="Award2 Position" />
+      <Label fx:id="award2PositionErrorLabel" layoutX="14.0" layoutY="760.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award2Year" layoutX="337.0" layoutY="18.0" prefWidth="300.0" promptText="Award2 Year" />
+      <TextField fx:id="award3Name" layoutX="337.0" layoutY="57.0" prefWidth="300.0" promptText="Award3 Name" />
+      <Label fx:id="award3NameErrorLabel" layoutX="337.0" layoutY="82.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award3Position" layoutX="337.0" layoutY="99.0" prefWidth="300.0" promptText="Award3 Position" />
+      <Label fx:id="award3PositionErrorLabel" layoutX="337.0" layoutY="124.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="award3Year" layoutX="337.0" layoutY="142.0" prefWidth="300.0" promptText="Award3 year" />
+      <Label layoutX="334.0" layoutY="200.0" text="Languages">
          <font>
-            <Font name="Verdana Bold" size="14.0" />
+            <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="award3YearErrorLabel" layoutX="338.0" layoutY="122.0" prefWidth="300.0" textFill="#da0000" />
-      <Label fx:id="award2YearErrorLabel" layoutX="14.0" layoutY="759.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="language1" layoutX="338.0" layoutY="186.0" prefWidth="200.0" promptText="Language1" />
-      <Label fx:id="language1ErrorLabel" layoutX="338.0" layoutY="211.0" prefWidth="200.0" textFill="#da0000" />
-      <TextField fx:id="language2" layoutX="338.0" layoutY="229.0" prefWidth="200.0" promptText="Language2" />
-      <Label fx:id="language2ErrorLabel" layoutX="338.0" layoutY="252.0" prefWidth="200.0" textFill="#da0000" />
-      <Label layoutX="338.0" layoutY="282.0" text="Education">
+      <Label fx:id="award3YearErrorLabel" layoutX="337.0" layoutY="165.0" prefWidth="300.0" textFill="#da0000" />
+      <Label fx:id="award2YearErrorLabel" layoutX="337.0" layoutY="43.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="language1" layoutX="337.0" layoutY="229.0" prefWidth="200.0" promptText="Language1" />
+      <Label fx:id="language1ErrorLabel" layoutX="337.0" layoutY="254.0" prefWidth="200.0" textFill="#da0000" />
+      <TextField fx:id="language2" layoutX="337.0" layoutY="272.0" prefWidth="200.0" promptText="Language2" />
+      <Label fx:id="language2ErrorLabel" layoutX="337.0" layoutY="295.0" prefWidth="200.0" textFill="#da0000" />
+      <Label layoutX="337.0" layoutY="325.0" text="Education">
          <font>
-            <Font name="Verdana Bold" size="14.0" />
+            <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField fx:id="underGradDegreeName" layoutX="338.0" layoutY="312.0" prefWidth="300.0" promptText="Under Grad Degree Name" />
-      <Label fx:id="underGradDegreeNameErrorLabel" layoutX="338.0" layoutY="337.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="underGradUnivarsityName" layoutX="338.0" layoutY="354.0" prefWidth="300.0" promptText="Under Grad Univarsity Name" />
-      <Label fx:id="underGradUnivarsityNameErrorLabel" layoutX="338.0" layoutY="379.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="underGradGraduationYear" layoutX="338.0" layoutY="396.0" prefWidth="300.0" promptText="Under Grad Graduation Year" />
-      <Label fx:id="underGradGraduationYearErrorLabel" layoutX="338.0" layoutY="421.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="underGradGarePoint" layoutX="338.0" layoutY="440.0" prefWidth="300.0" promptText="Under Grad Gare Point" />
-      <Label fx:id="underGradGarePointErrorLabel" layoutX="338.0" layoutY="465.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="hscOrALevelCollegeName" layoutX="338.0" layoutY="482.0" prefWidth="300.0" promptText="HSC/A Level College Name" />
-      <Label fx:id="hscOrALevelCollegeNameErrorLabel" layoutX="338.0" layoutY="507.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="hscOrALevelGraduationYear" layoutX="338.0" layoutY="524.0" prefWidth="300.0" promptText="HSC/A Level Graduation Year" />
-      <Label fx:id="hscOrALevelGraduationYearErrorLabel" layoutX="338.0" layoutY="549.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="hscOrALevelGradePoint" layoutX="338.0" layoutY="566.0" prefWidth="300.0" promptText="HSC/A Level Grade Point" />
-      <Label fx:id="hscOrALevelGradePointErrorLabel" layoutX="338.0" layoutY="591.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="sscOrOLevelSchoolName" layoutX="338.0" layoutY="608.0" prefWidth="300.0" promptText="SSC / O Level School Name" />
-      <Label fx:id="sscOrOLevelSchoolNameErrorLabel" layoutX="338.0" layoutY="633.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="sscOrOLevelGraduationYear" layoutX="338.0" layoutY="650.0" prefWidth="300.0" promptText="SSC / O Level Graduation Year" />
-      <Label fx:id="sscOrOLevelGraduationYearErrorLabel" layoutX="338.0" layoutY="675.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField fx:id="sscOrOLevelGradePoint" layoutX="338.0" layoutY="692.0" prefWidth="300.0" promptText="SSC / O Level Grade Point" />
-      <Label fx:id="sscOrOLevelGradePointErrorLabel" layoutX="338.0" layoutY="717.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradDegreeName" layoutX="337.0" layoutY="355.0" prefWidth="300.0" promptText="Under Grad Degree Name" />
+      <Label fx:id="underGradDegreeNameErrorLabel" layoutX="337.0" layoutY="380.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradUnivarsityName" layoutX="337.0" layoutY="397.0" prefWidth="300.0" promptText="Under Grad Univarsity Name" />
+      <Label fx:id="underGradUnivarsityNameErrorLabel" layoutX="337.0" layoutY="422.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradGraduationYear" layoutX="337.0" layoutY="439.0" prefWidth="300.0" promptText="Under Grad Graduation Year" />
+      <Label fx:id="underGradGraduationYearErrorLabel" layoutX="337.0" layoutY="464.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="underGradGarePoint" layoutX="337.0" layoutY="483.0" prefWidth="300.0" promptText="Under Grad Gare Point" />
+      <Label fx:id="underGradGarePointErrorLabel" layoutX="337.0" layoutY="508.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelCollegeName" layoutX="337.0" layoutY="525.0" prefWidth="300.0" promptText="HSC/A Level College Name" />
+      <Label fx:id="hscOrALevelCollegeNameErrorLabel" layoutX="337.0" layoutY="550.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelGraduationYear" layoutX="337.0" layoutY="567.0" prefWidth="300.0" promptText="HSC/A Level Graduation Year" />
+      <Label fx:id="hscOrALevelGraduationYearErrorLabel" layoutX="337.0" layoutY="592.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="hscOrALevelGradePoint" layoutX="337.0" layoutY="609.0" prefWidth="300.0" promptText="HSC/A Level Grade Point" />
+      <Label fx:id="hscOrALevelGradePointErrorLabel" layoutX="337.0" layoutY="634.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelSchoolName" layoutX="337.0" layoutY="651.0" prefWidth="300.0" promptText="SSC / O Level School Name" />
+      <Label fx:id="sscOrOLevelSchoolNameErrorLabel" layoutX="337.0" layoutY="676.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelGraduationYear" layoutX="337.0" layoutY="693.0" prefWidth="300.0" promptText="SSC / O Level Graduation Year" />
+      <Label fx:id="sscOrOLevelGraduationYearErrorLabel" layoutX="337.0" layoutY="718.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="sscOrOLevelGradePoint" layoutX="337.0" layoutY="735.0" prefWidth="300.0" promptText="SSC / O Level Grade Point" />
+      <Label fx:id="sscOrOLevelGradePointErrorLabel" layoutX="337.0" layoutY="760.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="661.0" layoutY="22.0" text="Job Experience">
+         <font>
+            <Font name="Verdana Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="company1Name" layoutX="661.0" layoutY="59.0" prefWidth="300.0" promptText="Company1 Name" />
+      <Label layoutX="661.0" layoutY="84.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company1Position" layoutX="661.0" layoutY="101.0" prefWidth="300.0" promptText="Company1 Position" />
+      <Label layoutX="661.0" layoutY="126.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company1YearsWorked" layoutX="661.0" layoutY="143.0" prefWidth="300.0" promptText="Years Worked" />
+      <Label layoutX="661.0" layoutY="168.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company2Name" layoutX="661.0" layoutY="185.0" prefWidth="300.0" promptText="Company2 Name" />
+      <Label layoutX="661.0" layoutY="210.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company2Position" layoutX="661.0" layoutY="227.0" prefWidth="300.0" promptText="Company2 Position" />
+      <Label layoutX="661.0" layoutY="252.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company2YearsWorked" layoutX="661.0" layoutY="269.0" prefWidth="300.0" promptText="Years Worked" />
+      <TextField fx:id="company3Name" layoutX="661.0" layoutY="310.0" prefWidth="300.0" promptText="Company3 Name" />
+      <Label layoutX="661.0" layoutY="335.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company3Position" layoutX="661.0" layoutY="352.0" prefWidth="300.0" promptText="Company3 Position" />
+      <Label layoutX="661.0" layoutY="377.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="company3YearsWorked" layoutX="661.0" layoutY="395.0" prefWidth="300.0" promptText="Years Worked" />
+      <Label layoutX="661.0" layoutY="418.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="661.0" layoutY="292.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="661.0" layoutY="447.0" text="Skills">
+         <font>
+            <Font name="Verdana Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="661.0" layoutY="479.0" prefWidth="140.0" promptText="Skill1" />
+      <Label layoutX="661.0" layoutY="504.0" prefWidth="140.0" />
+      <TextField layoutX="661.0" layoutY="521.0" prefWidth="140.0" promptText="Skill3" />
+      <Label layoutX="661.0" layoutY="546.0" prefWidth="140.0" />
+      <TextField layoutX="821.0" layoutY="479.0" prefWidth="140.0" promptText="Skill2" />
+      <Label layoutX="821.0" layoutY="504.0" prefWidth="140.0" />
+      <TextField layoutX="821.0" layoutY="521.0" prefWidth="140.0" promptText="Skill4" />
+      <Label layoutX="821.0" layoutY="546.0" prefWidth="140.0" />
+      <TextField layoutX="661.0" layoutY="567.0" prefWidth="140.0" promptText="Skill5" />
+      <Label layoutX="661.0" layoutY="592.0" prefWidth="140.0" />
+      <TextField layoutX="661.0" layoutY="609.0" prefWidth="140.0" promptText="Skill7" />
+      <Label layoutX="661.0" layoutY="634.0" prefWidth="140.0" />
+      <TextField layoutX="821.0" layoutY="567.0" prefWidth="140.0" promptText="Skill6" />
+      <Label layoutX="821.0" layoutY="592.0" prefWidth="140.0" />
+      <TextField layoutX="821.0" layoutY="609.0" prefWidth="140.0" promptText="Skill8" />
+      <Label layoutX="821.0" layoutY="634.0" prefWidth="140.0" />
+      <Label layoutX="16.0" layoutY="20.0" text="General Information">
+         <font>
+            <Font name="Verdana Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="661.0" layoutY="655.0" text="References">
+         <font>
+            <Font name="Verdana Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="661.0" layoutY="695.0" prefWidth="300.0" promptText="Reference1 Name" />
+      <TextField layoutX="661.0" layoutY="734.0" prefWidth="300.0" promptText="Reference1  Institution" />
+      <Label layoutX="661.0" layoutY="759.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField layoutX="986.0" layoutY="58.0" prefWidth="300.0" promptText="Reference1  Position" />
+      <Label layoutX="986.0" layoutY="83.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField layoutX="986.0" layoutY="101.0" prefWidth="300.0" promptText="Reference1 Email" />
+      <Label layoutX="986.0" layoutY="124.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="661.0" layoutY="720.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField layoutX="986.0" layoutY="145.0" prefWidth="300.0" promptText="Reference2 Name" />
+      <TextField layoutX="986.0" layoutY="184.0" prefWidth="300.0" promptText="Reference2  Institution" />
+      <Label layoutX="986.0" layoutY="209.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField layoutX="986.0" layoutY="226.0" prefWidth="300.0" promptText="Reference2  Position" />
+      <Label layoutX="986.0" layoutY="251.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField layoutX="986.0" layoutY="269.0" prefWidth="300.0" promptText="Reference2 Email" />
+      <Label layoutX="986.0" layoutY="292.0" prefWidth="300.0" textFill="#da0000" />
+      <Label layoutX="986.0" layoutY="170.0" prefWidth="300.0" textFill="#da0000" />
    </children>
 </AnchorPane>
