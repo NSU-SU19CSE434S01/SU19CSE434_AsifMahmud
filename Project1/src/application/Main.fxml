@@ -117,22 +117,22 @@
             <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="661.0" layoutY="479.0" prefWidth="140.0" promptText="Skill1" />
-      <Label layoutX="661.0" layoutY="504.0" prefWidth="140.0" />
-      <TextField layoutX="661.0" layoutY="521.0" prefWidth="140.0" promptText="Skill3" />
-      <Label layoutX="661.0" layoutY="546.0" prefWidth="140.0" />
-      <TextField layoutX="821.0" layoutY="479.0" prefWidth="140.0" promptText="Skill2" />
-      <Label layoutX="821.0" layoutY="504.0" prefWidth="140.0" />
-      <TextField layoutX="821.0" layoutY="521.0" prefWidth="140.0" promptText="Skill4" />
-      <Label layoutX="821.0" layoutY="546.0" prefWidth="140.0" />
-      <TextField layoutX="661.0" layoutY="567.0" prefWidth="140.0" promptText="Skill5" />
-      <Label layoutX="661.0" layoutY="592.0" prefWidth="140.0" />
-      <TextField layoutX="661.0" layoutY="609.0" prefWidth="140.0" promptText="Skill7" />
-      <Label layoutX="661.0" layoutY="634.0" prefWidth="140.0" />
-      <TextField layoutX="821.0" layoutY="567.0" prefWidth="140.0" promptText="Skill6" />
-      <Label layoutX="821.0" layoutY="592.0" prefWidth="140.0" />
-      <TextField layoutX="821.0" layoutY="609.0" prefWidth="140.0" promptText="Skill8" />
-      <Label layoutX="821.0" layoutY="634.0" prefWidth="140.0" />
+      <TextField fx:id="skill1" layoutX="661.0" layoutY="479.0" prefWidth="140.0" promptText="Skill1" />
+      <Label fx:id="skill1ErrorLabel" layoutX="661.0" layoutY="504.0" prefWidth="140.0" />
+      <TextField fx:id="skill3" layoutX="661.0" layoutY="521.0" prefWidth="140.0" promptText="Skill3" />
+      <Label fx:id="skill3ErrorLabel" layoutX="661.0" layoutY="546.0" prefWidth="140.0" />
+      <TextField fx:id="skill2" layoutX="821.0" layoutY="479.0" prefWidth="140.0" promptText="Skill2" />
+      <Label fx:id="skill2ErrorLabel" layoutX="821.0" layoutY="504.0" prefWidth="140.0" />
+      <TextField fx:id="skill4" layoutX="821.0" layoutY="521.0" prefWidth="140.0" promptText="Skill4" />
+      <Label fx:id="skill4ErrorLabel" layoutX="821.0" layoutY="546.0" prefWidth="140.0" />
+      <TextField fx:id="skill5" layoutX="661.0" layoutY="567.0" prefWidth="140.0" promptText="Skill5" />
+      <Label fx:id="skill5ErrorLabel" layoutX="661.0" layoutY="592.0" prefWidth="140.0" />
+      <TextField fx:id="skill7" layoutX="661.0" layoutY="609.0" prefWidth="140.0" promptText="Skill7" />
+      <Label fx:id="skill7ErrorLabel" layoutX="661.0" layoutY="634.0" prefWidth="140.0" />
+      <TextField fx:id="skill6" layoutX="821.0" layoutY="567.0" prefWidth="140.0" promptText="Skill6" />
+      <Label fx:id="skill6ErrorLabel" layoutX="821.0" layoutY="592.0" prefWidth="140.0" />
+      <TextField fx:id="skill8" layoutX="821.0" layoutY="609.0" prefWidth="140.0" promptText="Skill8" />
+      <Label fx:id="skill8ErrorLabel" layoutX="821.0" layoutY="634.0" prefWidth="140.0" />
       <Label layoutX="16.0" layoutY="20.0" text="General Information">
          <font>
             <Font name="Verdana Bold Italic" size="15.0" />

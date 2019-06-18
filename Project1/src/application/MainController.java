@@ -85,6 +85,22 @@ public class MainController {
 	private TextField company3Position;
 	@FXML
 	private TextField company3YearsWorked;
+	@FXML
+	private TextField skill1;
+	@FXML
+	private TextField skill2;
+	@FXML
+	private TextField skill3;
+	@FXML
+	private TextField skill4;
+	@FXML
+	private TextField skill5;
+	@FXML
+	private TextField skill6;
+	@FXML
+	private TextField skill7;
+	@FXML
+	private TextField skill8;
 	
 	
 	
@@ -161,6 +177,23 @@ public class MainController {
 	private Label company3PositionErrorLabel;
 	@FXML
 	private Label company3YearsWorkedErrorLabel;
+	@FXML
+	private Label skill1ErrorLabel;
+	@FXML
+	private Label skill2ErrorLabel;
+	@FXML
+	private Label skill3ErrorLabel;
+	@FXML
+	private Label skill4ErrorLabel;
+	@FXML
+	private Label skill5ErrorLabel;
+	@FXML
+	private Label skill6ErrorLabel;
+	@FXML
+	private Label skill7ErrorLabel;
+	@FXML
+	private Label skill8ErrorLabel;
+	
 	
 	
 	@FXML
@@ -171,7 +204,7 @@ public class MainController {
 		
 		//Assign user inputs to string variables
 		
-		//Generic inputs
+		//General inputs variables
 		String userNameV = userName.getText();
 		String userQualificationTitleV = userQualificationTitle.getText();
 		String userAddressV = userAddress.getText();
@@ -179,7 +212,7 @@ public class MainController {
 		String userEmailV = userEmail.getText();
 		String userStatementV = userStatement.getText();
 		
-		//Academic achievement inputs
+		//Academic achievement inputs variables
 		String award1NameV = award1Name.getText();
 		String award1PositionV = award1Position.getText();
 		String award1YearV = award1Year.getText();
@@ -190,11 +223,11 @@ public class MainController {
 		String award3PositionV = award3Position.getText();
 		String award3YearV = award3Year.getText();
 		
-		//Language inputs
+		//Language inputs variables
 		String language1V = language1.getText();
 		String language2V = language2.getText();
 		
-		//Education inputs
+		//Education inputs variables
 		String underGradDegreeNameV = underGradDegreeName.getText();
 		String underGradUnivarsityNameV = underGradUnivarsityName.getText();
 		String underGradGraduationYearV = underGradGraduationYear.getText();
@@ -205,6 +238,27 @@ public class MainController {
 		String sscOrOLevelSchoolNameV = sscOrOLevelSchoolName.getText();
 		String sscOrOLevelGraduationYearV = sscOrOLevelGraduationYear.getText();
 		String sscOrOLevelGradePointV = sscOrOLevelGradePoint.getText();
+		
+		//Job experience inputs variables
+		String company1NameV = company1Name.getText();
+		String company1PositionV = company1Position.getText();
+		String company1YearsWorkedV = company1YearsWorked.getText();
+		String company2NameV = company2Name.getText();
+		String company2PositionV = company2Position.getText();
+		String company2YearsWorkedV = company2YearsWorked.getText();
+		String company3NameV = company3Name.getText();
+		String company3PositionV = company3Position.getText();
+		String company3YearsWorkedV = company3YearsWorked.getText();
+		
+		//Skill inputs variables
+		String skill1V = skill1.getText();
+		String skill2V = skill2.getText();
+		String skill3V = skill3.getText();
+		String skill4V = skill4.getText();
+		String skill5V = skill5.getText();
+		String skill6V = skill6.getText();
+		String skill7V = skill7.getText();
+		String skill8V = skill8.getText();
 		
 	
 	
@@ -402,6 +456,122 @@ public class MainController {
 			noInputError = false;
 		}else {sscOrOLevelGradePointErrorLabel.setText("");}
 		
+		//Job experience input error messages
+		if(company1NameV.length() !=0 || company1PositionV.length() !=0 || company1YearsWorkedV.length() !=0 ) {
+			
+			if(validText(company1NameV) == false) {
+				company1NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else if(isEmpty(company1NameV) == true) {
+				company1NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else {company1NameErrorLabel.setText("");}
+			
+			if(isEmpty(company1PositionV) == true) {
+				company1PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {company1PositionErrorLabel.setText("");}
+			
+			if(validTwoPlaceNum(company1YearsWorkedV) == false) {
+				company1YearsWorkedErrorLabel.setText("Put in right years worked for");
+				noInputError = false;
+			}else {company1YearsWorkedErrorLabel.setText("");}
+		}else {
+			company1NameErrorLabel.setText("");
+			company1PositionErrorLabel.setText("");
+			company1YearsWorkedErrorLabel.setText("");
+		}
+		
+		if(company2NameV.length() !=0 || company2PositionV.length() !=0 || company2YearsWorkedV.length() !=0 ) {
+			
+			if(validText(company2NameV) == false) {
+				company2NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else if(isEmpty(company2NameV) == true) {
+				company2NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else {company2NameErrorLabel.setText("");}
+			
+			if(isEmpty(company2PositionV) == true) {
+				company2PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {company2PositionErrorLabel.setText("");}
+			
+			if(validTwoPlaceNum(company2YearsWorkedV) == false) {
+				company2YearsWorkedErrorLabel.setText("Put in right years worked for");
+				noInputError = false;
+			}else {company2YearsWorkedErrorLabel.setText("");}
+		}else {
+			company2NameErrorLabel.setText("");
+			company2PositionErrorLabel.setText("");
+			company2YearsWorkedErrorLabel.setText("");
+		}
+		
+		if(company3NameV.length() !=0 || company3PositionV.length() !=0 || company3YearsWorkedV.length() !=0 ) {
+			
+			if(validText(company3NameV) == false) {
+				company3NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else if(isEmpty(company3NameV) == true) {
+				company3NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else {company3NameErrorLabel.setText("");}
+			
+			if(isEmpty(company3PositionV) == true) {
+				company3PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {company3PositionErrorLabel.setText("");}
+			
+			if(validTwoPlaceNum(company3YearsWorkedV) == false) {
+				company3YearsWorkedErrorLabel.setText("Put in right years worked for");
+				noInputError = false;
+			}else {company3YearsWorkedErrorLabel.setText("");}
+		}else {
+			company3NameErrorLabel.setText("");
+			company3PositionErrorLabel.setText("");
+			company3YearsWorkedErrorLabel.setText("");
+		}
+		
+		//Skill input error messages
+		if(validText(skill1V) == false) {
+			skill1ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill2V) == false) {
+			skill2ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill3V) == false) {
+			skill3ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill4V) == false) {
+			skill4ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill5V) == false) {
+			skill5ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill6V) == false) {
+			skill6ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill7V) == false) {
+			skill7ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
+		
+		if(validText(skill8V) == false) {
+			skill8ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}
 		
 		
 		
@@ -703,13 +873,21 @@ public class MainController {
 		return m.matches();
 	}
 	
-	//Used to validate user name grade point
+	//Used to validate user grade point
 	public boolean validGrade(String input) {
 		
 		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{1,3}");
 		Matcher m = p.matcher(input);
 		return m.matches();
 	}
+	
+	//Used to validate two place number
+		public boolean validTwoPlaceNum(String input) {
+			
+			Pattern p = Pattern.compile("[0-9]{1,2}");
+			Matcher m = p.matcher(input);
+			return m.matches();
+		}
 	
 
 }
