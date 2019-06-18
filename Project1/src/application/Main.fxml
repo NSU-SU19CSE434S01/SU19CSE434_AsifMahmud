@@ -7,9 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="820.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane prefHeight="850.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button layoutX="1086.0" layoutY="760.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="35.0" prefWidth="100.0" text="Generate CV" />
+      <Button layoutX="1136.0" layoutY="786.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="50.0" prefWidth="150.0" text="Generate CV">
+         <font>
+            <Font name="Verdana Italic" size="14.0" />
+         </font></Button>
       <TextField fx:id="userQualificationTitle" layoutX="14.0" layoutY="99.0" prefWidth="300.0" promptText="Career Goal Title" />
       <TextField fx:id="userName" layoutX="14.0" layoutY="57.0" prefWidth="300.0" promptText="User Name" />
       <Label fx:id="userNameErrorLabel" layoutX="14.0" layoutY="82.0" prefWidth="300.0" textFill="#da0000" />
@@ -143,21 +146,21 @@
             <Font name="Verdana Bold Italic" size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="661.0" layoutY="695.0" prefWidth="300.0" promptText="Reference1 Name" />
-      <TextField layoutX="661.0" layoutY="734.0" prefWidth="300.0" promptText="Reference1  Institution" />
-      <Label layoutX="661.0" layoutY="759.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="986.0" layoutY="58.0" prefWidth="300.0" promptText="Reference1  Position" />
-      <Label layoutX="986.0" layoutY="83.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="986.0" layoutY="101.0" prefWidth="300.0" promptText="Reference1 Email" />
-      <Label layoutX="986.0" layoutY="124.0" prefWidth="300.0" textFill="#da0000" />
-      <Label layoutX="661.0" layoutY="720.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="986.0" layoutY="145.0" prefWidth="300.0" promptText="Reference2 Name" />
-      <TextField layoutX="986.0" layoutY="184.0" prefWidth="300.0" promptText="Reference2  Institution" />
-      <Label layoutX="986.0" layoutY="209.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="986.0" layoutY="226.0" prefWidth="300.0" promptText="Reference2  Position" />
-      <Label layoutX="986.0" layoutY="251.0" prefWidth="300.0" textFill="#da0000" />
-      <TextField layoutX="986.0" layoutY="269.0" prefWidth="300.0" promptText="Reference2 Email" />
-      <Label layoutX="986.0" layoutY="292.0" prefWidth="300.0" textFill="#da0000" />
-      <Label layoutX="986.0" layoutY="170.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference1Name" layoutX="661.0" layoutY="695.0" prefWidth="300.0" promptText="Reference1 Name" />
+      <TextField fx:id="reference1Institution" layoutX="661.0" layoutY="734.0" prefWidth="300.0" promptText="Reference1  Institution" />
+      <Label fx:id="reference1InstitutionErrorLabel" layoutX="661.0" layoutY="759.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference1Position" layoutX="986.0" layoutY="58.0" prefWidth="300.0" promptText="Reference1  Position" />
+      <Label fx:id="reference1PositionErrorLabel" layoutX="986.0" layoutY="83.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference1Email" layoutX="986.0" layoutY="101.0" prefWidth="300.0" promptText="Reference1 Email" />
+      <Label fx:id="reference1EmailErrorLabel" layoutX="986.0" layoutY="124.0" prefWidth="300.0" textFill="#da0000" />
+      <Label fx:id="reference1NameErrorLabel" layoutX="661.0" layoutY="720.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference2Name" layoutX="986.0" layoutY="145.0" prefWidth="300.0" promptText="Reference2 Name" />
+      <TextField fx:id="reference2Institution" layoutX="986.0" layoutY="184.0" prefWidth="300.0" promptText="Reference2  Institution" />
+      <Label fx:id="reference2InstitutionErrorLabel" layoutX="986.0" layoutY="209.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference2Position" layoutX="986.0" layoutY="226.0" prefWidth="300.0" promptText="Reference2  Position" />
+      <Label fx:id="reference2PositionErrorLabel" layoutX="986.0" layoutY="251.0" prefWidth="300.0" textFill="#da0000" />
+      <TextField fx:id="reference2Email" layoutX="986.0" layoutY="269.0" prefWidth="300.0" promptText="Reference2 Email" />
+      <Label fx:id="reference2EmailErrorLabel" layoutX="986.0" layoutY="292.0" prefWidth="300.0" textFill="#da0000" />
+      <Label fx:id="reference2NameErrorLabel" layoutX="986.0" layoutY="170.0" prefWidth="300.0" textFill="#da0000" />
    </children>
 </AnchorPane>

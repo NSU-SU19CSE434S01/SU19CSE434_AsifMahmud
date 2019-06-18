@@ -101,6 +101,23 @@ public class MainController {
 	private TextField skill7;
 	@FXML
 	private TextField skill8;
+	@FXML
+	private TextField reference1Name;
+	@FXML
+	private TextField reference1Institution;
+	@FXML
+	private TextField reference1Position;
+	@FXML
+	private TextField reference1Email;
+	@FXML
+	private TextField reference2Name;
+	@FXML
+	private TextField reference2Institution;
+	@FXML
+	private TextField reference2Position;
+	@FXML
+	private TextField reference2Email;
+
 	
 	
 	
@@ -193,6 +210,23 @@ public class MainController {
 	private Label skill7ErrorLabel;
 	@FXML
 	private Label skill8ErrorLabel;
+	@FXML
+	private Label reference1NameErrorLabel;
+	@FXML
+	private Label reference1InstitutionErrorLabel;
+	@FXML
+	private Label reference1PositionErrorLabel;
+	@FXML
+	private Label reference1EmailErrorLabel;
+	@FXML
+	private Label reference2NameErrorLabel;
+	@FXML
+	private Label reference2InstitutionErrorLabel;
+	@FXML
+	private Label reference2PositionErrorLabel;
+	@FXML
+	private Label reference2EmailErrorLabel;
+	
 	
 	
 	
@@ -259,6 +293,16 @@ public class MainController {
 		String skill6V = skill6.getText();
 		String skill7V = skill7.getText();
 		String skill8V = skill8.getText();
+		
+		//Reference inputs variables
+		String reference1NameV = reference1Name.getText();
+		String reference1InstitutionV = reference1Institution.getText();
+		String reference1PositionV = reference1Position.getText();
+		String reference1EmailV = reference1Email.getText();
+		String reference2NameV = reference2Name.getText();
+		String reference2InstitutionV = reference2Institution.getText();
+		String reference2PositionV = reference2Position.getText();
+		String reference2EmailV = reference2Email.getText();
 		
 	
 	
@@ -573,6 +617,81 @@ public class MainController {
 			noInputError = false;
 		}
 		
+		//Reference input error messages
+		if(reference1NameV.length() !=0 || reference1InstitutionV.length() !=0 || reference1PositionV.length() !=0 || reference1EmailV.length() !=0) {
+			
+			if(validText(reference1NameV) == false) {
+				reference1NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else if(isEmpty(reference1NameV) == true) {
+				reference1NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else {reference1NameErrorLabel.setText("");}
+			
+			if(validText(reference1InstitutionV) == false) {
+				reference1InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else if(isEmpty(reference1InstitutionV) == true) {
+				reference1InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else {reference1InstitutionErrorLabel.setText("");}
+			
+			if(validText(reference1PositionV) == false) {
+				reference1PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else if(isEmpty(reference1PositionV) == true) {
+				reference1PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else {reference1PositionErrorLabel.setText("");}
+			
+			if(validEmail(reference1EmailV) == false) {
+				reference1EmailErrorLabel.setText("Put in appropriate reference email");
+				noInputError = false;
+			}else {reference1EmailErrorLabel.setText("");}
+		}else {
+			reference1NameErrorLabel.setText("");
+			reference1InstitutionErrorLabel.setText("");
+			reference1PositionErrorLabel.setText("");
+			reference1EmailErrorLabel.setText("");
+		}
+		
+		if(reference2NameV.length() !=0 || reference2InstitutionV.length() !=0 || reference2PositionV.length() !=0 || reference2EmailV.length() !=0) {
+			
+			if(validText(reference2NameV) == false) {
+				reference2NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else if(isEmpty(reference2NameV) == true) {
+				reference2NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else {reference2NameErrorLabel.setText("");}
+			
+			if(validText(reference2InstitutionV) == false) {
+				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else if(isEmpty(reference2InstitutionV) == true) {
+				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else {reference2InstitutionErrorLabel.setText("");}
+			
+			if(validText(reference2PositionV) == false) {
+				reference2PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else if(isEmpty(reference2PositionV) == true) {
+				reference2PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else {reference2PositionErrorLabel.setText("");}
+			
+			if(validEmail(reference2EmailV) == false) {
+				reference2EmailErrorLabel.setText("Put in appropriate reference email");
+				noInputError = false;
+			}else {reference2EmailErrorLabel.setText("");}
+		}else {
+			reference2NameErrorLabel.setText("");
+			reference2InstitutionErrorLabel.setText("");
+			reference2PositionErrorLabel.setText("");
+			reference2EmailErrorLabel.setText("");
+		}
+		
 		
 		
 		if(noInputError == true) {
@@ -715,26 +834,26 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>nsu it</h3>\r\n" + 
-				"                        <p>Position: General Manager</p>\r\n" + 
-				"                        <p>Years Worked: 1 </p>\r\n" + 
+				"                        <h3>"+company1NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+company1PositionV+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company1YearsWorkedV+"</p>\r\n" + 
 				"                        \r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>brack it</h3>\r\n" + 
-				"                        <p>Position: General Manager</p>\r\n" + 
-				"                        <p>Years Worked: 1 </p>\r\n" + 
+				"                        <h3>"+company2NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+company2PositionV+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company2YearsWorkedV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>uber</h3>\r\n" + 
-				"                        <p>Position: Developer</p>\r\n" + 
-				"                        <p>Years Worked: 1 </p>\r\n" + 
+				"                        <h3>"+company3NameV+"</h3>\r\n" + 
+				"                        <p>Position: "+company3PositionV+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company3YearsWorkedV+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
@@ -745,25 +864,25 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Java</h4>\r\n" + 
+				"                            <h4>"+skill1V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Php</h4>\r\n" + 
+				"                            <h4>"+skill2V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Laravel</h4>\r\n" + 
+				"                            <h4>"+skill3V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Java Script</h4>\r\n" + 
+				"                            <h4>"+skill4V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
@@ -771,25 +890,25 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Java</h4>\r\n" + 
+				"                            <h4>"+skill5V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Php</h4>\r\n" + 
+				"                            <h4>"+skill6V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Laravel</h4>\r\n" + 
+				"                            <h4>"+skill7V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>Java Script</h4>\r\n" + 
+				"                            <h4>"+skill8V+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
@@ -801,19 +920,19 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h3>Abdul Hamid</h3>\r\n" + 
-				"                            <p>Institution: North South University</p>\r\n" + 
-				"                            <p>Position: Lecturer</p>\r\n" + 
-				"                            <p>Mail: ah@gmail.com</p>\r\n" + 
+				"                            <h3>"+reference1NameV+"</h3>\r\n" + 
+				"                            <p>Institution: "+reference1InstitutionV+"</p>\r\n" + 
+				"                            <p>Position: "+reference1PositionV+"</p>\r\n" + 
+				"                            <p>Mail: "+reference1EmailV+"</p>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h3>Abdul Hamid</h3>\r\n" + 
-				"                            <p>Institution: North South University</p>\r\n" + 
-				"                            <p>Position: Lecturer</p>\r\n" + 
-				"                            <p>Mail: ah@gmail.com</p>\r\n" + 
+				"                            <h3>"+reference2NameV+"</h3>\r\n" + 
+				"                            <p>Institution: "+reference2InstitutionV+"</p>\r\n" + 
+				"                            <p>Position: "+reference2PositionV+"</p>\r\n" + 
+				"                            <p>Mail: "+reference2EmailV+"</p>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
