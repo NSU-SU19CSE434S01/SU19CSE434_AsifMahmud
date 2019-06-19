@@ -119,8 +119,6 @@ public class MainController {
 	private TextField reference2Email;
 
 	
-	
-	
 	//Input error labels
 	@FXML
 	private Label userNameErrorLabel;
@@ -228,10 +226,9 @@ public class MainController {
 	private Label reference2EmailErrorLabel;
 	
 	
-	
-	
 	@FXML
 	private TextArea userStatement;
+	
 	
 	
 	public void generateCv(ActionEvent event) throws IOException {
@@ -580,42 +577,42 @@ public class MainController {
 		if(validText(skill1V) == false) {
 			skill1ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill1ErrorLabel.setText("");
 		
 		if(validText(skill2V) == false) {
 			skill2ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill2ErrorLabel.setText("");
 		
 		if(validText(skill3V) == false) {
 			skill3ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill3ErrorLabel.setText("");
 		
 		if(validText(skill4V) == false) {
 			skill4ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill4ErrorLabel.setText("");
 		
 		if(validText(skill5V) == false) {
 			skill5ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill5ErrorLabel.setText("");
 		
 		if(validText(skill6V) == false) {
 			skill6ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill6ErrorLabel.setText("");
 		
 		if(validText(skill7V) == false) {
 			skill7ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill7ErrorLabel.setText("");
 		
 		if(validText(skill8V) == false) {
 			skill8ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
-		}
+		}else skill8ErrorLabel.setText("");
 		
 		//Reference input error messages
 		if(reference1NameV.length() !=0 || reference1InstitutionV.length() !=0 || reference1PositionV.length() !=0 || reference1EmailV.length() !=0) {

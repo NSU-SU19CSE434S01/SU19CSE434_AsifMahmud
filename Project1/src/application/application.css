@@ -1,1 +1,19 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.text-area{
+	
+	-fx-text-fill: #77E18B;
+	-fx-background-color: #0C2239;
+	}
+
+.text-area .content{
+    -fx-background-color: #0C2239;
+    -fx-border-color: 	#77E18B;
+    -fx-border-width: 2;
+    -fx-border-radius: 14; 
+	}
+
+.text-field {
+    -fx-text-fill: #ffffff;
+    
+    }
+
