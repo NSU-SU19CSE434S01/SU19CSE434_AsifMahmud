@@ -225,6 +225,9 @@ public class MainController {
 	@FXML
 	private Label reference2EmailErrorLabel;
 	
+	@FXML
+	private Label cvGeneratedLocationLabel;
+	
 	
 	@FXML
 	private TextArea userStatement;
@@ -942,6 +945,11 @@ public class MainController {
 		
 		//Write html string to new html document 
 		Files.write(Paths.get("GeneratedCV/CV Of "+userNameV+".html"), htmlString.getBytes());
+		
+		//Shows the location of generated cv within the ui
+		cvGeneratedLocationLabel.setText("CV Generated: Project1/GeneratedCV");
+		}else {
+			cvGeneratedLocationLabel.setText("Put in appropriate information");
 		}
 	}
 	
@@ -998,12 +1006,14 @@ public class MainController {
 	}
 	
 	//Used to validate two place number
-		public boolean validTwoPlaceNum(String input) {
+	public boolean validTwoPlaceNum(String input) {
 			
-			Pattern p = Pattern.compile("[0-9]{1,2}");
-			Matcher m = p.matcher(input);
-			return m.matches();
+		Pattern p = Pattern.compile("[0-9]{1,2}");
+		Matcher m = p.matcher(input);
+		return m.matches();
 		}
+		
+	
 	
 
 }
