@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #0C2239;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="250.0" fitWidth="284.0" layoutX="525.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../Images/Applogo.png" />
+         </image></ImageView>
+      <Label layoutX="447.0" layoutY="418.0" text="CV GENERATOR" textFill="WHITE">
+         <font>
+            <Font name="Segoe Print Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="569.0" layoutY="521.0" text="CREATED BY " textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="586.0" layoutY="560.0" text="ASIF MAHMUD" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
