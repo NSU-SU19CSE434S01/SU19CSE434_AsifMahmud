@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #0C2239;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #0C2239;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.WelcomeController">
    <children>
       <ImageView fitHeight="250.0" fitWidth="284.0" layoutX="525.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,7 +28,7 @@
             <Font name="SansSerif Bold" size="18.0" />
          </font>
       </Label>
-      <Button layoutX="551.0" layoutY="675.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="PROCEED">
+      <Button fx:id="proceed" layoutX="551.0" layoutY="675.0" mnemonicParsing="false" onAction="#proceedToNextScene" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="PROCEED">
          <font>
             <Font name="SansSerif Bold" size="18.0" />
          </font>
