@@ -235,7 +235,7 @@ public class MainController {
 	@FXML
 	private TextArea userStatement;
 	
-	
+	private String profilePicPath = "Images/boy.png";
 	
 	
 	
@@ -722,7 +722,7 @@ public class MainController {
 				"                <h2 class=\"leftcontainerheader\">CONTACT INFO</h2>\r\n" + 
 				"                <hr>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/user.png\" alt=\"\"></div>\r\n" + 
+				"                    <div><img src=\""+profilePicPath+"\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Name</h4>\r\n" + 
 				"                        <p>"+userNameV+"</p>\r\n" + 
@@ -959,15 +959,23 @@ public class MainController {
 	}
 	
 	//Image upload button action
-	public void pic(ActionEvent event) throws IOException {
+	public void profilePicUpload(ActionEvent event) throws IOException {
 		
 		 
 		File selectedFile;
+		Path destinationPath;
 
 		
 	    FileChooser fc = new FileChooser();
-	    fc.setTitle("Attach a file");
+	    fc.setTitle("Attach an image");
 	    selectedFile = fc.showOpenDialog(null);
+	    
+	    if (selectedFile != null) {
+	        destinationPath = Paths.get("G:\\Java Projects\\CSE434\\Project1\\GeneratedCV\\Images\\"+ selectedFile.getName());
+	        profilePicPath = "Images/" +selectedFile.getName(); 
+	        Files.copy(selectedFile.toPath(), destinationPath);
+	        
+	    }
 
 	    
 		}
