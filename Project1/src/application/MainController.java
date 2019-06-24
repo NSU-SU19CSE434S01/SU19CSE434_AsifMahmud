@@ -716,13 +716,13 @@ public class MainController {
 				"    <div class=\"container\">\r\n" + 
 				"        <div class=\"leftcontainer\">\r\n" + 
 				"            <div class=\"profileimg\">\r\n" + 
-				"                <img src=\"Images/boy.png\" alt=\"\">\r\n" + 
+				"                <img src=\""+profilePicPath+"\" alt=\"\">\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"contactbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">CONTACT INFO</h2>\r\n" + 
 				"                <hr>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\""+profilePicPath+"\" alt=\"\"></div>\r\n" + 
+				"                    <div><img src=\"Images/user.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Name</h4>\r\n" + 
 				"                        <p>"+userNameV+"</p>\r\n" + 
