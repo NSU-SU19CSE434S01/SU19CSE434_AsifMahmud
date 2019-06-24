@@ -476,5 +476,15 @@
             <Font name="SansSerif Bold" size="22.0" />
          </font>
       </Label>
+      <Label layoutX="986.0" layoutY="490.0" text="PROFILE IMAGE" textFill="#eeeeee">
+         <font>
+            <Font name="SansSerif Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="986.0" layoutY="525.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="UPLOAD IMAGE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
