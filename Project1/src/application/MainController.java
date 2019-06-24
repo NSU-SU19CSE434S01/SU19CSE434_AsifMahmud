@@ -1,7 +1,9 @@
 package application;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 
 public class MainController {
 	
@@ -231,6 +234,8 @@ public class MainController {
 	
 	@FXML
 	private TextArea userStatement;
+	
+	
 	
 	
 	
@@ -952,6 +957,20 @@ public class MainController {
 			cvGeneratedLocationLabel.setText("Put in appropriate information");
 		}
 	}
+	
+	//Image upload button action
+	public void pic(ActionEvent event) throws IOException {
+		
+		 
+		File selectedFile;
+
+		
+	    FileChooser fc = new FileChooser();
+	    fc.setTitle("Attach a file");
+	    selectedFile = fc.showOpenDialog(null);
+
+	    
+		}
 	
 	//Used to validate user name. Learned from stack overflow.
 	public boolean validName(String input) {
