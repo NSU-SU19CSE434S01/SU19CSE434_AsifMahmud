@@ -228,9 +228,12 @@ public class MainController {
 	private Label reference2PositionErrorLabel;
 	@FXML
 	private Label reference2EmailErrorLabel;
-	
 	@FXML
 	private Label cvGeneratedLocationLabel;
+	@FXML
+	private Label imageFileErrorLabel;
+	@FXML
+	private Label imageFileErrorLabel1;
 	
 	
 	@FXML
