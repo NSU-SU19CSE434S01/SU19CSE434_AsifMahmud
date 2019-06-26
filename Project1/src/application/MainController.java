@@ -1041,6 +1041,13 @@ public class MainController {
 		Matcher m = p.matcher(input);
 		return m.matches();
 		}
+	
+	public boolean validImageFile(String input) {
+		
+		Pattern p = Pattern.compile("[A-Za-z0-9._-]+\\.JPG|[A-Za-z0-9._-]+\\.jpeg|[A-Za-z0-9._-]+\\.png");
+		Matcher m = p.matcher(input);
+		return m.matches();
+	}
 		
 	
 	
