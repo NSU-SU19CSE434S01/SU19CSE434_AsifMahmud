@@ -975,15 +975,25 @@ public class MainController {
 	    selectedFile = fc.showOpenDialog(null);
 	    
 	    if (selectedFile != null) {
+	    	
+	    	if(validImageFile(selectedFile.getName()) == true) {
+	    	
 	        destinationPath = Paths.get("G:\\Java Projects\\CSE434\\Project1\\GeneratedCV\\Images\\"+ selectedFile.getName());
 	        profilePicPath = "Images/" +selectedFile.getName(); 
 	        Files.copy(selectedFile.toPath(), destinationPath, StandardCopyOption.REPLACE_EXISTING);
 	        
-	        
-	    }
+	        imageFileErrorLabel.setText("");
+    		imageFileErrorLabel1.setText("");
+	    	
+	    	}else {
+	    		
+	    		imageFileErrorLabel.setText("Only JPG, jpeg and png file is allowed");
+	    		imageFileErrorLabel1.setText("Image name can only contain letters, numbers, _, -, .");
+	    	}
+        }
 
 	    
-		}
+	}
 	
 	//Used to validate user name. Learned from stack overflow.
 	public boolean validName(String input) {
@@ -1045,6 +1055,7 @@ public class MainController {
 		return m.matches();
 		}
 	
+	//Check for valid image file
 	public boolean validImageFile(String input) {
 		
 		Pattern p = Pattern.compile("[A-Za-z0-9._-]+\\.JPG|[A-Za-z0-9._-]+\\.jpeg|[A-Za-z0-9._-]+\\.png");

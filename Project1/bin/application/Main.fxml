@@ -486,12 +486,12 @@
             <Font name="SansSerif Bold" size="14.0" />
          </font>
       </Button>
-      <Label fx:id="reference2EmailErrorLabel1" layoutX="986.0" layoutY="561.0" prefWidth="300.0" textFill="#ff5f5f">
+      <Label fx:id="imageFileErrorLabel" layoutX="986.0" layoutY="561.0" prefWidth="300.0" textFill="#ff5f5f">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label fx:id="reference2EmailErrorLabel11" layoutX="986.0" layoutY="583.0" prefWidth="300.0" textFill="#ff5f5f">
+      <Label fx:id="imageFileErrorLabel1" layoutX="986.0" layoutY="583.0" prefWidth="300.0" textFill="#ff5f5f">
          <font>
             <Font size="13.0" />
          </font>
