@@ -327,12 +327,10 @@ public class MainController {
 		//Put in error messages
 		generalDataProcessing(userNameV, userQualificationTitleV);
 		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
+		statementDataProcessing(userStatementV);
 		
 		
-		if(isEmpty(userStatementV) == true) {
-			userStatementErrorLabel.setText("Please fill this up");
-			noInputError = false;
-		}else {userStatementErrorLabel.setText("");}
+		
 		
 		//Academic achievements input error messages
 		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
@@ -1012,6 +1010,15 @@ public class MainController {
 			userEmailErrorLabel.setText("Put in appropriate email");
 			noInputError = false;
 		}else {userEmailErrorLabel.setText("");}
+	}
+	
+	
+	public void statementDataProcessing(String userStatementV) {
+		
+		if(isEmpty(userStatementV) == true) {
+			userStatementErrorLabel.setText("Please fill this up");
+			noInputError = false;
+		}else {userStatementErrorLabel.setText("");}
 	}
 	
 	
