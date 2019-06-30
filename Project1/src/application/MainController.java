@@ -326,21 +326,8 @@ public class MainController {
 		
 		//Put in error messages
 		generalDataProcessing(userNameV, userQualificationTitleV);
+		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
 		
-		if(isEmpty(userAddressV) == true) {
-			userAddressErrorLabel.setText("Put in appropriate address");
-			noInputError = false;
-		}else {userAddressErrorLabel.setText("");}
-		
-		if(validPhoneNumber(userPhoneNumberV) == false) {
-			userPhoneNumberErrorLabel.setText("Put in appropriate phone number");
-			noInputError = false;
-		}else {userPhoneNumberErrorLabel.setText("");}
-		
-		if(validEmail(userEmailV) == false) {
-			userEmailErrorLabel.setText("Put in appropriate email");
-			noInputError = false;
-		}else {userEmailErrorLabel.setText("");}
 		
 		if(isEmpty(userStatementV) == true) {
 			userStatementErrorLabel.setText("Please fill this up");
@@ -1006,6 +993,25 @@ public class MainController {
 			userTitleErrorLabel.setText("Put in appropriate title");
 			noInputError = false;
 		}else {userTitleErrorLabel.setText("");}
+	}
+	
+	
+	public void contactDataProcessing(String userAddressV, String userPhoneNumberV, String userEmailV) {
+		
+		if(isEmpty(userAddressV) == true) {
+			userAddressErrorLabel.setText("Put in appropriate address");
+			noInputError = false;
+		}else {userAddressErrorLabel.setText("");}
+		
+		if(validPhoneNumber(userPhoneNumberV) == false) {
+			userPhoneNumberErrorLabel.setText("Put in appropriate phone number");
+			noInputError = false;
+		}else {userPhoneNumberErrorLabel.setText("");}
+		
+		if(validEmail(userEmailV) == false) {
+			userEmailErrorLabel.setText("Put in appropriate email");
+			noInputError = false;
+		}else {userEmailErrorLabel.setText("");}
 	}
 	
 	
