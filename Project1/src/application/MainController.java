@@ -329,6 +329,7 @@ public class MainController {
 		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
 		statementDataProcessing(userStatementV);
 		academicAchievementsDataProcessing (award1NameV, award1PositionV, award1YearV);
+		academicAchievements2DataProcessing(award2NameV, award2PositionV, award2YearV);
 		
 		
 		
@@ -336,30 +337,7 @@ public class MainController {
 		//Academic achievements input error messages
 		
 		
-		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
-			
-			if(validText(award2NameV) == false) {
-				award2NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else if(isEmpty(award2NameV) == true) {
-				award2NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else {award2NameErrorLabel.setText("");}
-			
-			if(isEmpty(award2PositionV) == true) {
-				award2PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {award2PositionErrorLabel.setText("");}
-			
-			if(validYear(award2YearV) == false) {
-				award2YearErrorLabel.setText("Put in right year");
-				noInputError = false;
-			}else {award2YearErrorLabel.setText("");}
-		}else {
-			award2NameErrorLabel.setText("");
-			award2PositionErrorLabel.setText("");
-			award2YearErrorLabel.setText("");
-		}
+		
 		
 		if(award3NameV.length() !=0 || award3PositionV.length() !=0 || award3YearV.length() !=0 ) {
 			
@@ -1034,6 +1012,37 @@ public class MainController {
 			award1NameErrorLabel.setText("");
 			award1PositionErrorLabel.setText("");
 			award1YearErrorLabel.setText("");
+		}
+	}
+	
+	
+	
+	
+	public void academicAchievements2DataProcessing(String award2NameV, String award2PositionV, String award2YearV) {
+		
+		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
+			
+			if(validText(award2NameV) == false) {
+				award2NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else if(isEmpty(award2NameV) == true) {
+				award2NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else {award2NameErrorLabel.setText("");}
+			
+			if(isEmpty(award2PositionV) == true) {
+				award2PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {award2PositionErrorLabel.setText("");}
+			
+			if(validYear(award2YearV) == false) {
+				award2YearErrorLabel.setText("Put in right year");
+				noInputError = false;
+			}else {award2YearErrorLabel.setText("");}
+		}else {
+			award2NameErrorLabel.setText("");
+			award2PositionErrorLabel.setText("");
+			award2YearErrorLabel.setText("");
 		}
 	}
 	
