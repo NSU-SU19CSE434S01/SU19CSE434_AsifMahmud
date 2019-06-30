@@ -331,6 +331,7 @@ public class MainController {
 		academicAchievementsDataProcessing (award1NameV, award1PositionV, award1YearV);
 		academicAchievements2DataProcessing(award2NameV, award2PositionV, award2YearV);
 		academicAchievements3DataProcessing(award3NameV, award3PositionV, award3YearV);
+		languageDataProcessing (language1V, language2V);
 		
 		
 		
@@ -343,21 +344,7 @@ public class MainController {
 		
 		
 		//Language input error messages
-		if(validText(language1V) == false) {
-			language1ErrorLabel.setText("Put in primary language");
-			noInputError = false;
-		}else if(isEmpty(language1V) == true) {
-			language1ErrorLabel.setText("Put in primary language");
-			noInputError = false;
-		}else {language1ErrorLabel.setText("");}
 		
-		if(validText(language2V) == false) {
-			language2ErrorLabel.setText("Put in secondary language");
-			noInputError = false;
-		}else if(isEmpty(language2V) == true) {
-			language2ErrorLabel.setText("Put in secondary language");
-			noInputError = false;
-		}else {language2ErrorLabel.setText("");}
 		
 		//Education input error messages
 		if(validText(underGradDegreeNameV) == false) {
@@ -911,7 +898,7 @@ public class MainController {
 	
 	//User input data processing methods
 	
-	public void generalDataProcessing(String userNameV, String userQualificationTitleV) {
+	public void generalDataProcessing (String userNameV, String userQualificationTitleV) {
 		
 		if(validName(userNameV) == false) {
 			userNameErrorLabel.setText("Put in appropriate name");
@@ -931,7 +918,7 @@ public class MainController {
 	
 	
 	
-	public void contactDataProcessing(String userAddressV, String userPhoneNumberV, String userEmailV) {
+	public void contactDataProcessing (String userAddressV, String userPhoneNumberV, String userEmailV) {
 		
 		if(isEmpty(userAddressV) == true) {
 			userAddressErrorLabel.setText("Put in appropriate address");
@@ -953,7 +940,7 @@ public class MainController {
 	
 	
 	
-	public void statementDataProcessing(String userStatementV) {
+	public void statementDataProcessing (String userStatementV) {
 		
 		if(isEmpty(userStatementV) == true) {
 			userStatementErrorLabel.setText("Please fill this up");
@@ -996,7 +983,7 @@ public class MainController {
 	
 	
 	
-	public void academicAchievements2DataProcessing(String award2NameV, String award2PositionV, String award2YearV) {
+	public void academicAchievements2DataProcessing (String award2NameV, String award2PositionV, String award2YearV) {
 		
 		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
 			
@@ -1027,7 +1014,7 @@ public class MainController {
 	
 	
 	
-	public void academicAchievements3DataProcessing(String award3NameV, String award3PositionV, String award3YearV) {
+	public void academicAchievements3DataProcessing (String award3NameV, String award3PositionV, String award3YearV) {
 		
 		if(award3NameV.length() !=0 || award3PositionV.length() !=0 || award3YearV.length() !=0 ) {
 			
@@ -1058,20 +1045,42 @@ public class MainController {
 	
 	
 	
+	public void languageDataProcessing (String language1V, String language2V) {
+		
+		if(validText(language1V) == false) {
+			language1ErrorLabel.setText("Put in primary language");
+			noInputError = false;
+		}else if(isEmpty(language1V) == true) {
+			language1ErrorLabel.setText("Put in primary language");
+			noInputError = false;
+		}else {language1ErrorLabel.setText("");}
+		
+		if(validText(language2V) == false) {
+			language2ErrorLabel.setText("Put in secondary language");
+			noInputError = false;
+		}else if(isEmpty(language2V) == true) {
+			language2ErrorLabel.setText("Put in secondary language");
+			noInputError = false;
+		}else {language2ErrorLabel.setText("");}
+	}
+	
+	
+	
+	
 	//Used to validate user name. Learned from stack overflow.
-	public boolean validName(String input) {
+	public boolean validName (String input) {
 		
 		return Pattern.matches("^[\\p{L} .'-]+$", input);  
 	}
 	
 	//Used to validate user text
-	public boolean validText(String input) {
+	public boolean validText (String input) {
 		
 		return Pattern.matches("^[a-zA-Z\\s]*$", input);
 	}
 	
 	//Used to check empty string
-	public boolean isEmpty(String input) {
+	public boolean isEmpty (String input) {
 		
 		if (input.equals("") == true) {
 			return true;
@@ -1079,7 +1088,7 @@ public class MainController {
 	}
 	
 	//Used to validate phone number
-	public boolean validPhoneNumber(String input) {
+	public boolean validPhoneNumber (String input) {
 		
 		Pattern p = Pattern.compile("[0-9]{9,13}");
 		Matcher m = p.matcher(input);
@@ -1087,7 +1096,7 @@ public class MainController {
 	}
 	
 	//Used to validate email
-	public boolean validEmail(String input) {
+	public boolean validEmail (String input) {
 		
 		Pattern p = Pattern.compile("[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\\.[A-Za-z]{2,4}");
 		Matcher m = p.matcher(input);
@@ -1095,7 +1104,7 @@ public class MainController {
 	}
 	
 	//Used to validate year
-	public boolean validYear(String input) {
+	public boolean validYear (String input) {
 		
 		Pattern p = Pattern.compile("20[0-9]{2}|19[0-9]{2}");
 		Matcher m = p.matcher(input);
@@ -1103,7 +1112,7 @@ public class MainController {
 	}
 	
 	//Used to validate user grade point
-	public boolean validGrade(String input) {
+	public boolean validGrade (String input) {
 		
 		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{1,3}");
 		Matcher m = p.matcher(input);
@@ -1111,7 +1120,7 @@ public class MainController {
 	}
 	
 	//Used to validate two place number
-	public boolean validTwoPlaceNum(String input) {
+	public boolean validTwoPlaceNum (String input) {
 			
 		Pattern p = Pattern.compile("[0-9]{1,2}");
 		Matcher m = p.matcher(input);
@@ -1119,7 +1128,7 @@ public class MainController {
 		}
 	
 	//Check for valid image file
-	public boolean validImageFile(String input) {
+	public boolean validImageFile (String input) {
 		
 		Pattern p = Pattern.compile("[A-Za-z0-9._-]+\\.JPG|[A-Za-z0-9._-]+\\.jpeg|[A-Za-z0-9._-]+\\.png");
 		Matcher m = p.matcher(input);
