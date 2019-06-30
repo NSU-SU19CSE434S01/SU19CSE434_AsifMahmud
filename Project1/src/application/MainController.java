@@ -328,35 +328,13 @@ public class MainController {
 		generalDataProcessing(userNameV, userQualificationTitleV);
 		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
 		statementDataProcessing(userStatementV);
+		academicAchievementsDataProcessing (award1NameV, award1PositionV, award1YearV);
 		
 		
 		
 		
 		//Academic achievements input error messages
-		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
-			
-			if(validText(award1NameV) == false) {
-				award1NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else if(isEmpty(award1NameV) == true) {
-				award1NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else {award1NameErrorLabel.setText("");}
-			
-			if(isEmpty(award1PositionV) == true) {
-				award1PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {award1PositionErrorLabel.setText("");}
-			
-			if(validYear(award1YearV) == false) {
-				award1YearErrorLabel.setText("Put in right year");
-				noInputError = false;
-			}else {award1YearErrorLabel.setText("");}
-		}else {
-			award1NameErrorLabel.setText("");
-			award1PositionErrorLabel.setText("");
-			award1YearErrorLabel.setText("");
-		}
+		
 		
 		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
 			
@@ -994,6 +972,9 @@ public class MainController {
 	}
 	
 	
+	
+	
+	
 	public void contactDataProcessing(String userAddressV, String userPhoneNumberV, String userEmailV) {
 		
 		if(isEmpty(userAddressV) == true) {
@@ -1013,12 +994,47 @@ public class MainController {
 	}
 	
 	
+	
+	
+	
 	public void statementDataProcessing(String userStatementV) {
 		
 		if(isEmpty(userStatementV) == true) {
 			userStatementErrorLabel.setText("Please fill this up");
 			noInputError = false;
 		}else {userStatementErrorLabel.setText("");}
+	}
+	
+	
+	
+	
+	
+	public void academicAchievementsDataProcessing (String award1NameV, String award1PositionV, String award1YearV) {
+		
+		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
+			
+			if(validText(award1NameV) == false) {
+				award1NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else if(isEmpty(award1NameV) == true) {
+				award1NameErrorLabel.setText("Put in appropriate award name");
+				noInputError = false;
+			}else {award1NameErrorLabel.setText("");}
+			
+			if(isEmpty(award1PositionV) == true) {
+				award1PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {award1PositionErrorLabel.setText("");}
+			
+			if(validYear(award1YearV) == false) {
+				award1YearErrorLabel.setText("Put in right year");
+				noInputError = false;
+			}else {award1YearErrorLabel.setText("");}
+		}else {
+			award1NameErrorLabel.setText("");
+			award1PositionErrorLabel.setText("");
+			award1YearErrorLabel.setText("");
+		}
 	}
 	
 	
