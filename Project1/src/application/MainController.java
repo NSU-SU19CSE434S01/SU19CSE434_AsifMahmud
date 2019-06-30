@@ -242,8 +242,14 @@ public class MainController {
 	private String profilePicPath = "Images/boy.png";
 	
 	
+	//Error determining variable for all user inputs
+	public boolean noInputError;
+	
+	
 	
 	public void generateCv(ActionEvent event) throws IOException {
+		
+		noInputError = true;
 		
 		//Assign user inputs to string variables
 		
@@ -315,23 +321,11 @@ public class MainController {
 		
 	
 	
-		//Error determining variable for all user inputs
-		boolean noInputError = true;
+		
 		
 		
 		//Put in error messages
-		if(validName(userNameV) == false) {
-			userNameErrorLabel.setText("Put in appropriate name");
-			noInputError = false;
-		}else {userNameErrorLabel.setText("");}
-		
-		if(validText(userQualificationTitleV) == false) {
-			userTitleErrorLabel.setText("Put in appropriate title");
-			noInputError = false;
-		}else if(isEmpty(userQualificationTitleV) == true) {
-			userTitleErrorLabel.setText("Put in appropriate title");
-			noInputError = false;
-		}else {userTitleErrorLabel.setText("");}
+		generalDataProcessing(userNameV, userQualificationTitleV);
 		
 		if(isEmpty(userAddressV) == true) {
 			userAddressErrorLabel.setText("Put in appropriate address");
@@ -994,6 +988,27 @@ public class MainController {
 
 	    
 	}
+	
+	
+	//User input data processing methods
+	
+	public void generalDataProcessing(String userNameV, String userQualificationTitleV) {
+		
+		if(validName(userNameV) == false) {
+			userNameErrorLabel.setText("Put in appropriate name");
+			noInputError = false;
+		}else {userNameErrorLabel.setText("");}
+		
+		if(validText(userQualificationTitleV) == false) {
+			userTitleErrorLabel.setText("Put in appropriate title");
+			noInputError = false;
+		}else if(isEmpty(userQualificationTitleV) == true) {
+			userTitleErrorLabel.setText("Put in appropriate title");
+			noInputError = false;
+		}else {userTitleErrorLabel.setText("");}
+	}
+	
+	
 	
 	//Used to validate user name. Learned from stack overflow.
 	public boolean validName(String input) {
