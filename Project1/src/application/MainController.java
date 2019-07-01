@@ -254,15 +254,6 @@ public class MainController {
 		//Removing unnecessary variables
 		
 		//Skill inputs variables
-		String skill1V = skill1.getText();
-		String skill2V = skill2.getText();
-		String skill3V = skill3.getText();
-		String skill4V = skill4.getText();
-		String skill5V = skill5.getText();
-		String skill6V = skill6.getText();
-		String skill7V = skill7.getText();
-		String skill8V = skill8.getText();
-		
 		//Reference inputs variables
 		String reference1NameV = reference1Name.getText();
 		String reference1InstitutionV = reference1Institution.getText();
@@ -289,8 +280,8 @@ public class MainController {
 		jobExperience1DataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText());
 		jobExperience2DataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText());
 		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
-		skillSet1DataProcessing (skill1V, skill2V, skill3V, skill4V);
-		skillSet2DataProcessing (skill5V, skill6V, skill7V, skill8V);
+		skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
+		skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
 		reference1DataProcessing (reference1NameV, reference1InstitutionV, reference1PositionV, reference1EmailV);
 		reference2DataProcessing (reference2NameV, reference2InstitutionV, reference2PositionV, reference2EmailV);
 		
@@ -466,25 +457,25 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill1V+"</h4>\r\n" + 
+				"                            <h4>"+skill1.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill2V+"</h4>\r\n" + 
+				"                            <h4>"+skill2.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill3V+"</h4>\r\n" + 
+				"                            <h4>"+skill3.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill4V+"</h4>\r\n" + 
+				"                            <h4>"+skill4.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
@@ -492,25 +483,25 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill5V+"</h4>\r\n" + 
+				"                            <h4>"+skill5.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill6V+"</h4>\r\n" + 
+				"                            <h4>"+skill6.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill7V+"</h4>\r\n" + 
+				"                            <h4>"+skill7.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h4>"+skill8V+"</h4>\r\n" + 
+				"                            <h4>"+skill8.getText()+"</h4>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
