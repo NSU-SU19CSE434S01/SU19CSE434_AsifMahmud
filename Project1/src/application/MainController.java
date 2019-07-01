@@ -334,6 +334,7 @@ public class MainController {
 		languageDataProcessing (language1V, language2V);
 		underGradGeneralDataProcessing (underGradDegreeNameV, underGradUnivarsityNameV);
 		underGradResultDataProcessing (underGradGraduationYearV, underGradGarePointV);
+		hscOrALevelDataProcessing (hscOrALevelCollegeNameV, hscOrALevelGraduationYearV, hscOrALevelGradePointV);
 		
 		
 		
@@ -353,23 +354,7 @@ public class MainController {
 		
 		
 		
-		if(validText(hscOrALevelCollegeNameV) == false) {
-			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
-			noInputError = false;
-		}else if(isEmpty(hscOrALevelCollegeNameV) == true) {
-			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
-			noInputError = false;
-		}else {hscOrALevelCollegeNameErrorLabel.setText("");}
 		
-		if(validYear(hscOrALevelGraduationYearV) == false) {
-			hscOrALevelGraduationYearErrorLabel.setText("Put in right year");
-			noInputError = false;
-		}else {hscOrALevelGraduationYearErrorLabel.setText("");}
-		
-		if(validGrade(hscOrALevelGradePointV) == false) {
-			hscOrALevelGradePointErrorLabel.setText("Put in appropriate grade");
-			noInputError = false;
-		}else {hscOrALevelGradePointErrorLabel.setText("");}
 		
 		if(validText(sscOrOLevelSchoolNameV) == false) {
 			sscOrOLevelSchoolNameErrorLabel.setText("Put in appropriate school name");
@@ -1082,6 +1067,30 @@ public class MainController {
 			noInputError = false;
 		}else {underGradGarePointErrorLabel.setText("");}
 		
+	}
+	
+	
+	
+	
+	public void hscOrALevelDataProcessing (String hscOrALevelCollegeNameV, String hscOrALevelGraduationYearV, String hscOrALevelGradePointV) {
+		
+		if(validText(hscOrALevelCollegeNameV) == false) {
+			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
+			noInputError = false;
+		}else if(isEmpty(hscOrALevelCollegeNameV) == true) {
+			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
+			noInputError = false;
+		}else {hscOrALevelCollegeNameErrorLabel.setText("");}
+		
+		if(validYear(hscOrALevelGraduationYearV) == false) {
+			hscOrALevelGraduationYearErrorLabel.setText("Put in right year");
+			noInputError = false;
+		}else {hscOrALevelGraduationYearErrorLabel.setText("");}
+		
+		if(validGrade(hscOrALevelGradePointV) == false) {
+			hscOrALevelGradePointErrorLabel.setText("Put in appropriate grade");
+			noInputError = false;
+		}else {hscOrALevelGradePointErrorLabel.setText("");}
 	}
 	
 	
