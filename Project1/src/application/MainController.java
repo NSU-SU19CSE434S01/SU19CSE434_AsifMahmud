@@ -319,12 +319,8 @@ public class MainController {
 		String reference2PositionV = reference2Position.getText();
 		String reference2EmailV = reference2Email.getText();
 		
-	
-	
 		
 		
-		
-		//Put in error messages
 		generalDataProcessing(userNameV, userQualificationTitleV);
 		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
 		statementDataProcessing(userStatementV);
@@ -342,76 +338,7 @@ public class MainController {
 		skillSet1DataProcessing (skill1V, skill2V, skill3V, skill4V);
 		skillSet2DataProcessing (skill5V, skill6V, skill7V, skill8V);
 		reference1DataProcessing (reference1NameV, reference1InstitutionV, reference1PositionV, reference1EmailV);
-		//Academic achievements input error messages
-		
-		
-		
-		
-		
-		
-		//Language input error messages
-		
-		
-		//Education input error messages
-		
-		
-		
-		
-		
-		
-		
-		
-		//Job experience input error messages
-		
-		
-		
-		
-		
-		
-		//Skill input error messages
-		
-		
-		
-		
-		//Reference input error messages
-		
-		
-		if(reference2NameV.length() !=0 || reference2InstitutionV.length() !=0 || reference2PositionV.length() !=0 || reference2EmailV.length() !=0) {
-			
-			if(validText(reference2NameV) == false) {
-				reference2NameErrorLabel.setText("Put in appropriate reference name");
-				noInputError = false;
-			}else if(isEmpty(reference2NameV) == true) {
-				reference2NameErrorLabel.setText("Put in appropriate reference name");
-				noInputError = false;
-			}else {reference2NameErrorLabel.setText("");}
-			
-			if(validText(reference2InstitutionV) == false) {
-				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
-				noInputError = false;
-			}else if(isEmpty(reference2InstitutionV) == true) {
-				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
-				noInputError = false;
-			}else {reference2InstitutionErrorLabel.setText("");}
-			
-			if(validText(reference2PositionV) == false) {
-				reference2PositionErrorLabel.setText("Put in appropriate position");
-				noInputError = false;
-			}else if(isEmpty(reference2PositionV) == true) {
-				reference2PositionErrorLabel.setText("Put in appropriate position");
-				noInputError = false;
-			}else {reference2PositionErrorLabel.setText("");}
-			
-			if(validEmail(reference2EmailV) == false) {
-				reference2EmailErrorLabel.setText("Put in appropriate reference email");
-				noInputError = false;
-			}else {reference2EmailErrorLabel.setText("");}
-		}else {
-			reference2NameErrorLabel.setText("");
-			reference2InstitutionErrorLabel.setText("");
-			reference2PositionErrorLabel.setText("");
-			reference2EmailErrorLabel.setText("");
-		}
+		reference2DataProcessing (reference2NameV, reference2InstitutionV, reference2PositionV, reference2EmailV);
 		
 		
 		
@@ -1152,6 +1079,52 @@ public class MainController {
 			reference1EmailErrorLabel.setText("");
 		}
 	}
+	
+	
+	
+	
+	public void reference2DataProcessing (String reference2NameV, String reference2InstitutionV, String reference2PositionV, String reference2EmailV) {
+		
+		if(reference2NameV.length() !=0 || reference2InstitutionV.length() !=0 || reference2PositionV.length() !=0 || reference2EmailV.length() !=0) {
+			
+			if(validText(reference2NameV) == false) {
+				reference2NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else if(isEmpty(reference2NameV) == true) {
+				reference2NameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else {reference2NameErrorLabel.setText("");}
+			
+			if(validText(reference2InstitutionV) == false) {
+				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else if(isEmpty(reference2InstitutionV) == true) {
+				reference2InstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else {reference2InstitutionErrorLabel.setText("");}
+			
+			if(validText(reference2PositionV) == false) {
+				reference2PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else if(isEmpty(reference2PositionV) == true) {
+				reference2PositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else {reference2PositionErrorLabel.setText("");}
+			
+			if(validEmail(reference2EmailV) == false) {
+				reference2EmailErrorLabel.setText("Put in appropriate reference email");
+				noInputError = false;
+			}else {reference2EmailErrorLabel.setText("");}
+		}else {
+			reference2NameErrorLabel.setText("");
+			reference2InstitutionErrorLabel.setText("");
+			reference2PositionErrorLabel.setText("");
+			reference2EmailErrorLabel.setText("");
+		}
+	}
+	
+	
+	
 	
 	
 	//Used to validate user name. Learned from stack overflow.
