@@ -247,7 +247,7 @@ public class MainController {
 	
 	
 	
-	public void generateCv(ActionEvent event) throws IOException {
+	public void generateCv (ActionEvent event) throws IOException {
 		
 		noInputError = true;
 		
@@ -347,21 +347,7 @@ public class MainController {
 		
 		
 		//Education input error messages
-		if(validText(underGradDegreeNameV) == false) {
-			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
-			noInputError = false;
-		}else if(isEmpty(underGradDegreeNameV) == true) {
-			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
-			noInputError = false;
-		}else {underGradDegreeNameErrorLabel.setText("");}
 		
-		if(validText(underGradUnivarsityNameV) == false) {
-			underGradUnivarsityNameErrorLabel.setText("Put in appropriate university name");
-			noInputError = false;
-		}else if(isEmpty(underGradUnivarsityNameV) == true) {
-			underGradUnivarsityNameErrorLabel.setText("Put in appropriate univarsity name");
-			noInputError = false;
-		}else {underGradUnivarsityNameErrorLabel.setText("");}
 		
 		if(validYear(underGradGraduationYearV) == false) {
 			underGradGraduationYearErrorLabel.setText("Put in right year");
@@ -1062,6 +1048,29 @@ public class MainController {
 			language2ErrorLabel.setText("Put in secondary language");
 			noInputError = false;
 		}else {language2ErrorLabel.setText("");}
+	}
+	
+	
+	
+	
+	public void underGradGeneralDataProcessing (String underGradDegreeNameV, String underGradUnivarsityNameV) {
+		
+		if(validText(underGradDegreeNameV) == false) {
+			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
+			noInputError = false;
+		}else if(isEmpty(underGradDegreeNameV) == true) {
+			underGradDegreeNameErrorLabel.setText("Put in appropriate degree name");
+			noInputError = false;
+		}else {underGradDegreeNameErrorLabel.setText("");}
+		
+		if(validText(underGradUnivarsityNameV) == false) {
+			underGradUnivarsityNameErrorLabel.setText("Put in appropriate university name");
+			noInputError = false;
+		}else if(isEmpty(underGradUnivarsityNameV) == true) {
+			underGradUnivarsityNameErrorLabel.setText("Put in appropriate univarsity name");
+			noInputError = false;
+		}else {underGradUnivarsityNameErrorLabel.setText("");}
+		
 	}
 	
 	
