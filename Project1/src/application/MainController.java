@@ -339,6 +339,7 @@ public class MainController {
 		jobExperience1DataProcessing (company1NameV, company1PositionV, company1YearsWorkedV);
 		jobExperience2DataProcessing (company2NameV, company2PositionV, company2YearsWorkedV);
 		jobExperience3DataProcessing (company3NameV, company3PositionV, company3YearsWorkedV);
+		skillSet1DataProcessing (skill1V, skill2V, skill3V, skill4V);
 		//Academic achievements input error messages
 		
 		
@@ -366,25 +367,7 @@ public class MainController {
 		
 		
 		//Skill input error messages
-		if(validText(skill1V) == false) {
-			skill1ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill1ErrorLabel.setText("");
 		
-		if(validText(skill2V) == false) {
-			skill2ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill2ErrorLabel.setText("");
-		
-		if(validText(skill3V) == false) {
-			skill3ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill3ErrorLabel.setText("");
-		
-		if(validText(skill4V) == false) {
-			skill4ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill4ErrorLabel.setText("");
 		
 		if(validText(skill5V) == false) {
 			skill5ErrorLabel.setText("Put in appropriate skill");
@@ -1126,6 +1109,31 @@ public class MainController {
 	}
 	
 	
+	
+	
+	public void skillSet1DataProcessing (String skill1V, String skill2V, String skill3V, String skill4V) {
+		
+		if(validText(skill1V) == false) {
+			skill1ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill1ErrorLabel.setText("");
+		
+		if(validText(skill2V) == false) {
+			skill2ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill2ErrorLabel.setText("");
+		
+		if(validText(skill3V) == false) {
+			skill3ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill3ErrorLabel.setText("");
+		
+		if(validText(skill4V) == false) {
+			skill4ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill4ErrorLabel.setText("");
+	
+	}
 	
 	
 	//Used to validate user name. Learned from stack overflow.
