@@ -251,28 +251,7 @@ public class MainController {
 		
 		noInputError = true;
 		
-		//Assign user inputs to string variables
 		
-		//General inputs variables
-		String userNameV = userName.getText();
-		String userQualificationTitleV = userQualificationTitle.getText();
-		String userAddressV = userAddress.getText();
-		String userPhoneNumberV = userPhoneNumber.getText();
-		String userEmailV = userEmail.getText();
-		String userStatementV = userStatement.getText();
-		
-		//Academic achievement inputs variables
-		String award1NameV = award1Name.getText();
-		String award1PositionV = award1Position.getText();
-		String award1YearV = award1Year.getText();
-		String award2NameV = award2Name.getText();
-		String award2PositionV = award2Position.getText();
-		String award2YearV = award2Year.getText();
-		String award3NameV = award3Name.getText();
-		String award3PositionV = award3Position.getText();
-		String award3YearV = award3Year.getText();
-		
-		//Language inputs variables
 		String language1V = language1.getText();
 		String language2V = language2.getText();
 		
@@ -321,12 +300,12 @@ public class MainController {
 		
 		
 		
-		generalDataProcessing(userNameV, userQualificationTitleV);
-		contactDataProcessing(userAddressV, userPhoneNumberV, userEmailV);
-		statementDataProcessing(userStatementV);
-		academicAchievementsDataProcessing (award1NameV, award1PositionV, award1YearV);
-		academicAchievements2DataProcessing(award2NameV, award2PositionV, award2YearV);
-		academicAchievements3DataProcessing(award3NameV, award3PositionV, award3YearV);
+		generalDataProcessing(userName.getText(), userQualificationTitle.getText());
+		contactDataProcessing(userAddress.getText(), userPhoneNumber.getText(), userEmail.getText());
+		statementDataProcessing(userStatement.getText());
+		academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText());
+		academicAchievements2DataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText());
+		academicAchievements3DataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText());
 		languageDataProcessing (language1V, language2V);
 		underGradGeneralDataProcessing (underGradDegreeNameV, underGradUnivarsityNameV);
 		underGradResultDataProcessing (underGradGraduationYearV, underGradGarePointV);
@@ -368,28 +347,28 @@ public class MainController {
 				"                    <div><img src=\"Images/user.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Name</h4>\r\n" + 
-				"                        <p>"+userNameV+"</p>\r\n" + 
+				"                        <p>"+userName.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/address.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Address</h4>\r\n" + 
-				"                        <p>"+userAddressV+"</p>\r\n" + 
+				"                        <p>"+userAddress.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/phone.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Phone</h4>\r\n" + 
-				"                        <p>"+userPhoneNumberV+"</p>\r\n" + 
+				"                        <p>"+userPhoneNumber.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/mail.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h4>Mail</h4>\r\n" + 
-				"                        <p>"+userEmailV+"</p>\r\n" + 
+				"                        <p>"+userEmail.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"\r\n" + 
@@ -397,7 +376,7 @@ public class MainController {
 				"            <div class=\"statementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">STATEMENT</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <p>"+userStatementV+"</p>\r\n" + 
+				"                <p>"+userStatement.getText()+"</p>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"achievementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">ACADEMIC ACIEVEMENTS</h2>\r\n" + 
@@ -405,25 +384,25 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: "+award1YearV+"</p>\r\n" + 
-				"                        <h3>"+award1NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+award1PositionV+"</p>\r\n" + 
+				"                        <p>Year: "+award1Year.getText()+"</p>\r\n" + 
+				"                        <h3>"+award1Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+award1Position.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: "+award2YearV+"</p>\r\n" + 
-				"                        <h3>"+award2NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+award2PositionV+"</p>\r\n" + 
+				"                        <p>Year: "+award2Year.getText()+"</p>\r\n" + 
+				"                        <h3>"+award2Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+award2Position.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <p>Year: "+award3YearV+"</p>\r\n" + 
-				"                        <h3>"+award3NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+award3PositionV+"</p>\r\n" + 
+				"                        <p>Year: "+award3Year.getText()+"</p>\r\n" + 
+				"                        <h3>"+award3Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+award3Position.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
@@ -442,8 +421,8 @@ public class MainController {
 				"        </div>\r\n" + 
 				"        <div class=\"rightcontainer\">\r\n" + 
 				"            <div class=\"namebanner\">\r\n" + 
-				"                <h1>"+userNameV+"</h1>\r\n" + 
-				"                <h3>"+userQualificationTitleV+"</h3>\r\n" + 
+				"                <h1>"+userName.getText()+"</h1>\r\n" + 
+				"                <h3>"+userQualificationTitle.getText()+"</h3>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">EDUCATION</h2>\r\n" + 
@@ -592,7 +571,7 @@ public class MainController {
 		
 		
 		//Write html string to new html document 
-		Files.write(Paths.get("GeneratedCV/CV Of "+userNameV+".html"), htmlString.getBytes());
+		Files.write(Paths.get("GeneratedCV/CV Of "+userName.getText()+".html"), htmlString.getBytes());
 		
 		//Shows the location of generated cv within the ui
 		cvGeneratedLocationLabel.setText("CV Generated: Project1/GeneratedCV");
