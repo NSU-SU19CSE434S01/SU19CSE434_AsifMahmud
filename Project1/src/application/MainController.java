@@ -251,14 +251,7 @@ public class MainController {
 		
 		noInputError = true;
 		
-		//Removing unnecessary variables
 		
-		//Skill inputs variables
-		//Reference inputs variables
-		String reference1NameV = reference1Name.getText();
-		String reference1InstitutionV = reference1Institution.getText();
-		String reference1PositionV = reference1Position.getText();
-		String reference1EmailV = reference1Email.getText();
 		String reference2NameV = reference2Name.getText();
 		String reference2InstitutionV = reference2Institution.getText();
 		String reference2PositionV = reference2Position.getText();
@@ -282,7 +275,7 @@ public class MainController {
 		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
 		skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
 		skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
-		reference1DataProcessing (reference1NameV, reference1InstitutionV, reference1PositionV, reference1EmailV);
+		reference1DataProcessing (reference1Name.getText(), reference1Institution.getText(), reference1Position.getText(), reference1Email.getText());
 		reference2DataProcessing (reference2NameV, reference2InstitutionV, reference2PositionV, reference2EmailV);
 		
 		
@@ -513,10 +506,10 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h3>"+reference1NameV+"</h3>\r\n" + 
-				"                            <p>Institution: "+reference1InstitutionV+"</p>\r\n" + 
-				"                            <p>Position: "+reference1PositionV+"</p>\r\n" + 
-				"                            <p>Mail: "+reference1EmailV+"</p>\r\n" + 
+				"                            <h3>"+reference1Name.getText()+"</h3>\r\n" + 
+				"                            <p>Institution: "+reference1Institution.getText()+"</p>\r\n" + 
+				"                            <p>Position: "+reference1Position.getText()+"</p>\r\n" + 
+				"                            <p>Mail: "+reference1Email.getText()+"</p>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                    <div class=\"boxestoflex\">\r\n" + 
@@ -546,15 +539,18 @@ public class MainController {
 		}
 	}
 	
+	
+	
+	
+	
 	//Image upload button action
+	
 	public void profilePicUpload(ActionEvent event) throws IOException {
 		
-		 
 		File selectedFile;
 		Path destinationPath;
 
-		
-	    FileChooser fc = new FileChooser();
+		FileChooser fc = new FileChooser();
 	    fc.setTitle("Attach an image");
 	    selectedFile = fc.showOpenDialog(null);
 	    
@@ -575,9 +571,10 @@ public class MainController {
 	    		imageFileErrorLabel1.setText("Image name can only contain letters, numbers, _, -, .");
 	    	}
         }
-
-	    
 	}
+	
+	
+	
 	
 	
 	//User input data processing methods
