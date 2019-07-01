@@ -252,13 +252,6 @@ public class MainController {
 		noInputError = true;
 		
 		
-		String reference2NameV = reference2Name.getText();
-		String reference2InstitutionV = reference2Institution.getText();
-		String reference2PositionV = reference2Position.getText();
-		String reference2EmailV = reference2Email.getText();
-		
-		
-		
 		generalDataProcessing(userName.getText(), userQualificationTitle.getText());
 		contactDataProcessing(userAddress.getText(), userPhoneNumber.getText(), userEmail.getText());
 		statementDataProcessing(userStatement.getText());
@@ -276,8 +269,7 @@ public class MainController {
 		skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
 		skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
 		reference1DataProcessing (reference1Name.getText(), reference1Institution.getText(), reference1Position.getText(), reference1Email.getText());
-		reference2DataProcessing (reference2NameV, reference2InstitutionV, reference2PositionV, reference2EmailV);
-		
+		reference2DataProcessing (reference2Name.getText(), reference2Institution.getText(), reference2Position.getText(), reference2Email.getText());
 		
 		
 		if(noInputError == true) {
@@ -515,10 +507,10 @@ public class MainController {
 				"                    <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
-				"                            <h3>"+reference2NameV+"</h3>\r\n" + 
-				"                            <p>Institution: "+reference2InstitutionV+"</p>\r\n" + 
-				"                            <p>Position: "+reference2PositionV+"</p>\r\n" + 
-				"                            <p>Mail: "+reference2EmailV+"</p>\r\n" + 
+				"                            <h3>"+reference2Name.getText()+"</h3>\r\n" + 
+				"                            <p>Institution: "+reference2Institution.getText()+"</p>\r\n" + 
+				"                            <p>Position: "+reference2Position.getText()+"</p>\r\n" + 
+				"                            <p>Mail: "+reference2Email.getText()+"</p>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
@@ -532,7 +524,7 @@ public class MainController {
 		//Write html string to new html document 
 		Files.write(Paths.get("GeneratedCV/CV Of "+userName.getText()+".html"), htmlString.getBytes());
 		
-		//Shows the location of generated cv within the ui
+		//Shows the location of generated CV within the user interface of application
 		cvGeneratedLocationLabel.setText("CV Generated: Project1/GeneratedCV");
 		}else {
 			cvGeneratedLocationLabel.setText("Put in appropriate information");
