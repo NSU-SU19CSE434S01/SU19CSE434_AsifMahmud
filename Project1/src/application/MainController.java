@@ -332,6 +332,8 @@ public class MainController {
 		academicAchievements2DataProcessing(award2NameV, award2PositionV, award2YearV);
 		academicAchievements3DataProcessing(award3NameV, award3PositionV, award3YearV);
 		languageDataProcessing (language1V, language2V);
+		underGradGeneralDataProcessing (underGradDegreeNameV, underGradUnivarsityNameV);
+		underGradResultDataProcessing (underGradGraduationYearV, underGradGarePointV);
 		
 		
 		
@@ -349,15 +351,7 @@ public class MainController {
 		//Education input error messages
 		
 		
-		if(validYear(underGradGraduationYearV) == false) {
-			underGradGraduationYearErrorLabel.setText("Put in right year");
-			noInputError = false;
-		}else {underGradGraduationYearErrorLabel.setText("");}
 		
-		if(validGrade(underGradGarePointV) == false) {
-			underGradGarePointErrorLabel.setText("Put in appropriate grade");
-			noInputError = false;
-		}else {underGradGarePointErrorLabel.setText("");}
 		
 		if(validText(hscOrALevelCollegeNameV) == false) {
 			hscOrALevelCollegeNameErrorLabel.setText("Put in appropriate college name");
@@ -1070,6 +1064,23 @@ public class MainController {
 			underGradUnivarsityNameErrorLabel.setText("Put in appropriate univarsity name");
 			noInputError = false;
 		}else {underGradUnivarsityNameErrorLabel.setText("");}
+		
+	}
+	
+	
+	
+	
+	public void underGradResultDataProcessing (String underGradGraduationYearV, String underGradGarePointV) {
+		
+		if(validYear(underGradGraduationYearV) == false) {
+			underGradGraduationYearErrorLabel.setText("Put in right year");
+			noInputError = false;
+		}else {underGradGraduationYearErrorLabel.setText("");}
+		
+		if(validGrade(underGradGarePointV) == false) {
+			underGradGarePointErrorLabel.setText("Put in appropriate grade");
+			noInputError = false;
+		}else {underGradGarePointErrorLabel.setText("");}
 		
 	}
 	
