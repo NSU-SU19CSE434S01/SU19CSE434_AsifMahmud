@@ -336,7 +336,7 @@ public class MainController {
 		underGradResultDataProcessing (underGradGraduationYearV, underGradGarePointV);
 		hscOrALevelDataProcessing (hscOrALevelCollegeNameV, hscOrALevelGraduationYearV, hscOrALevelGradePointV);
 		sscOrOLevelDataProcessing (sscOrOLevelSchoolNameV, sscOrOLevelGraduationYearV, sscOrOLevelGradePointV);
-		
+		jobExperience1DataProcessing (company1NameV, company1PositionV, company1YearsWorkedV);
 		
 		
 		//Academic achievements input error messages
@@ -359,30 +359,7 @@ public class MainController {
 		
 		
 		//Job experience input error messages
-		if(company1NameV.length() !=0 || company1PositionV.length() !=0 || company1YearsWorkedV.length() !=0 ) {
-			
-			if(validText(company1NameV) == false) {
-				company1NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else if(isEmpty(company1NameV) == true) {
-				company1NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else {company1NameErrorLabel.setText("");}
-			
-			if(isEmpty(company1PositionV) == true) {
-				company1PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {company1PositionErrorLabel.setText("");}
-			
-			if(validTwoPlaceNum(company1YearsWorkedV) == false) {
-				company1YearsWorkedErrorLabel.setText("Put in right years worked for");
-				noInputError = false;
-			}else {company1YearsWorkedErrorLabel.setText("");}
-		}else {
-			company1NameErrorLabel.setText("");
-			company1PositionErrorLabel.setText("");
-			company1YearsWorkedErrorLabel.setText("");
-		}
+		
 		
 		if(company2NameV.length() !=0 || company2PositionV.length() !=0 || company2YearsWorkedV.length() !=0 ) {
 			
@@ -1099,6 +1076,37 @@ public class MainController {
 			sscOrOLevelGradePointErrorLabel.setText("Put in appropriate grade");
 			noInputError = false;
 		}else {sscOrOLevelGradePointErrorLabel.setText("");}
+	}
+	
+	
+	
+	
+	public void jobExperience1DataProcessing (String company1NameV, String company1PositionV, String company1YearsWorkedV) {
+		
+		if(company1NameV.length() !=0 || company1PositionV.length() !=0 || company1YearsWorkedV.length() !=0 ) {
+			
+			if(validText(company1NameV) == false) {
+				company1NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else if(isEmpty(company1NameV) == true) {
+				company1NameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else {company1NameErrorLabel.setText("");}
+			
+			if(isEmpty(company1PositionV) == true) {
+				company1PositionErrorLabel.setText("Put in position");
+				noInputError = false;
+			}else {company1PositionErrorLabel.setText("");}
+			
+			if(validTwoPlaceNum(company1YearsWorkedV) == false) {
+				company1YearsWorkedErrorLabel.setText("Put in right years worked for");
+				noInputError = false;
+			}else {company1YearsWorkedErrorLabel.setText("");}
+		}else {
+			company1NameErrorLabel.setText("");
+			company1PositionErrorLabel.setText("");
+			company1YearsWorkedErrorLabel.setText("");
+		}
 	}
 	
 	
