@@ -253,16 +253,6 @@ public class MainController {
 		
 		//Removing unnecessary variables
 		
-		String company1NameV = company1Name.getText();
-		String company1PositionV = company1Position.getText();
-		String company1YearsWorkedV = company1YearsWorked.getText();
-		String company2NameV = company2Name.getText();
-		String company2PositionV = company2Position.getText();
-		String company2YearsWorkedV = company2YearsWorked.getText();
-		String company3NameV = company3Name.getText();
-		String company3PositionV = company3Position.getText();
-		String company3YearsWorkedV = company3YearsWorked.getText();
-		
 		//Skill inputs variables
 		String skill1V = skill1.getText();
 		String skill2V = skill2.getText();
@@ -296,9 +286,9 @@ public class MainController {
 		underGradResultDataProcessing (underGradGraduationYear.getText(), underGradGarePoint.getText());
 		hscOrALevelDataProcessing (hscOrALevelCollegeName.getText(), hscOrALevelGraduationYear.getText(), hscOrALevelGradePoint.getText());
 		sscOrOLevelDataProcessing (sscOrOLevelSchoolName.getText(), sscOrOLevelGraduationYear.getText(), sscOrOLevelGradePoint.getText());
-		jobExperience1DataProcessing (company1NameV, company1PositionV, company1YearsWorkedV);
-		jobExperience2DataProcessing (company2NameV, company2PositionV, company2YearsWorkedV);
-		jobExperience3DataProcessing (company3NameV, company3PositionV, company3YearsWorkedV);
+		jobExperience1DataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText());
+		jobExperience2DataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText());
+		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
 		skillSet1DataProcessing (skill1V, skill2V, skill3V, skill4V);
 		skillSet2DataProcessing (skill5V, skill6V, skill7V, skill8V);
 		reference1DataProcessing (reference1NameV, reference1InstitutionV, reference1PositionV, reference1EmailV);
@@ -446,26 +436,26 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>"+company1NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+company1PositionV+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company1YearsWorkedV+"</p>\r\n" + 
+				"                        <h3>"+company1Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+company1Position.getText()+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company1YearsWorked.getText()+"</p>\r\n" + 
 				"                        \r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>"+company2NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+company2PositionV+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company2YearsWorkedV+"</p>\r\n" + 
+				"                        <h3>"+company2Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+company2Position.getText()+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company2YearsWorked.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>"+company3NameV+"</h3>\r\n" + 
-				"                        <p>Position: "+company3PositionV+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company3YearsWorkedV+"</p>\r\n" + 
+				"                        <h3>"+company3Name.getText()+"</h3>\r\n" + 
+				"                        <p>Position: "+company3Position.getText()+"</p>\r\n" + 
+				"                        <p>Years Worked: "+company3YearsWorked.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
