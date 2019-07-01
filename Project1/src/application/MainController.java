@@ -340,6 +340,7 @@ public class MainController {
 		jobExperience2DataProcessing (company2NameV, company2PositionV, company2YearsWorkedV);
 		jobExperience3DataProcessing (company3NameV, company3PositionV, company3YearsWorkedV);
 		skillSet1DataProcessing (skill1V, skill2V, skill3V, skill4V);
+		skillSet2DataProcessing (skill5V, skill6V, skill7V, skill8V);
 		//Academic achievements input error messages
 		
 		
@@ -369,25 +370,7 @@ public class MainController {
 		//Skill input error messages
 		
 		
-		if(validText(skill5V) == false) {
-			skill5ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill5ErrorLabel.setText("");
 		
-		if(validText(skill6V) == false) {
-			skill6ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill6ErrorLabel.setText("");
-		
-		if(validText(skill7V) == false) {
-			skill7ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill7ErrorLabel.setText("");
-		
-		if(validText(skill8V) == false) {
-			skill8ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill8ErrorLabel.setText("");
 		
 		//Reference input error messages
 		if(reference1NameV.length() !=0 || reference1InstitutionV.length() !=0 || reference1PositionV.length() !=0 || reference1EmailV.length() !=0) {
@@ -1133,6 +1116,32 @@ public class MainController {
 			noInputError = false;
 		}else skill4ErrorLabel.setText("");
 	
+	}
+	
+	
+	
+	
+	public void skillSet2DataProcessing (String skill5V, String skill6V, String skill7V, String skill8V) {
+		
+		if(validText(skill5V) == false) {
+			skill5ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill5ErrorLabel.setText("");
+		
+		if(validText(skill6V) == false) {
+			skill6ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill6ErrorLabel.setText("");
+		
+		if(validText(skill7V) == false) {
+			skill7ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill7ErrorLabel.setText("");
+		
+		if(validText(skill8V) == false) {
+			skill8ErrorLabel.setText("Put in appropriate skill");
+			noInputError = false;
+		}else skill8ErrorLabel.setText("");
 	}
 	
 	
