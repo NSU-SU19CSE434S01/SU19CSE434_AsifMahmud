@@ -251,23 +251,8 @@ public class MainController {
 		
 		noInputError = true;
 		
+		//Removing unnecessary variables
 		
-		String language1V = language1.getText();
-		String language2V = language2.getText();
-		
-		//Education inputs variables
-		String underGradDegreeNameV = underGradDegreeName.getText();
-		String underGradUnivarsityNameV = underGradUnivarsityName.getText();
-		String underGradGraduationYearV = underGradGraduationYear.getText();
-		String underGradGarePointV = underGradGarePoint.getText();
-		String hscOrALevelCollegeNameV = hscOrALevelCollegeName.getText();
-		String hscOrALevelGraduationYearV = hscOrALevelGraduationYear.getText();
-		String hscOrALevelGradePointV = hscOrALevelGradePoint.getText();
-		String sscOrOLevelSchoolNameV = sscOrOLevelSchoolName.getText();
-		String sscOrOLevelGraduationYearV = sscOrOLevelGraduationYear.getText();
-		String sscOrOLevelGradePointV = sscOrOLevelGradePoint.getText();
-		
-		//Job experience inputs variables
 		String company1NameV = company1Name.getText();
 		String company1PositionV = company1Position.getText();
 		String company1YearsWorkedV = company1YearsWorked.getText();
@@ -306,11 +291,11 @@ public class MainController {
 		academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText());
 		academicAchievements2DataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText());
 		academicAchievements3DataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText());
-		languageDataProcessing (language1V, language2V);
-		underGradGeneralDataProcessing (underGradDegreeNameV, underGradUnivarsityNameV);
-		underGradResultDataProcessing (underGradGraduationYearV, underGradGarePointV);
-		hscOrALevelDataProcessing (hscOrALevelCollegeNameV, hscOrALevelGraduationYearV, hscOrALevelGradePointV);
-		sscOrOLevelDataProcessing (sscOrOLevelSchoolNameV, sscOrOLevelGraduationYearV, sscOrOLevelGradePointV);
+		languageDataProcessing (language1.getText(), language2.getText());
+		underGradGeneralDataProcessing (underGradDegreeName.getText(), underGradUnivarsityName.getText());
+		underGradResultDataProcessing (underGradGraduationYear.getText(), underGradGarePoint.getText());
+		hscOrALevelDataProcessing (hscOrALevelCollegeName.getText(), hscOrALevelGraduationYear.getText(), hscOrALevelGradePoint.getText());
+		sscOrOLevelDataProcessing (sscOrOLevelSchoolName.getText(), sscOrOLevelGraduationYear.getText(), sscOrOLevelGradePoint.getText());
 		jobExperience1DataProcessing (company1NameV, company1PositionV, company1YearsWorkedV);
 		jobExperience2DataProcessing (company2NameV, company2PositionV, company2YearsWorkedV);
 		jobExperience3DataProcessing (company3NameV, company3PositionV, company3YearsWorkedV);
@@ -411,11 +396,11 @@ public class MainController {
 				"                <hr>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/language.png\" alt=\"\"></div>\r\n" + 
-				"                    <div><h3>"+language1V+"</h3></div>\r\n" + 
+				"                    <div><h3>"+language1.getText()+"</h3></div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/language.png\" alt=\"\"></div>\r\n" + 
-				"                    <div><h3>"+language2V+"</h3></div>\r\n" + 
+				"                    <div><h3>"+language2.getText()+"</h3></div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
 				"        </div>\r\n" + 
@@ -430,28 +415,28 @@ public class MainController {
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
-				"                        <h3>"+underGradDegreeNameV+"</h3>\r\n" + 
-				"                        <p>"+underGradUnivarsityNameV+"</p>\r\n" + 
-				"                        <p>Graduation Year: "+underGradGraduationYearV+"</p>\r\n" + 
-				"                        <p>Grade Point: "+underGradGarePointV+"</p>\r\n" + 
+				"                        <h3>"+underGradDegreeName.getText()+"</h3>\r\n" + 
+				"                        <p>"+underGradUnivarsityName.getText()+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+underGradGraduationYear.getText()+"</p>\r\n" + 
+				"                        <p>Grade Point: "+underGradGarePoint.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h3>hsc / a level</h3>\r\n" + 
-				"                        <p>"+hscOrALevelCollegeNameV+"</p>\r\n" + 
-				"                        <p>Graduation Year: "+hscOrALevelGraduationYearV+"</p>\r\n" + 
-				"                        <p>Grade Point: "+hscOrALevelGradePointV+"</p>\r\n" + 
+				"                        <p>"+hscOrALevelCollegeName.getText()+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+hscOrALevelGraduationYear.getText()+"</p>\r\n" + 
+				"                        <p>Grade Point: "+hscOrALevelGradePoint.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/edu.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h3>ssc / o level</h3>\r\n" + 
-				"                        <p>"+sscOrOLevelSchoolNameV+"</p>\r\n" + 
-				"                        <p>Graduation Year: "+sscOrOLevelGraduationYearV+"</p>\r\n" + 
-				"                        <p>Grade Point: "+sscOrOLevelGradePointV+"</p>\r\n" + 
+				"                        <p>"+sscOrOLevelSchoolName.getText()+"</p>\r\n" + 
+				"                        <p>Graduation Year: "+sscOrOLevelGraduationYear.getText()+"</p>\r\n" + 
+				"                        <p>Grade Point: "+sscOrOLevelGradePoint.getText()+"</p>\r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
