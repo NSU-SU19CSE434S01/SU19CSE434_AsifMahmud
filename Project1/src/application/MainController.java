@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 
 public class MainController {
@@ -235,9 +236,13 @@ public class MainController {
 	@FXML
 	private Label imageFileErrorLabel1;
 	
-	
 	@FXML
 	private TextArea userStatement;
+	
+	@FXML
+	private VBox skillSet1Vbox;
+	
+	
 	
 	private String profilePicPath = "Images/boy.png";
 	
@@ -245,6 +250,7 @@ public class MainController {
 	//Error determining variable for all user inputs
 	public boolean noInputError;
 	
+	private int skillLabelCount = 0;
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -566,6 +572,47 @@ public class MainController {
 	}
 	
 	
+	
+	
+	//Skill label generate button action
+	
+	public void skillLabelGenerate (ActionEvent event) throws Exception {
+		
+		if (skillLabelCount == 0) {
+			
+			skill1 = new TextField();
+			skill1ErrorLabel = new Label();
+			skill1.setPromptText("Skill 1");
+			skillSet1Vbox.getChildren().addAll(skill1, skill1ErrorLabel);
+		} 
+		
+		if (skillLabelCount == 1) {
+			
+			skill2 = new TextField();
+			skill2ErrorLabel = new Label();
+			skill2.setPromptText("Skill 2");
+			skillSet1Vbox.getChildren().addAll(skill2, skill2ErrorLabel);
+		} 
+		
+		if (skillLabelCount == 2) {
+			
+			skill3 = new TextField();
+			skill3ErrorLabel = new Label();
+			skill3.setPromptText("Skill 3");
+			skillSet1Vbox.getChildren().addAll(skill3, skill3ErrorLabel);
+		}
+		
+		if (skillLabelCount == 3) {
+			
+			skill4 = new TextField();
+			skill4ErrorLabel = new Label();
+			skill4.setPromptText("Skill 4");
+			skillSet1Vbox.getChildren().addAll(skill4,skill4ErrorLabel);
+			}
+		
+		skillLabelCount++;
+		
+	}
 	
 	
 	
