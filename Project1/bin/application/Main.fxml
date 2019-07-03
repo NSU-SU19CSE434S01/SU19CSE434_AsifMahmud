@@ -5,496 +5,665 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #0C2239;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button layoutX="1136.0" layoutY="838.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
-         <font>
-            <Font name="SansSerif Bold" size="14.0" />
-         </font></Button>
-      <TextField fx:id="userQualificationTitle" layoutX="14.0" layoutY="101.0" prefWidth="300.0" promptText="Career Goal Title" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <TextField fx:id="userName" layoutX="14.0" layoutY="50.0" prefWidth="300.0" promptText="User Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="userNameErrorLabel" layoutX="15.0" layoutY="84.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label fx:id="userTitleErrorLabel" layoutX="14.0" layoutY="139.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="14.0" layoutY="155.0" text="CONTACT INFORMATION" textFill="#eeeeee">
+      <Label layoutX="337.0" layoutY="623.0" text="ACADEMIC ACHIEVEMENTS" textFill="#eeeeee">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="userAddress" layoutX="14.0" layoutY="183.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="userAddressErrorLabel" layoutX="14.0" layoutY="218.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="userPhoneNumber" layoutX="14.0" layoutY="235.0" prefWidth="300.0" promptText="Phone Number" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="userPhoneNumberErrorLabel" layoutX="14.0" layoutY="269.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="userEmail" layoutX="14.0" layoutY="286.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="userEmailErrorLabel" layoutX="14.0" layoutY="319.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="14.0" layoutY="345.0" text="STATEMENT" textFill="#eeeeee">
+      <Label layoutX="652.0" layoutY="346.0" text="JOB EXPERIENCE" textFill="#eeeeee">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="userStatementErrorLabel" layoutX="14.0" layoutY="522.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="14.0" layoutY="549.0" text="ACADEMIC ACHIEVEMENTS" textFill="#eeeeee">
+      <Label layoutX="337.0" layoutY="346.0" text="SKILLS" textFill="#eeeeee">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="award1Name" layoutX="14.0" layoutY="575.0" prefWidth="300.0" promptText="Award1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award1NameErrorLabel" layoutX="14.0" layoutY="609.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award1Position" layoutX="14.0" layoutY="626.0" prefWidth="300.0" promptText="Award1 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award1PositionErrorLabel" layoutX="14.0" layoutY="660.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award1Year" layoutX="14.0" layoutY="676.0" prefWidth="300.0" promptText="Award1 Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award1YearErrorLabel" layoutX="14.0" layoutY="712.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award2Name" layoutX="14.0" layoutY="727.0" prefWidth="300.0" promptText="Award2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award2NameErrorLabel" layoutX="14.0" layoutY="762.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award2Position" layoutX="14.0" layoutY="779.0" prefWidth="300.0" promptText="Award2 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award2PositionErrorLabel" layoutX="14.0" layoutY="813.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award2Year" layoutX="15.0" layoutY="829.0" prefWidth="300.0" promptText="Award2 Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <TextField fx:id="award3Name" layoutX="337.0" layoutY="50.0" prefWidth="300.0" promptText="Award3 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award3NameErrorLabel" layoutX="337.0" layoutY="84.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award3Position" layoutX="337.0" layoutY="99.0" prefWidth="300.0" promptText="Award3 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="award3PositionErrorLabel" layoutX="337.0" layoutY="134.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="award3Year" layoutX="337.0" layoutY="148.0" prefWidth="300.0" promptText="Award3 year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label layoutX="341.0" layoutY="207.0" text="LANGUAGES" textFill="#eeeeee">
+      <Label layoutX="976.0" layoutY="188.0" text="REFERENCES" textFill="#eeeeee">
          <font>
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="award3YearErrorLabel" layoutX="337.0" layoutY="183.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label fx:id="award2YearErrorLabel" layoutX="15.0" layoutY="863.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="language1" layoutX="337.0" layoutY="235.0" prefWidth="200.0" promptText="Language1" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="language1ErrorLabel" layoutX="337.0" layoutY="269.0" prefWidth="200.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="language2" layoutX="337.0" layoutY="287.0" prefWidth="200.0" promptText="Language2" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="language2ErrorLabel" layoutX="337.0" layoutY="319.0" prefWidth="200.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="341.0" layoutY="335.0" text="EDUCATION" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="underGradDegreeName" layoutX="337.0" layoutY="364.0" prefWidth="300.0" promptText="Under Grad Degree Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="underGradDegreeNameErrorLabel" layoutX="337.0" layoutY="397.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="underGradUnivarsityName" layoutX="337.0" layoutY="414.0" prefWidth="300.0" promptText="Under Grad Univarsity Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="underGradUnivarsityNameErrorLabel" layoutX="337.0" layoutY="448.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="underGradGraduationYear" layoutX="337.0" layoutY="465.0" prefWidth="300.0" promptText="Under Grad Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="underGradGraduationYearErrorLabel" layoutX="337.0" layoutY="500.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="underGradGarePoint" layoutX="337.0" layoutY="522.0" prefWidth="300.0" promptText="Under Grad Gare Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="underGradGarePointErrorLabel" layoutX="337.0" layoutY="561.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="hscOrALevelCollegeName" layoutX="337.0" layoutY="576.0" prefWidth="300.0" promptText="HSC/A Level College Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="hscOrALevelCollegeNameErrorLabel" layoutX="337.0" layoutY="609.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="hscOrALevelGraduationYear" layoutX="337.0" layoutY="626.0" prefWidth="300.0" promptText="HSC/A Level Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="hscOrALevelGraduationYearErrorLabel" layoutX="337.0" layoutY="660.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="hscOrALevelGradePoint" layoutX="337.0" layoutY="676.0" prefWidth="300.0" promptText="HSC/A Level Grade Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="hscOrALevelGradePointErrorLabel" layoutX="337.0" layoutY="710.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="sscOrOLevelSchoolName" layoutX="337.0" layoutY="727.0" prefWidth="300.0" promptText="SSC / O Level School Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="sscOrOLevelSchoolNameErrorLabel" layoutX="337.0" layoutY="762.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="sscOrOLevelGraduationYear" layoutX="337.0" layoutY="779.0" prefWidth="300.0" promptText="SSC / O Level Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="sscOrOLevelGraduationYearErrorLabel" layoutX="337.0" layoutY="813.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="sscOrOLevelGradePoint" layoutX="661.0" layoutY="50.0" prefWidth="300.0" promptText="SSC / O Level Grade Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="sscOrOLevelGradePointErrorLabel" layoutX="661.0" layoutY="84.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="662.0" layoutY="106.0" text="JOB EXPERIENCE" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="company1Name" layoutX="661.0" layoutY="134.0" prefWidth="300.0" promptText="Company1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company1NameErrorLabel" layoutX="661.0" layoutY="167.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company1Position" layoutX="661.0" layoutY="183.0" prefWidth="300.0" promptText="Company1 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company1PositionErrorLabel" layoutX="661.0" layoutY="218.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company1YearsWorked" layoutX="661.0" layoutY="235.0" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company1YearsWorkedErrorLabel" layoutX="661.0" layoutY="269.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company2Name" layoutX="661.0" layoutY="287.0" prefWidth="300.0" promptText="Company2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company2NameErrorLabel" layoutX="661.0" layoutY="319.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company2Position" layoutX="661.0" layoutY="338.0" prefWidth="300.0" promptText="Company2 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company2PositionErrorLabel" layoutX="661.0" layoutY="372.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company2YearsWorked" layoutX="661.0" layoutY="389.0" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <TextField fx:id="company3Name" layoutX="661.0" layoutY="439.0" prefWidth="300.0" promptText="Company3 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company3NameErrorLabel" layoutX="661.0" layoutY="473.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company3Position" layoutX="661.0" layoutY="491.0" prefWidth="300.0" promptText="Company3 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company3PositionErrorLabel" layoutX="661.0" layoutY="522.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="company3YearsWorked" layoutX="661.0" layoutY="542.0" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="company3YearsWorkedErrorLabel" layoutX="661.0" layoutY="576.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label fx:id="company2YearsWorkedErrorLabel" layoutX="661.0" layoutY="422.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="662.0" layoutY="599.0" text="SKILLS" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="skill1" layoutX="661.0" layoutY="626.0" prefWidth="140.0" promptText="Skill1" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill1ErrorLabel" layoutX="661.0" layoutY="660.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill3" layoutX="661.0" layoutY="676.0" prefWidth="140.0" promptText="Skill3" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill3ErrorLabel" layoutX="662.0" layoutY="710.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill2" layoutX="821.0" layoutY="626.0" prefWidth="140.0" promptText="Skill2" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill2ErrorLabel" layoutX="821.0" layoutY="660.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill4" layoutX="821.0" layoutY="676.0" prefWidth="140.0" promptText="Skill4" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill4ErrorLabel" layoutX="821.0" layoutY="710.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill5" layoutX="661.0" layoutY="727.0" prefWidth="140.0" promptText="Skill5" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill5ErrorLabel" layoutX="661.0" layoutY="760.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill7" layoutX="661.0" layoutY="779.0" prefWidth="140.0" promptText="Skill7" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill7ErrorLabel" layoutX="661.0" layoutY="813.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill6" layoutX="821.0" layoutY="727.0" prefWidth="140.0" promptText="Skill6" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill6ErrorLabel" layoutX="821.0" layoutY="760.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="skill8" layoutX="821.0" layoutY="779.0" prefWidth="140.0" promptText="Skill8" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="skill8ErrorLabel" layoutX="821.0" layoutY="813.0" prefWidth="140.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label layoutX="14.0" layoutY="22.0" text="GENERAL INFORMATION" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <Label layoutX="986.0" layoutY="22.0" text="REFERENCES" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <TextField fx:id="reference1Name" layoutX="986.0" layoutY="50.0" prefWidth="300.0" promptText="Reference1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <TextField fx:id="reference1Institution" layoutX="986.0" layoutY="101.0" prefWidth="300.0" promptText="Reference1  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference1InstitutionErrorLabel" layoutX="986.0" layoutY="135.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="reference1Position" layoutX="986.0" layoutY="151.0" prefWidth="300.0" promptText="Reference1  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference1PositionErrorLabel" layoutX="986.0" layoutY="183.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="reference1Email" layoutX="986.0" layoutY="202.0" prefWidth="300.0" promptText="Reference1 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference1EmailErrorLabel" layoutX="986.0" layoutY="238.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label fx:id="reference1NameErrorLabel" layoutX="986.0" layoutY="84.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="reference2Name" layoutX="986.0" layoutY="252.0" prefWidth="300.0" promptText="Reference2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <TextField fx:id="reference2Institution" layoutX="986.0" layoutY="303.0" prefWidth="300.0" promptText="Reference2  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference2InstitutionErrorLabel" layoutX="986.0" layoutY="337.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="reference2Position" layoutX="986.0" layoutY="352.0" prefWidth="300.0" promptText="Reference2  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference2PositionErrorLabel" layoutX="986.0" layoutY="389.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextField fx:id="reference2Email" layoutX="986.0" layoutY="405.0" prefWidth="300.0" promptText="Reference2 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-         <font>
-            <Font size="14.0" />
-         </font></TextField>
-      <Label fx:id="reference2EmailErrorLabel" layoutX="986.0" layoutY="439.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <Label fx:id="reference2NameErrorLabel" layoutX="986.0" layoutY="287.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font></Label>
-      <TextArea fx:id="userStatement" layoutX="14.0" layoutY="372.0" prefHeight="150.0" prefWidth="300.0" />
-      <Label fx:id="cvGeneratedLocationLabel" layoutX="419.0" layoutY="850.0" textFill="WHITE">
+      <Label fx:id="cvGeneratedLocationLabel" layoutX="559.0" layoutY="866.0" text="Cv generate label" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="986.0" layoutY="490.0" text="PROFILE IMAGE" textFill="#eeeeee">
-         <font>
-            <Font name="SansSerif Bold" size="16.0" />
-         </font>
-      </Label>
-      <Button layoutX="986.0" layoutY="525.0" mnemonicParsing="false" onAction="#profilePicUpload" prefHeight="35.0" prefWidth="300.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="UPLOAD IMAGE">
-         <font>
-            <Font name="SansSerif Bold" size="14.0" />
-         </font>
-      </Button>
-      <Label fx:id="imageFileErrorLabel" layoutX="986.0" layoutY="561.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
-      <Label fx:id="imageFileErrorLabel1" layoutX="986.0" layoutY="583.0" prefWidth="300.0" textFill="#ff5f5f">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Label>
+      <VBox layoutX="14.0" layoutY="8.0" prefHeight="900.0" prefWidth="300.0">
+         <children>
+            <Label text="GENERAL INFORMATION" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userName" prefWidth="300.0" promptText="User Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="userNameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userQualificationTitle" prefWidth="300.0" promptText="Career Goal Title" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="userTitleErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="CONTACT INFORMATION" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userAddress" prefWidth="300.0" promptText="Address" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="userAddressErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userPhoneNumber" prefWidth="300.0" promptText="Phone Number" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="userPhoneNumberErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userEmail" prefWidth="300.0" promptText="Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="userEmailErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="STATEMENT" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="userStatement" prefHeight="150.0" prefWidth="300.0" />
+            <Label fx:id="userStatementErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="LANGUAGES" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="language1" prefWidth="200.0" promptText="Language1" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="language1ErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="language2" prefWidth="200.0" promptText="Language2" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="language2ErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="EDUCATION" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="underGradDegreeName" prefWidth="300.0" promptText="Under Grad Degree Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="underGradDegreeNameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="underGradUnivarsityName" prefWidth="300.0" promptText="Under Grad Univarsity Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="underGradUnivarsityNameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="underGradGraduationYear" prefWidth="300.0" promptText="Under Grad Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="underGradGraduationYearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="underGradGarePoint" prefWidth="300.0" promptText="Under Grad Gare Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="underGradGarePointErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="337.0" layoutY="29.0" prefHeight="293.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="hscOrALevelCollegeName" prefWidth="300.0" promptText="HSC/A Level College Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="hscOrALevelCollegeNameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hscOrALevelGraduationYear" prefWidth="300.0" promptText="HSC/A Level Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="hscOrALevelGraduationYearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hscOrALevelGradePoint" prefWidth="300.0" promptText="HSC/A Level Grade Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="hscOrALevelGradePointErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sscOrOLevelSchoolName" prefWidth="300.0" promptText="SSC / O Level School Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="sscOrOLevelSchoolNameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sscOrOLevelGraduationYear" prefWidth="300.0" promptText="SSC / O Level Graduation Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="sscOrOLevelGraduationYearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="sscOrOLevelGradePoint" prefWidth="300.0" promptText="SSC / O Level Grade Point" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="sscOrOLevelGradePointErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="337.0" layoutY="368.0" prefHeight="245.0" prefWidth="140.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label prefWidth="140.0" />
+            <TextField fx:id="skill1" prefWidth="140.0" promptText="Skill1" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill1ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill3" prefWidth="140.0" promptText="Skill3" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill3ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill5" prefWidth="140.0" promptText="Skill5" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill5ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill7" prefWidth="140.0" promptText="Skill7" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill7ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0">
+         <children>
+            <TextField fx:id="skill2" prefWidth="140.0" promptText="Skill2" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill2ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill4" prefWidth="140.0" promptText="Skill4" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill4ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill6" prefWidth="140.0" promptText="Skill6" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill6ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="skill8" prefWidth="140.0" promptText="Skill8" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="skill8ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label prefWidth="300.0" />
+            <TextField fx:id="award1Name" prefWidth="300.0" promptText="Award1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award1NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award1Position" prefWidth="300.0" promptText="Award1 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award1PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award1Year" prefWidth="300.0" promptText="Award1 Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award1YearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="652.0" layoutY="29.0" prefHeight="309.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="award2Name" prefWidth="300.0" promptText="Award2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award2NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award2Position" prefWidth="300.0" promptText="Award2 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award2PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award2Year" prefWidth="300.0" promptText="Award2 Year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award2YearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award3Name" prefWidth="300.0" promptText="Award3 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award3NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award3Position" prefWidth="300.0" promptText="Award3 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award3PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="award3Year" prefWidth="300.0" promptText="Award3 year" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="award3YearErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="652.0" layoutY="368.0" prefHeight="364.0" prefWidth="300.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label prefWidth="300.0" />
+            <TextField fx:id="company1Name" prefWidth="300.0" promptText="Company1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company1NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company1Position" prefWidth="300.0" promptText="Company1 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company1PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company1YearsWorked" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company1YearsWorkedErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company2Name" prefWidth="300.0" promptText="Company2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company2NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company2Position" prefWidth="300.0" promptText="Company2 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company2PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company2YearsWorked" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company2YearsWorkedErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="976.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="company3Name" prefWidth="300.0" promptText="Company3 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company3NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company3Position" prefWidth="300.0" promptText="Company3 Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company3PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="company3YearsWorked" prefWidth="300.0" promptText="Years Worked" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="company3YearsWorkedErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="976.0" layoutY="212.0" prefHeight="444.0" prefWidth="300.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label prefWidth="300.0" />
+            <TextField fx:id="reference1Name" prefWidth="300.0" promptText="Reference1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference1NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference1Institution" prefWidth="300.0" promptText="Reference1  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference1InstitutionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference1Position" prefWidth="300.0" promptText="Reference1  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference1PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference1Email" prefWidth="300.0" promptText="Reference1 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference1EmailErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference2Name" prefWidth="300.0" promptText="Reference2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference2NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference2Institution" prefWidth="300.0" promptText="Reference2  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference2InstitutionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference2Position" prefWidth="300.0" promptText="Reference2  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference2PositionErrorLabel" prefHeight="0.0" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reference2Email" prefWidth="300.0" promptText="Reference2 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label fx:id="reference2EmailErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="976.0" layoutY="679.0" prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <Label text="PROFILE IMAGE" textFill="#eeeeee">
+               <font>
+                  <Font name="SansSerif Bold" size="16.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#profilePicUpload" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="UPLOAD IMAGE">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="imageFileErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="imageFileErrorLabel1" prefWidth="300.0" textFill="#ff5f5f">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#generateCv" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+               <font>
+                  <Font name="SansSerif Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
