@@ -279,7 +279,14 @@ public class MainController {
 		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
 		//skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
 		//skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
-		
+		if(skill1 != null) {skillSet1DataProcessing (skill1.getText(), skill1ErrorLabel);}
+		if(skill2 != null) {skillSet1DataProcessing (skill2.getText(), skill2ErrorLabel);}
+		if(skill3 != null) {skillSet1DataProcessing (skill3.getText(), skill3ErrorLabel);}
+		if(skill4 != null) {skillSet1DataProcessing (skill4.getText(), skill4ErrorLabel);}
+		if(skill5 != null) {skillSet2DataProcessing (skill5.getText(), skill5ErrorLabel);}
+		if(skill6 != null) {skillSet2DataProcessing (skill6.getText(), skill6ErrorLabel);}
+		if(skill7 != null) {skillSet2DataProcessing (skill7.getText(), skill7ErrorLabel);}
+		if(skill8 != null) {skillSet2DataProcessing (skill8.getText(), skill8ErrorLabel);}
 		
 		reference1DataProcessing (reference1Name.getText(), reference1Institution.getText(), reference1Position.getText(), reference1Email.getText());
 		reference2DataProcessing (reference2Name.getText(), reference2Institution.getText(), reference2Position.getText(), reference2Email.getText());
@@ -1012,6 +1019,9 @@ public class MainController {
 	    if(validText(skill) == false) {
 			label.setText("Put in appropriate skill");
 			noInputError = false;
+		}else if(isEmpty(skill) == true) {
+			label.setText("Put in appropriate skill");
+			noInputError = false;
 		}else {
 			label.setText("");
 			skillSet1HtmlFormat = skillSet1HtmlFormat + skillHtmlGenerator(skill); 
@@ -1026,6 +1036,9 @@ public class MainController {
 	public void skillSet2DataProcessing (String skill, Label label) {
 		
 	    if(validText(skill) == false) {
+			label.setText("Put in appropriate skill");
+			noInputError = false;
+		}else if(isEmpty(skill) == true) {
 			label.setText("Put in appropriate skill");
 			noInputError = false;
 		}else {
