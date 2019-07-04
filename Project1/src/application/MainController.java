@@ -654,6 +654,46 @@ public class MainController {
 			award1YearErrorLabel.getStyleClass().add("dynamic-labels");
 			academivAcievementsVbox1.getChildren().addAll(award1Name, award1NameErrorLabel, award1Position, award1PositionErrorLabel, award1Year, award1YearErrorLabel);
 		} 
+		
+		if (academicAchievementLabelCount == 1) {
+			
+			award2Name = new TextField();
+			award2Position = new TextField();
+			award2Year = new TextField();
+			award2NameErrorLabel = new Label();
+			award2PositionErrorLabel = new Label();
+			award2YearErrorLabel = new Label();
+			award2Name.setPromptText("Award2 Name");
+			award2Position.setPromptText("Award2 Position");
+			award2Year.setPromptText("Award2 Year");
+			award2NameErrorLabel.getStyleClass().add("dynamic-labels");
+			award2PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			award2YearErrorLabel.getStyleClass().add("dynamic-labels");
+			academivAcievementsVbox2.getChildren().addAll(award2Name, award2NameErrorLabel, award2Position, award2PositionErrorLabel, award2Year, award2YearErrorLabel);
+		}
+		
+		if (academicAchievementLabelCount == 2) {
+			
+			award3Name = new TextField();
+			award3Position = new TextField();
+			award3Year = new TextField();
+			award3NameErrorLabel = new Label();
+			award3PositionErrorLabel = new Label();
+			award3YearErrorLabel = new Label();
+			award3Name.setPromptText("Award3 Name");
+			award3Position.setPromptText("Award3 Position");
+			award3Year.setPromptText("Award3 Year");
+			award3NameErrorLabel.getStyleClass().add("dynamic-labels");
+			award3PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			award3YearErrorLabel.getStyleClass().add("dynamic-labels");
+			academivAcievementsVbox1.getChildren().addAll(award3Name, award3NameErrorLabel, award3Position, award3PositionErrorLabel, award3Year, award3YearErrorLabel);
+		}
+		
+		if (academicAchievementLabelCount > 2) {award3YearErrorLabel.setText("Mximum fields reached");}
+		
+		academicAchievementLabelCount++;
+
+
 	}
 	
 	
