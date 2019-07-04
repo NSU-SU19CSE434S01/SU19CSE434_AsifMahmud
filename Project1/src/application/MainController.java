@@ -366,30 +366,7 @@ public class MainController {
 				"            <div class=\"achievementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">ACADEMIC ACIEVEMENTS</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <p>Year: "+award1Year.getText()+"</p>\r\n" + 
-				"                        <h3>"+award1Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+award1Position.getText()+"</p>\r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <p>Year: "+award2Year.getText()+"</p>\r\n" + 
-				"                        <h3>"+award2Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+award2Position.getText()+"</p>\r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <p>Year: "+award3Year.getText()+"</p>\r\n" + 
-				"                        <h3>"+award3Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+award3Position.getText()+"</p>\r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
+				"                "+academicAchievementsHtmlFormat+
 				"            </div>\r\n" + 
 				"            <div class=\"languagebox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">LANGUAGES</h2>\r\n" + 
@@ -520,6 +497,7 @@ public class MainController {
 		
 		skillSet1HtmlFormat = "";
 		skillSet2HtmlFormat = "";
+		academicAchievementsHtmlFormat = "";
 	}
 	
 	
@@ -783,6 +761,9 @@ public class MainController {
 				awardYearLabel.setText("Put in right year");
 				noInputError = false;
 			}else {awardYearLabel.setText("");}
+			
+			academicAchievementsHtmlFormat = academicAchievementsHtmlFormat + 
+					academicAchievementHtmlGenerator (awardName, awardPosition, awardYear); 
 		}
 	
 	
@@ -1126,14 +1107,14 @@ public class MainController {
 	
 	
 	
-	public String academicAchievementHtmlGenerator (String award1Name, String award1Position, String award1Year) {
+	public String academicAchievementHtmlGenerator (String awardName, String awardPosition, String awardYear) {
 		
-		return  "<div class=\"boxestoflex\"" + 
+		return  "<div class=\"boxestoflex\">" + 
 				"  <div><img src=\"Images/star.png\" alt=\"\"></div>" + 
 				"  <div>" + 
-				"     <p>Year: "+award1Year+"</p>" + 
-				"     <h3>"+award1Name+"</h3>" + 
-				"     <p>Position: "+award1Position+"</p>" + 
+				"     <p>Year: "+awardYear+"</p>" + 
+				"     <h3>"+awardName+"</h3>" + 
+				"     <p>Position: "+awardPosition+"</p>" + 
 				"  </div>" + 
 				"</div>"; 
 		}
