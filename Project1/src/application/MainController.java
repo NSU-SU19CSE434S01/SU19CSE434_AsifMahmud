@@ -263,6 +263,9 @@ public class MainController {
 	
 	//Variables needed for Dynamic Academic Achievement Text-Fields
 	private int academicAchievementLabelCount = 0;
+	private String academicAchievements1HtmlFormat = "";
+	private String academicAchievements2HtmlFormat = "";
+	private String academicAchievements3HtmlFormat = "";
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -1166,6 +1169,20 @@ public class MainController {
 		return "<div class=\"boxestoflex\"><div><img src=\"Images/skills.png\" alt=\"\"></div><div><h4>"+skill+"</h4></div></div>";
 				
      }
+	
+	
+	
+	public String academicAchievementHtmlGenerator (String award1Name, String award1Position, String award1Year) {
+		
+		return  "<div class=\"boxestoflex\"" + 
+				"  <div><img src=\"Images/star.png\" alt=\"\"></div>" + 
+				"  <div>" + 
+				"     <p>Year: "+award1Year+"</p>" + 
+				"     <h3>"+award1Name+"</h3>" + 
+				"     <p>Position: "+award1Position+"</p>" + 
+				"  </div>" + 
+				"</div>"; 
+		}
 	
 	
 	
