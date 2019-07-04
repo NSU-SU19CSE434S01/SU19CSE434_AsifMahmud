@@ -254,8 +254,8 @@ public class MainController {
 	
 	
 	private int skillLabelCount = 0;
-	private String skillSet1HtmlFormat;
-	private String skillSet2HtmlFormat;
+	private String skillSet1HtmlFormat = "";
+	private String skillSet2HtmlFormat = "";
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -549,6 +549,9 @@ public class MainController {
 		}else {
 			cvGeneratedLocationLabel.setText("Put in appropriate information");
 		}
+		
+		skillSet1HtmlFormat = "";
+		skillSet2HtmlFormat = "";
 	}
 	
 	

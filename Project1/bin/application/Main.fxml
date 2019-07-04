@@ -246,7 +246,7 @@
       </VBox>
       <VBox fx:id="skillSet1Vbox" layoutX="337.0" layoutY="368.0" prefHeight="245.0" prefWidth="140.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+            <Button mnemonicParsing="false" onAction="#skillLabelGenerate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
@@ -257,7 +257,7 @@
       <VBox fx:id="skillSet2Vbox" layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0" />
       <VBox layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
@@ -361,7 +361,7 @@
       </VBox>
       <VBox layoutX="652.0" layoutY="368.0" prefHeight="364.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
@@ -465,7 +465,7 @@
       </VBox>
       <VBox layoutX="976.0" layoutY="212.0" prefHeight="444.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>
