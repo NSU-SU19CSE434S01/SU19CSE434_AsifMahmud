@@ -252,7 +252,7 @@ public class MainController {
 	//Error determining variable for all user inputs
 	public boolean noInputError;
 	
-	
+	//Variables needed for Dynamic Skill Text-Fields
 	private int skillLabelCount = 0;
 	private String skillSet1HtmlFormat = "";
 	private String skillSet2HtmlFormat = "";
@@ -277,8 +277,7 @@ public class MainController {
 		jobExperience1DataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText());
 		jobExperience2DataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText());
 		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
-		//skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
-		//skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
+		
 		if(skill1 != null) {skillSet1DataProcessing (skill1.getText(), skill1ErrorLabel);}
 		if(skill2 != null) {skillSet1DataProcessing (skill2.getText(), skill2ErrorLabel);}
 		if(skill3 != null) {skillSet1DataProcessing (skill3.getText(), skill3ErrorLabel);}
@@ -458,7 +457,8 @@ public class MainController {
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">SKILLS</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                "+skillSet1HtmlFormat+
+				"                <div class=\"boxestoflex2\">\r\n" + 
+				"                    "+skillSet1HtmlFormat+
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex2\">\r\n" + 
 				"                    "+skillSet2HtmlFormat+
@@ -619,6 +619,8 @@ public class MainController {
 			skill8ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet2Vbox.getChildren().addAll(skill8,skill8ErrorLabel);
 			}
+		
+		if (skillLabelCount > 7) {skill8ErrorLabel.setText("Mximum fields reached");}
 		
 		skillLabelCount++;
 		
@@ -1016,59 +1018,6 @@ public class MainController {
 	
 	
 	
-	/*public void skillSet1DataProcessing (String skill1V, String skill2V, String skill3V, String skill4V) {
-		
-		if(validText(skill1V) == false) {
-			skill1ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill1ErrorLabel.setText("");
-		
-		if(validText(skill2V) == false) {
-			skill2ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill2ErrorLabel.setText("");
-		
-		if(validText(skill3V) == false) {
-			skill3ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill3ErrorLabel.setText("");
-		
-		if(validText(skill4V) == false) {
-			skill4ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill4ErrorLabel.setText("");
-	
-	}
-	
-	
-	
-	
-	public void skillSet2DataProcessing (String skill5V, String skill6V, String skill7V, String skill8V) {
-		
-		if(validText(skill5V) == false) {
-			skill5ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill5ErrorLabel.setText("");
-		
-		if(validText(skill6V) == false) {
-			skill6ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill6ErrorLabel.setText("");
-		
-		if(validText(skill7V) == false) {
-			skill7ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill7ErrorLabel.setText("");
-		
-		if(validText(skill8V) == false) {
-			skill8ErrorLabel.setText("Put in appropriate skill");
-			noInputError = false;
-		}else skill8ErrorLabel.setText("");
-	}*/
-	
-	
-	
-	
 	public void reference1DataProcessing (String reference1NameV, String reference1InstitutionV, String reference1PositionV, String reference1EmailV) {
 		
 		if(reference1NameV.length() !=0 || reference1InstitutionV.length() !=0 || reference1PositionV.length() !=0 || reference1EmailV.length() !=0) {
@@ -1154,6 +1103,7 @@ public class MainController {
 	
 	
 	
+	//Html Generator Methods
 	
 	public String skillHtmlGenerator (String skill) {
 		
