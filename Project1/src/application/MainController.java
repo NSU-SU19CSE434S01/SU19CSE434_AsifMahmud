@@ -257,6 +257,9 @@ public class MainController {
 	private String skillSet1HtmlFormat = "";
 	private String skillSet2HtmlFormat = "";
 	
+	//Variables needed for Dynamic Academic Achievement Text-Fields
+	private int academicAchievementLabelCount = 0;
+	
 	
 	public void generateCv (ActionEvent event) throws IOException {
 		
@@ -625,6 +628,14 @@ public class MainController {
 		skillLabelCount++;
 		
 	}
+	
+	
+	
+	
+	public void academicAchievementsLabelGenerate (ActionEvent event) throws Exception {
+		
+	}
+	
 	
 	
 	
@@ -1100,6 +1111,7 @@ public class MainController {
 			reference2EmailErrorLabel.setText("");
 		}
 	}
+	
 	
 	
 	
