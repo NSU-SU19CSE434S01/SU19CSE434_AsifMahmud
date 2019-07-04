@@ -600,6 +600,7 @@ public class MainController {
 			skill1 = new TextField();
 			skill1ErrorLabel = new Label();
 			skill1.setPromptText("Skill 1");
+			skill1ErrorLabel.getStyleClass().add(".dynamic-labels");
 			skillSet1Vbox.getChildren().addAll(skill1, skill1ErrorLabel);
 		} 
 		

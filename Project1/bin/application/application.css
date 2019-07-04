@@ -14,7 +14,15 @@
 
 .text-field {
     -fx-text-fill: #ffffff;
-    
+    -fx-background-color: #0C2239; 
+    -fx-border-color: #77E18B; 
+    -fx-border-width: 2; 
+    -fx-border-radius: 14;
+    -fx-font-size: 14;
     
     }
 
+.dynamic-labels {
+	-fx-text-fill: #ff5f5f;
+	-fx-font-size: 14;
+}
