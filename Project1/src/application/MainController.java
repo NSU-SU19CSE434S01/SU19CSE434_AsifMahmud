@@ -263,7 +263,7 @@ public class MainController {
 	
 	//Variables needed for Dynamic Academic Achievement Text-Fields
 	private int academicAchievementLabelCount = 0;
-	private String academicAchievements1HtmlFormat = "";
+	private String academicAchievementsHtmlFormat = "";
 	private String academicAchievements2HtmlFormat = "";
 	private String academicAchievements3HtmlFormat = "";
 	
@@ -276,9 +276,12 @@ public class MainController {
 		generalDataProcessing(userName.getText(), userQualificationTitle.getText());
 		contactDataProcessing(userAddress.getText(), userPhoneNumber.getText(), userEmail.getText());
 		statementDataProcessing(userStatement.getText());
-		if (award1Name != null) {academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText());}
-		if (award2Name != null) {academicAchievements2DataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText());}
-		if (award3Name != null)	{academicAchievements3DataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText());}
+		if (award1Name != null) {academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText(),
+				award1NameErrorLabel, award1PositionErrorLabel, award1YearErrorLabel);}
+		if (award2Name != null) {academicAchievementsDataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText(),
+				award2NameErrorLabel, award2PositionErrorLabel, award2YearErrorLabel);}
+		if (award3Name != null)	{academicAchievementsDataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText(),
+				award3NameErrorLabel, award3PositionErrorLabel, award3YearErrorLabel);}
 		
 		
 		languageDataProcessing (language1.getText(), language2.getText());
@@ -760,75 +763,26 @@ public class MainController {
 	
 	
 	
-	public void academicAchievementsDataProcessing (String award1NameV, String award1PositionV, String award1YearV) {
+	public void academicAchievementsDataProcessing (String awardName, String awardPosition, String awardYear,
+			Label awardNameLabel, Label awardPositionLabel, Label awardYearLabel) {
 		
-		if(validText(award1NameV) == false) {
-				award1NameErrorLabel.setText("Put in appropriate award name");
+			if(validText(awardName) == false) {
+			awardNameLabel.setText("Put in appropriate award name");
 				noInputError = false;
-			}else if(isEmpty(award1NameV) == true) {
-				award1NameErrorLabel.setText("Put in appropriate award name");
+			}else if(isEmpty(awardName) == true) {
+				awardNameLabel.setText("Put in appropriate award name");
 				noInputError = false;
-			}else {award1NameErrorLabel.setText("");}
+			}else {awardNameLabel.setText("");}
 			
-			if(isEmpty(award1PositionV) == true) {
-				award1PositionErrorLabel.setText("Put in position");
+			if(isEmpty(awardPosition) == true) {
+				awardPositionLabel.setText("Put in position");
 				noInputError = false;
-			}else {award1PositionErrorLabel.setText("");}
+			}else {awardPositionLabel.setText("");}
 			
-			if(validYear(award1YearV) == false) {
-				award1YearErrorLabel.setText("Put in right year");
+			if(validYear(awardYear) == false) {
+				awardYearLabel.setText("Put in right year");
 				noInputError = false;
-			}else {award1YearErrorLabel.setText("");}
-		}
-	
-	
-	
-	
-	
-	public void academicAchievements2DataProcessing (String award2NameV, String award2PositionV, String award2YearV) {
-		
-		if(validText(award2NameV) == false) {
-				award2NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else if(isEmpty(award2NameV) == true) {
-				award2NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else {award2NameErrorLabel.setText("");}
-			
-			if(isEmpty(award2PositionV) == true) {
-				award2PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {award2PositionErrorLabel.setText("");}
-			
-			if(validYear(award2YearV) == false) {
-				award2YearErrorLabel.setText("Put in right year");
-				noInputError = false;
-			}else {award2YearErrorLabel.setText("");}
-		}
-	
-	
-	
-	
-	
-	public void academicAchievements3DataProcessing (String award3NameV, String award3PositionV, String award3YearV) {
-		
-		if(validText(award3NameV) == false) {
-				award3NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else if(isEmpty(award3NameV) == true) {
-				award3NameErrorLabel.setText("Put in appropriate award name");
-				noInputError = false;
-			}else {award3NameErrorLabel.setText("");}
-			
-			if(isEmpty(award3PositionV) == true) {
-				award3PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {award3PositionErrorLabel.setText("");}
-			
-			if(validYear(award3YearV) == false) {
-				award3YearErrorLabel.setText("Put in right year");
-				noInputError = false;
-			}else {award3YearErrorLabel.setText("");}
+			}else {awardYearLabel.setText("");}
 		}
 	
 	
