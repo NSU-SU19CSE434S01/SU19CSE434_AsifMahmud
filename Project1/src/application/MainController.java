@@ -686,7 +686,7 @@ public class MainController {
 			award3NameErrorLabel.getStyleClass().add("dynamic-labels");
 			award3PositionErrorLabel.getStyleClass().add("dynamic-labels");
 			award3YearErrorLabel.getStyleClass().add("dynamic-labels");
-			academivAcievementsVbox1.getChildren().addAll(award3Name, award3NameErrorLabel, award3Position, award3PositionErrorLabel, award3Year, award3YearErrorLabel);
+			academivAcievementsVbox2.getChildren().addAll(award3Name, award3NameErrorLabel, award3Position, award3PositionErrorLabel, award3Year, award3YearErrorLabel);
 		}
 		
 		if (academicAchievementLabelCount > 2) {award3YearErrorLabel.setText("Mximum fields reached");}
