@@ -1014,7 +1014,23 @@ public class MainController {
 			noInputError = false;
 		}else {
 			label.setText("");
-			
+			skillSet1HtmlFormat = skillSet1HtmlFormat + skillHtmlGenerator(skill); 
+			 
+		}
+		
+	 }
+	
+	
+	
+	
+	public void skillSet2DataProcessing (String skill, Label label) {
+		
+	    if(validText(skill) == false) {
+			label.setText("Put in appropriate skill");
+			noInputError = false;
+		}else {
+			label.setText("");
+			skillSet2HtmlFormat = skillSet2HtmlFormat + skillHtmlGenerator(skill);
 			 
 		}
 		
@@ -1158,6 +1174,15 @@ public class MainController {
 			reference2EmailErrorLabel.setText("");
 		}
 	}
+	
+	
+	
+	
+	public String skillHtmlGenerator (String skill) {
+		
+		return "<div class=\"boxestoflex\"><div><img src=\"Images/skills.png\" alt=\"\"></div><div><h4>"+skill+"</h4></div></div>";
+				
+     }
 	
 	
 	
