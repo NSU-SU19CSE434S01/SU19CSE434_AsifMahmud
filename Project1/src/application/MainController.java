@@ -243,6 +243,10 @@ public class MainController {
 	private VBox skillSet1Vbox;
 	@FXML
 	private VBox skillSet2Vbox;
+	@FXML
+	private VBox academivAcievementsVbox1;
+	@FXML
+	private VBox academivAcievementsVbox2;
 	
 	
 	
@@ -634,6 +638,22 @@ public class MainController {
 	
 	public void academicAchievementsLabelGenerate (ActionEvent event) throws Exception {
 		
+		if (academicAchievementLabelCount == 0) {
+			
+			award1Name = new TextField();
+			award1Position = new TextField();
+			award1Year = new TextField();
+			award1NameErrorLabel = new Label();
+			award1PositionErrorLabel = new Label();
+			award1YearErrorLabel = new Label();
+			award1Name.setPromptText("Award1 Name");
+			award1Position.setPromptText("Award1 Position");
+			award1Year.setPromptText("Award1 Year");
+			award1NameErrorLabel.getStyleClass().add("dynamic-labels");
+			award1PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			award1YearErrorLabel.getStyleClass().add("dynamic-labels");
+			academivAcievementsVbox1.getChildren().addAll(award1Name, award1NameErrorLabel, award1Position, award1PositionErrorLabel, award1Year, award1YearErrorLabel);
+		} 
 	}
 	
 	

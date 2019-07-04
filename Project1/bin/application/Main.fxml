@@ -255,7 +255,7 @@
          </children>
       </VBox>
       <VBox fx:id="skillSet2Vbox" layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0" />
-      <VBox layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
+      <VBox fx:id="academivAcievementsVbox1" layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
@@ -295,7 +295,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="652.0" layoutY="29.0" prefHeight="309.0" prefWidth="300.0">
+      <VBox fx:id="academivAcievementsVbox2" layoutX="652.0" layoutY="29.0" prefHeight="309.0" prefWidth="300.0">
          <children>
             <TextField fx:id="award2Name" prefWidth="300.0" promptText="Award2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
                <font>
