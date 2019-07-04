@@ -252,7 +252,10 @@ public class MainController {
 	//Error determining variable for all user inputs
 	public boolean noInputError;
 	
+	
 	private int skillLabelCount = 0;
+	private String skillSet1HtmlFormat;
+	private String skillSet2HtmlFormat;
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -274,8 +277,10 @@ public class MainController {
 		jobExperience1DataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText());
 		jobExperience2DataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText());
 		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
-		skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
-		skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
+		//skillSet1DataProcessing (skill1.getText(), skill2.getText(), skill3.getText(), skill4.getText());
+		//skillSet2DataProcessing (skill5.getText(), skill6.getText(), skill7.getText(), skill8.getText());
+		
+		
 		reference1DataProcessing (reference1Name.getText(), reference1Institution.getText(), reference1Position.getText(), reference1Email.getText());
 		reference2DataProcessing (reference2Name.getText(), reference2Institution.getText(), reference2Position.getText(), reference2Email.getText());
 		
@@ -1002,7 +1007,23 @@ public class MainController {
 	
 	
 	
-	public void skillSet1DataProcessing (String skill1V, String skill2V, String skill3V, String skill4V) {
+	public void skillSet1DataProcessing (String skill, Label label) {
+		
+	    if(validText(skill) == false) {
+			label.setText("Put in appropriate skill");
+			noInputError = false;
+		}else {
+			label.setText("");
+			
+			 
+		}
+		
+	 }
+	
+	
+	
+	
+	/*public void skillSet1DataProcessing (String skill1V, String skill2V, String skill3V, String skill4V) {
 		
 		if(validText(skill1V) == false) {
 			skill1ErrorLabel.setText("Put in appropriate skill");
@@ -1050,7 +1071,7 @@ public class MainController {
 			skill8ErrorLabel.setText("Put in appropriate skill");
 			noInputError = false;
 		}else skill8ErrorLabel.setText("");
-	}
+	}*/
 	
 	
 	

@@ -244,7 +244,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="337.0" layoutY="368.0" prefHeight="245.0" prefWidth="140.0">
+      <VBox fx:id="skillSet1Vbox" layoutX="337.0" layoutY="368.0" prefHeight="245.0" prefWidth="140.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
                <font>
@@ -252,92 +252,9 @@
                </font>
             </Button>
             <Label prefWidth="140.0" />
-            <TextField fx:id="skill1" prefWidth="140.0" promptText="Skill1" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill1ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill3" prefWidth="140.0" promptText="Skill3" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill3ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill5" prefWidth="140.0" promptText="Skill5" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill5ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill7" prefWidth="140.0" promptText="Skill7" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill7ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
          </children>
       </VBox>
-      <VBox layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0">
-         <children>
-            <TextField fx:id="skill2" prefWidth="140.0" promptText="Skill2" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill2ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill4" prefWidth="140.0" promptText="Skill4" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill4ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill6" prefWidth="140.0" promptText="Skill6" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill6ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="skill8" prefWidth="140.0" promptText="Skill8" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="skill8ErrorLabel" prefWidth="140.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-         </children>
-      </VBox>
+      <VBox fx:id="skillSet2Vbox" layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0" />
       <VBox layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
