@@ -241,6 +241,8 @@ public class MainController {
 	
 	@FXML
 	private VBox skillSet1Vbox;
+	@FXML
+	private VBox skillSet2Vbox;
 	
 	
 	
@@ -608,6 +610,38 @@ public class MainController {
 			skill4ErrorLabel = new Label();
 			skill4.setPromptText("Skill 4");
 			skillSet1Vbox.getChildren().addAll(skill4,skill4ErrorLabel);
+			}
+		
+		if (skillLabelCount == 4) {
+			
+			skill5 = new TextField();
+			skill5ErrorLabel = new Label();
+			skill5.setPromptText("Skill 5");
+			skillSet2Vbox.getChildren().addAll(skill5, skill5ErrorLabel);
+		} 
+		
+		if (skillLabelCount == 5) {
+			
+			skill6 = new TextField();
+			skill6ErrorLabel = new Label();
+			skill6.setPromptText("Skill 6");
+			skillSet2Vbox.getChildren().addAll(skill6, skill6ErrorLabel);
+		} 
+		
+		if (skillLabelCount == 6) {
+			
+			skill7 = new TextField();
+			skill7ErrorLabel = new Label();
+			skill7.setPromptText("Skill 7");
+			skillSet2Vbox.getChildren().addAll(skill7, skill7ErrorLabel);
+		}
+		
+		if (skillLabelCount == 7) {
+			
+			skill8 = new TextField();
+			skill8ErrorLabel = new Label();
+			skill8.setPromptText("Skill 8");
+			skillSet2Vbox.getChildren().addAll(skill8,skill8ErrorLabel);
 			}
 		
 		skillLabelCount++;
