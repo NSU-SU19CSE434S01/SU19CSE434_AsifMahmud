@@ -273,9 +273,11 @@ public class MainController {
 		generalDataProcessing(userName.getText(), userQualificationTitle.getText());
 		contactDataProcessing(userAddress.getText(), userPhoneNumber.getText(), userEmail.getText());
 		statementDataProcessing(userStatement.getText());
-		academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText());
-		academicAchievements2DataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText());
-		academicAchievements3DataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText());
+		if (award1Name != null) {academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText());}
+		if (award2Name != null) {academicAchievements2DataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText());}
+		if (award3Name != null)	{academicAchievements3DataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText());}
+		
+		
 		languageDataProcessing (language1.getText(), language2.getText());
 		underGradGeneralDataProcessing (underGradDegreeName.getText(), underGradUnivarsityName.getText());
 		underGradResultDataProcessing (underGradGraduationYear.getText(), underGradGarePoint.getText());
@@ -757,9 +759,7 @@ public class MainController {
 	
 	public void academicAchievementsDataProcessing (String award1NameV, String award1PositionV, String award1YearV) {
 		
-		if(award1NameV.length() !=0 || award1PositionV.length() !=0 || award1YearV.length() !=0 ) {
-			
-			if(validText(award1NameV) == false) {
+		if(validText(award1NameV) == false) {
 				award1NameErrorLabel.setText("Put in appropriate award name");
 				noInputError = false;
 			}else if(isEmpty(award1NameV) == true) {
@@ -776,21 +776,15 @@ public class MainController {
 				award1YearErrorLabel.setText("Put in right year");
 				noInputError = false;
 			}else {award1YearErrorLabel.setText("");}
-		}else {
-			award1NameErrorLabel.setText("");
-			award1PositionErrorLabel.setText("");
-			award1YearErrorLabel.setText("");
 		}
-	}
+	
 	
 	
 	
 	
 	public void academicAchievements2DataProcessing (String award2NameV, String award2PositionV, String award2YearV) {
 		
-		if(award2NameV.length() !=0 || award2PositionV.length() !=0 || award2YearV.length() !=0 ) {
-			
-			if(validText(award2NameV) == false) {
+		if(validText(award2NameV) == false) {
 				award2NameErrorLabel.setText("Put in appropriate award name");
 				noInputError = false;
 			}else if(isEmpty(award2NameV) == true) {
@@ -807,21 +801,15 @@ public class MainController {
 				award2YearErrorLabel.setText("Put in right year");
 				noInputError = false;
 			}else {award2YearErrorLabel.setText("");}
-		}else {
-			award2NameErrorLabel.setText("");
-			award2PositionErrorLabel.setText("");
-			award2YearErrorLabel.setText("");
 		}
-	}
+	
 	
 	
 	
 	
 	public void academicAchievements3DataProcessing (String award3NameV, String award3PositionV, String award3YearV) {
 		
-		if(award3NameV.length() !=0 || award3PositionV.length() !=0 || award3YearV.length() !=0 ) {
-			
-			if(validText(award3NameV) == false) {
+		if(validText(award3NameV) == false) {
 				award3NameErrorLabel.setText("Put in appropriate award name");
 				noInputError = false;
 			}else if(isEmpty(award3NameV) == true) {
@@ -838,12 +826,8 @@ public class MainController {
 				award3YearErrorLabel.setText("Put in right year");
 				noInputError = false;
 			}else {award3YearErrorLabel.setText("");}
-		}else {
-			award3NameErrorLabel.setText("");
-			award3PositionErrorLabel.setText("");
-			award3YearErrorLabel.setText("");
 		}
-	}
+	
 	
 	
 	
