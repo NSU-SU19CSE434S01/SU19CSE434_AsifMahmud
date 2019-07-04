@@ -458,57 +458,10 @@ public class MainController {
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">SKILLS</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <div class=\"boxestoflex2\">\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill1.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill2.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill3.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill4.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
+				"                "+skillSet1HtmlFormat+
 				"                </div>\r\n" + 
 				"                <div class=\"boxestoflex2\">\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill5.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill6.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill7.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h4>"+skill8.getText()+"</h4>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
+				"                    "+skillSet2HtmlFormat+
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"rightcontainerbox\">\r\n" + 
@@ -600,7 +553,7 @@ public class MainController {
 			skill1 = new TextField();
 			skill1ErrorLabel = new Label();
 			skill1.setPromptText("Skill 1");
-			skill1ErrorLabel.getStyleClass().add(".dynamic-labels");
+			skill1ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet1Vbox.getChildren().addAll(skill1, skill1ErrorLabel);
 		} 
 		
@@ -609,6 +562,7 @@ public class MainController {
 			skill2 = new TextField();
 			skill2ErrorLabel = new Label();
 			skill2.setPromptText("Skill 2");
+			skill2ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet1Vbox.getChildren().addAll(skill2, skill2ErrorLabel);
 		} 
 		
@@ -617,6 +571,7 @@ public class MainController {
 			skill3 = new TextField();
 			skill3ErrorLabel = new Label();
 			skill3.setPromptText("Skill 3");
+			skill3ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet1Vbox.getChildren().addAll(skill3, skill3ErrorLabel);
 		}
 		
@@ -625,6 +580,7 @@ public class MainController {
 			skill4 = new TextField();
 			skill4ErrorLabel = new Label();
 			skill4.setPromptText("Skill 4");
+			skill4ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet1Vbox.getChildren().addAll(skill4,skill4ErrorLabel);
 			}
 		
@@ -633,6 +589,7 @@ public class MainController {
 			skill5 = new TextField();
 			skill5ErrorLabel = new Label();
 			skill5.setPromptText("Skill 5");
+			skill5ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet2Vbox.getChildren().addAll(skill5, skill5ErrorLabel);
 		} 
 		
@@ -641,6 +598,7 @@ public class MainController {
 			skill6 = new TextField();
 			skill6ErrorLabel = new Label();
 			skill6.setPromptText("Skill 6");
+			skill6ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet2Vbox.getChildren().addAll(skill6, skill6ErrorLabel);
 		} 
 		
@@ -649,6 +607,7 @@ public class MainController {
 			skill7 = new TextField();
 			skill7ErrorLabel = new Label();
 			skill7.setPromptText("Skill 7");
+			skill7ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet2Vbox.getChildren().addAll(skill7, skill7ErrorLabel);
 		}
 		
@@ -657,6 +616,7 @@ public class MainController {
 			skill8 = new TextField();
 			skill8ErrorLabel = new Label();
 			skill8.setPromptText("Skill 8");
+			skill8ErrorLabel.getStyleClass().add("dynamic-labels");
 			skillSet2Vbox.getChildren().addAll(skill8,skill8ErrorLabel);
 			}
 		
