@@ -545,8 +545,7 @@ public class MainController {
 	
 	
 	
-	//Skill label generate button action
-	
+	//Skills dynamic Text-Fields generate button action method
 	public void skillLabelGenerate (ActionEvent event) throws Exception {
 		
 		if (skillLabelCount == 0) {
@@ -629,7 +628,7 @@ public class MainController {
 	
 	
 	
-	
+	//Academic Achievements dynamic Text-Fields generate button action method
 	public void academicAchievementsLabelGenerate (ActionEvent event) throws Exception {
 		
 		if (academicAchievementLabelCount == 0) {
@@ -692,7 +691,7 @@ public class MainController {
 	
 	
 	
-	
+	//Job Experience dynamic Text-Fields generate button action method
 	public void jobExperienceLabelGenerate (ActionEvent event) throws Exception {
 		
 		if (jobExperienceLabelCount == 0) {
@@ -711,6 +710,44 @@ public class MainController {
 			company1YearsWorkedErrorLabel.getStyleClass().add("dynamic-labels");
 			jobExperienceVbox1.getChildren().addAll(company1Name, company1NameErrorLabel, company1Position, company1PositionErrorLabel, company1YearsWorked, company1YearsWorkedErrorLabel);
 		} 
+		
+		if (jobExperienceLabelCount == 1) {
+			
+			company2Name = new TextField();
+			company2Position = new TextField();
+			company2YearsWorked = new TextField();
+			company2NameErrorLabel = new Label();
+			company2PositionErrorLabel = new Label();
+			company2YearsWorkedErrorLabel = new Label();
+			company2Name.setPromptText("Company2 Name");
+			company2Position.setPromptText("Company2 Position");
+			company2YearsWorked.setPromptText("Company2 Years Worked");
+			company2NameErrorLabel.getStyleClass().add("dynamic-labels");
+			company2PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			company2YearsWorkedErrorLabel.getStyleClass().add("dynamic-labels");
+			jobExperienceVbox1.getChildren().addAll(company2Name, company2NameErrorLabel, company2Position, company2PositionErrorLabel, company2YearsWorked, company2YearsWorkedErrorLabel);
+		}
+		
+		if (jobExperienceLabelCount == 2) {
+			
+			company3Name = new TextField();
+			company3Position = new TextField();
+			company3YearsWorked = new TextField();
+			company3NameErrorLabel = new Label();
+			company3PositionErrorLabel = new Label();
+			company3YearsWorkedErrorLabel = new Label();
+			company3Name.setPromptText("Company3 Name");
+			company3Position.setPromptText("Company3 Position");
+			company3YearsWorked.setPromptText("Company3 Years Worked");
+			company3NameErrorLabel.getStyleClass().add("dynamic-labels");
+			company3PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			company3YearsWorkedErrorLabel.getStyleClass().add("dynamic-labels");
+			jobExperienceVbox2.getChildren().addAll(company3Name, company3NameErrorLabel, company3Position, company3PositionErrorLabel, company3YearsWorked, company3YearsWorkedErrorLabel);
+		}
+		
+		if (jobExperienceLabelCount > 2) {company3YearsWorkedErrorLabel.setText("Mximum fields reached");}
+		
+		jobExperienceLabelCount++;
 	}
 	
 	
