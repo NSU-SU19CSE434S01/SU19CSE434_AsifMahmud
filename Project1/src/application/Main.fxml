@@ -30,7 +30,7 @@
             <Font name="SansSerif Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="cvGeneratedLocationLabel" layoutX="559.0" layoutY="866.0" text="Cv generate label" textFill="WHITE">
+      <Label fx:id="cvGeneratedLocationLabel" layoutX="492.0" layoutY="862.0" text="Application By Asif Mahmud" textFill="WHITE">
          <font>
             <Font name="SansSerif Bold" size="22.0" />
          </font>
@@ -244,7 +244,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox fx:id="skillSet1Vbox" layoutX="337.0" layoutY="368.0" prefHeight="245.0" prefWidth="140.0">
+      <VBox fx:id="skillSet1Vbox" layoutX="337.0" layoutY="368.0" prefHeight="256.0" prefWidth="140.0">
          <children>
             <Button mnemonicParsing="false" onAction="#skillLabelGenerate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
@@ -255,7 +255,7 @@
          </children>
       </VBox>
       <VBox fx:id="skillSet2Vbox" layoutX="501.0" layoutY="412.0" prefHeight="199.0" prefWidth="140.0" />
-      <VBox fx:id="academivAcievementsVbox1" layoutX="337.0" layoutY="649.0" prefHeight="182.0" prefWidth="300.0">
+      <VBox fx:id="academivAcievementsVbox1" layoutX="337.0" layoutY="649.0" prefHeight="192.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" onAction="#academicAchievementsLabelGenerate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
@@ -367,7 +367,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="976.0" layoutY="679.0" prefHeight="200.0" prefWidth="300.0">
+      <VBox layoutX="976.0" layoutY="679.0" prefHeight="94.0" prefWidth="300.0">
          <children>
             <Label text="PROFILE IMAGE" textFill="#eeeeee">
                <font>
@@ -389,12 +389,12 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#generateCv" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
-               <font>
-                  <Font name="SansSerif Bold" size="14.0" />
-               </font>
-            </Button>
          </children>
       </VBox>
+      <Button layoutX="976.0" layoutY="791.0" mnemonicParsing="false" onAction="#generateCv" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GENERATE CV">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

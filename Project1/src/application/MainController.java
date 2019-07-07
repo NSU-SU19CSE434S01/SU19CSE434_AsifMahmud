@@ -269,6 +269,10 @@ public class MainController {
 	private int academicAchievementLabelCount = 0;
 	private String academicAchievementsHtmlFormat = "";
 	
+	//Variables needed for Dynamic Job Experience Text-Fields
+	private int jobExperienceLabelCount = 0;
+	private String jobExperienceHtmlFormat = "";
+	
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -686,6 +690,12 @@ public class MainController {
 
 	}
 	
+	
+	
+	
+	public void jobExperienceLabelGenerate (ActionEvent event) throws Exception {
+		
+	}
 	
 	
 	
