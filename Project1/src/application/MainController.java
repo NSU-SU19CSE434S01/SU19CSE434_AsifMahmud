@@ -449,11 +449,11 @@ public class MainController {
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">SKILLS</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <div class=\"boxestoflex2\">\r\n" + 
-				"                    "+skillSet1HtmlFormat+
+				"                <div class=\"boxestoflex2\">\r\n"  
+				                    +skillSet1HtmlFormat+
 				"                </div>\r\n" + 
-				"                <div class=\"boxestoflex2\">\r\n" + 
-				"                    "+skillSet2HtmlFormat+
+				"                <div class=\"boxestoflex2\">\r\n"  
+				                    +skillSet2HtmlFormat+
 				"                </div>\r\n" + 
 				"            </div>\r\n" + 
 				"            <div class=\"rightcontainerbox\">\r\n" + 
@@ -1101,7 +1101,14 @@ public class MainController {
 	
 	public String skillHtmlGenerator (String skill) {
 		
-		return "<div class=\"boxestoflex\"><div><img src=\"Images/skills.png\" alt=\"\"></div><div><h4>"+skill+"</h4></div></div>";
+		return  
+			    "                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>"+skill+"</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
 				
      }
 	
