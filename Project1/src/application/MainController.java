@@ -247,6 +247,10 @@ public class MainController {
 	private VBox academivAcievementsVbox1;
 	@FXML
 	private VBox academivAcievementsVbox2;
+	@FXML
+	private VBox jobExperienceVbox1;
+	@FXML
+	private VBox jobExperienceVbox2;
 	
 	
 	
@@ -264,8 +268,7 @@ public class MainController {
 	//Variables needed for Dynamic Academic Achievement Text-Fields
 	private int academicAchievementLabelCount = 0;
 	private String academicAchievementsHtmlFormat = "";
-	private String academicAchievements2HtmlFormat = "";
-	private String academicAchievements3HtmlFormat = "";
+	
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -495,6 +498,7 @@ public class MainController {
 			cvGeneratedLocationLabel.setText("Put in appropriate information");
 		}
 		
+		//Making generated Html strings empty before next run
 		skillSet1HtmlFormat = "";
 		skillSet2HtmlFormat = "";
 		academicAchievementsHtmlFormat = "";

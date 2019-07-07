@@ -266,7 +266,7 @@
          </children>
       </VBox>
       <VBox fx:id="academivAcievementsVbox2" layoutX="652.0" layoutY="29.0" prefHeight="309.0" prefWidth="300.0" />
-      <VBox layoutX="652.0" layoutY="368.0" prefHeight="364.0" prefWidth="300.0">
+      <VBox fx:id="jobExperienceVbox1" layoutX="652.0" layoutY="368.0" prefHeight="364.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
@@ -336,7 +336,7 @@
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="976.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0">
+      <VBox fx:id="jobExperienceVbox2" layoutX="976.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0">
          <children>
             <TextField fx:id="company3Name" prefWidth="300.0" promptText="Company3 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
                <font>
