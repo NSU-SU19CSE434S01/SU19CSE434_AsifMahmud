@@ -365,8 +365,8 @@ public class MainController {
 				"            </div>\r\n" + 
 				"            <div class=\"achievementbox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">ACADEMIC ACIEVEMENTS</h2>\r\n" + 
-				"                <hr>\r\n" + 
-				"                "+academicAchievementsHtmlFormat+
+				"                <hr>\r\n"  
+				                 +academicAchievementsHtmlFormat+
 				"            </div>\r\n" + 
 				"            <div class=\"languagebox\">\r\n" + 
 				"                <h2 class=\"leftcontainerheader\">LANGUAGES</h2>\r\n" + 
@@ -1107,16 +1107,18 @@ public class MainController {
 	
 	
 	
+	
 	public String academicAchievementHtmlGenerator (String awardName, String awardPosition, String awardYear) {
 		
-		return  "<div class=\"boxestoflex\">" + 
-				"  <div><img src=\"Images/star.png\" alt=\"\"></div>" + 
-				"  <div>" + 
-				"     <p>Year: "+awardYear+"</p>" + 
-				"     <h3>"+awardName+"</h3>" + 
-				"     <p>Position: "+awardPosition+"</p>" + 
-				"  </div>" + 
-				"</div>"; 
+		return 
+				"               <div class=\"boxestoflex\">\r\n" + 
+				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
+				"                    <div>\r\n" + 
+				"                        <p>Year: "+awardYear+"</p>\r\n" + 
+				"                        <h3>"+awardName+"</h3>\r\n" + 
+				"                        <p>Position: "+awardPosition+"</p>\r\n" + 
+				"                    </div>\r\n" + 
+				"               </div>\r\n";
 		}
 	
 	
