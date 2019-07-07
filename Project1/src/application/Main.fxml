@@ -268,7 +268,7 @@
       <VBox fx:id="academivAcievementsVbox2" layoutX="652.0" layoutY="29.0" prefHeight="309.0" prefWidth="300.0" />
       <VBox fx:id="jobExperienceVbox1" layoutX="652.0" layoutY="368.0" prefHeight="364.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
+            <Button mnemonicParsing="false" onAction="#jobExperienceLabelGenerate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>

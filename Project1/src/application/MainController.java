@@ -695,6 +695,22 @@ public class MainController {
 	
 	public void jobExperienceLabelGenerate (ActionEvent event) throws Exception {
 		
+		if (jobExperienceLabelCount == 0) {
+			
+			company1Name = new TextField();
+			company1Position = new TextField();
+			company1YearsWorked = new TextField();
+			company1NameErrorLabel = new Label();
+			company1PositionErrorLabel = new Label();
+			company1YearsWorkedErrorLabel = new Label();
+			company1Name.setPromptText("Company1 Name");
+			company1Position.setPromptText("Company1 Position");
+			company1YearsWorked.setPromptText("Company1 Years Worked");
+			company1NameErrorLabel.getStyleClass().add("dynamic-labels");
+			company1PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			company1YearsWorkedErrorLabel.getStyleClass().add("dynamic-labels");
+			jobExperienceVbox1.getChildren().addAll(company1Name, company1NameErrorLabel, company1Position, company1PositionErrorLabel, company1YearsWorked, company1YearsWorkedErrorLabel);
+		} 
 	}
 	
 	
