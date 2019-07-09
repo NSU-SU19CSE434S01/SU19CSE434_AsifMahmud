@@ -251,6 +251,8 @@ public class MainController {
 	private VBox jobExperienceVbox1;
 	@FXML
 	private VBox jobExperienceVbox2;
+	@FXML
+	private VBox referenceVbox;
 	
 	
 	
