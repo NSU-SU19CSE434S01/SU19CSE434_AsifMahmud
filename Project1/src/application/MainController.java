@@ -978,68 +978,6 @@ public class MainController {
 	
 	
 	
-	public void jobExperience2DataProcessing (String company2NameV, String company2PositionV, String company2YearsWorkedV) {
-		
-		if(company2NameV.length() !=0 || company2PositionV.length() !=0 || company2YearsWorkedV.length() !=0 ) {
-			
-			if(validText(company2NameV) == false) {
-				company2NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else if(isEmpty(company2NameV) == true) {
-				company2NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else {company2NameErrorLabel.setText("");}
-			
-			if(isEmpty(company2PositionV) == true) {
-				company2PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {company2PositionErrorLabel.setText("");}
-			
-			if(validTwoPlaceNum(company2YearsWorkedV) == false) {
-				company2YearsWorkedErrorLabel.setText("Put in right years worked for");
-				noInputError = false;
-			}else {company2YearsWorkedErrorLabel.setText("");}
-		}else {
-			company2NameErrorLabel.setText("");
-			company2PositionErrorLabel.setText("");
-			company2YearsWorkedErrorLabel.setText("");
-		}
-	}
-	
-	
-	
-	
-	public void jobExperience3DataProcessing (String company3NameV, String company3PositionV, String company3YearsWorkedV) {
-		
-		if(company3NameV.length() !=0 || company3PositionV.length() !=0 || company3YearsWorkedV.length() !=0 ) {
-			
-			if(validText(company3NameV) == false) {
-				company3NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else if(isEmpty(company3NameV) == true) {
-				company3NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else {company3NameErrorLabel.setText("");}
-			
-			if(isEmpty(company3PositionV) == true) {
-				company3PositionErrorLabel.setText("Put in position");
-				noInputError = false;
-			}else {company3PositionErrorLabel.setText("");}
-			
-			if(validTwoPlaceNum(company3YearsWorkedV) == false) {
-				company3YearsWorkedErrorLabel.setText("Put in right years worked for");
-				noInputError = false;
-			}else {company3YearsWorkedErrorLabel.setText("");}
-		}else {
-			company3NameErrorLabel.setText("");
-			company3PositionErrorLabel.setText("");
-			company3YearsWorkedErrorLabel.setText("");
-		}
-	}
-	
-	
-	
-	
 	public void skillSet1DataProcessing (String skill, Label label) {
 		
 	    if(validText(skill) == false) {
