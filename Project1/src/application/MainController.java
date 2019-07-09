@@ -429,32 +429,8 @@ public class MainController {
 				"            </div>\r\n" + 
 				"             <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">JOB EXPERIENCE</h2>\r\n" + 
-				"                <hr>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <h3>"+company1Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+company1Position.getText()+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company1YearsWorked.getText()+"</p>\r\n" + 
-				"                        \r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <h3>"+company2Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+company2Position.getText()+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company2YearsWorked.getText()+"</p>\r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
-				"                <div class=\"boxestoflex\">\r\n" + 
-				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
-				"                    <div>\r\n" + 
-				"                        <h3>"+company3Name.getText()+"</h3>\r\n" + 
-				"                        <p>Position: "+company3Position.getText()+"</p>\r\n" + 
-				"                        <p>Years Worked: "+company3YearsWorked.getText()+"</p>\r\n" + 
-				"                    </div>\r\n" + 
-				"                </div>\r\n" + 
+				"                <hr>\r\n"  
+				                 +jobExperienceHtmlFormat+
 				"            </div>\r\n" + 
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">SKILLS</h2>\r\n" + 
@@ -509,6 +485,7 @@ public class MainController {
 		skillSet1HtmlFormat = "";
 		skillSet2HtmlFormat = "";
 		academicAchievementsHtmlFormat = "";
+		jobExperienceHtmlFormat = "";
 	}
 	
 	
