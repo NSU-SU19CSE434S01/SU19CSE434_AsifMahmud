@@ -829,8 +829,8 @@ public class MainController {
 				noInputError = false;
 			}else {awardYearLabel.setText("");}
 			
-			academicAchievementsHtmlFormat = academicAchievementsHtmlFormat + 
-					academicAchievementHtmlGenerator (awardName, awardPosition, awardYear); 
+			academicAchievementsHtmlFormat = academicAchievementsHtmlFormat 
+					+ academicAchievementHtmlGenerator (awardName, awardPosition, awardYear); 
 		}
 	
 	
@@ -947,32 +947,32 @@ public class MainController {
 	
 	
 	
-	public void jobExperience1DataProcessing (String company1NameV, String company1PositionV, String company1YearsWorkedV) {
+	public void jobExperienceDataProcessing (String companyName, String companyPosition, String companyYearsWorked,
+			Label companyNameErrorLabel, Label companyPositionErrorLabel, Label companyYearsWorkedErrorLabel) {
 		
-		if(company1NameV.length() !=0 || company1PositionV.length() !=0 || company1YearsWorkedV.length() !=0 ) {
+		
+			if(validText(companyName) == false) {
+				companyNameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else if(isEmpty(companyName) == true) {
+				companyNameErrorLabel.setText("Put in appropriate company name");
+				noInputError = false;
+			}else {companyNameErrorLabel.setText("");}
 			
-			if(validText(company1NameV) == false) {
-				company1NameErrorLabel.setText("Put in appropriate company name");
+			if(isEmpty(companyPosition) == true) {
+				companyPositionErrorLabel.setText("Put in position");
 				noInputError = false;
-			}else if(isEmpty(company1NameV) == true) {
-				company1NameErrorLabel.setText("Put in appropriate company name");
-				noInputError = false;
-			}else {company1NameErrorLabel.setText("");}
+			}else {companyPositionErrorLabel.setText("");}
 			
-			if(isEmpty(company1PositionV) == true) {
-				company1PositionErrorLabel.setText("Put in position");
+			if(validTwoPlaceNum(companyYearsWorked) == false) {
+				companyYearsWorkedErrorLabel.setText("Put in right years worked for");
 				noInputError = false;
-			}else {company1PositionErrorLabel.setText("");}
+			}else {companyYearsWorkedErrorLabel.setText("");}
 			
-			if(validTwoPlaceNum(company1YearsWorkedV) == false) {
-				company1YearsWorkedErrorLabel.setText("Put in right years worked for");
-				noInputError = false;
-			}else {company1YearsWorkedErrorLabel.setText("");}
-		}else {
-			company1NameErrorLabel.setText("");
-			company1PositionErrorLabel.setText("");
-			company1YearsWorkedErrorLabel.setText("");
-		}
+			jobExperienceHtmlFormat = jobExperienceHtmlFormat 
+					+ jobExperienceHtmlGenerator(companyName, companyPosition, companyYearsWorked);
+					
+		
 	}
 	
 	
@@ -1147,7 +1147,7 @@ public class MainController {
 				"                        <p>Years Worked: "+companyYearsWorked+"</p>\r\n" + 
 				"                        \r\n" + 
 				"                    </div>\r\n" + 
-				"                </div>";
+				"                </div>\r\n";
 	}
 	
 	
