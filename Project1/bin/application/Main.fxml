@@ -277,7 +277,7 @@
          </children>
       </VBox>
       <VBox fx:id="jobExperienceVbox2" layoutX="976.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0" />
-      <VBox layoutX="976.0" layoutY="212.0" prefHeight="444.0" prefWidth="300.0">
+      <VBox fx:id="referenceVbox" layoutX="976.0" layoutY="212.0" prefHeight="444.0" prefWidth="300.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
@@ -285,86 +285,6 @@
                </font>
             </Button>
             <Label prefWidth="300.0" />
-            <TextField fx:id="reference1Name" prefWidth="300.0" promptText="Reference1 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference1NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference1Institution" prefWidth="300.0" promptText="Reference1  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference1InstitutionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference1Position" prefWidth="300.0" promptText="Reference1  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference1PositionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference1Email" prefWidth="300.0" promptText="Reference1 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference1EmailErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference2Name" prefWidth="300.0" promptText="Reference2 Name" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference2NameErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference2Institution" prefWidth="300.0" promptText="Reference2  Institution" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference2InstitutionErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference2Position" prefWidth="300.0" promptText="Reference2  Position" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference2PositionErrorLabel" prefHeight="0.0" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <TextField fx:id="reference2Email" prefWidth="300.0" promptText="Reference2 Email" style="-fx-background-color: #0C2239; -fx-border-color: #77E18B; -fx-border-width: 2; -fx-border-radius: 14;">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </TextField>
-            <Label fx:id="reference2EmailErrorLabel" prefWidth="300.0" textFill="#ff5f5f">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
          </children>
       </VBox>
       <VBox layoutX="976.0" layoutY="679.0" prefHeight="94.0" prefWidth="300.0">
