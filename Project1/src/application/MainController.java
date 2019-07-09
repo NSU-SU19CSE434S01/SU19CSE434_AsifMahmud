@@ -1198,6 +1198,23 @@ public class MainController {
 	
 	
 	
+	public String jobExperienceHtmlGenerator (String companyName, String companyPosition, String companyYearsWorked) {
+		
+		return 
+				"				<div class=\"boxestoflex\">\r\n" + 
+				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
+				"                    <div>\r\n" + 
+				"                        <h3>"+companyName+"</h3>\r\n" + 
+				"                        <p>Position: "+companyPosition+"</p>\r\n" + 
+				"                        <p>Years Worked: "+companyYearsWorked+"</p>\r\n" + 
+				"                        \r\n" + 
+				"                    </div>\r\n" + 
+				"                </div>";
+	}
+	
+	
+	
+	
 	
 	//Used to validate user name. Learned from stack overflow.
 	public boolean validName (String input) {
