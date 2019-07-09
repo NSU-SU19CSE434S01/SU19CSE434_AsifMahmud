@@ -279,10 +279,10 @@ public class MainController {
 		
 		noInputError = true;
 		
-		
 		generalDataProcessing(userName.getText(), userQualificationTitle.getText());
 		contactDataProcessing(userAddress.getText(), userPhoneNumber.getText(), userEmail.getText());
 		statementDataProcessing(userStatement.getText());
+		
 		if (award1Name != null) {academicAchievementsDataProcessing (award1Name.getText(), award1Position.getText(), award1Year.getText(),
 				award1NameErrorLabel, award1PositionErrorLabel, award1YearErrorLabel);}
 		if (award2Name != null) {academicAchievementsDataProcessing(award2Name.getText(), award2Position.getText(), award2Year.getText(),
@@ -290,15 +290,18 @@ public class MainController {
 		if (award3Name != null)	{academicAchievementsDataProcessing(award3Name.getText(), award3Position.getText(), award3Year.getText(),
 				award3NameErrorLabel, award3PositionErrorLabel, award3YearErrorLabel);}
 		
-		
 		languageDataProcessing (language1.getText(), language2.getText());
 		underGradGeneralDataProcessing (underGradDegreeName.getText(), underGradUnivarsityName.getText());
 		underGradResultDataProcessing (underGradGraduationYear.getText(), underGradGarePoint.getText());
 		hscOrALevelDataProcessing (hscOrALevelCollegeName.getText(), hscOrALevelGraduationYear.getText(), hscOrALevelGradePoint.getText());
 		sscOrOLevelDataProcessing (sscOrOLevelSchoolName.getText(), sscOrOLevelGraduationYear.getText(), sscOrOLevelGradePoint.getText());
-		jobExperience1DataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText());
-		jobExperience2DataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText());
-		jobExperience3DataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText());
+		
+		if (company1Name != null) {jobExperienceDataProcessing (company1Name.getText(), company1Position.getText(), company1YearsWorked.getText(),
+				company1NameErrorLabel,company1PositionErrorLabel,company1YearsWorkedErrorLabel);}
+		if (company2Name != null) {jobExperienceDataProcessing (company2Name.getText(), company2Position.getText(), company2YearsWorked.getText(),
+				company2NameErrorLabel,company2PositionErrorLabel,company2YearsWorkedErrorLabel);}
+		if (company3Name != null) {jobExperienceDataProcessing (company3Name.getText(), company3Position.getText(), company3YearsWorked.getText(),
+				company3NameErrorLabel,company3PositionErrorLabel,company3YearsWorkedErrorLabel);}
 		
 		if(skill1 != null) {skillSet1DataProcessing (skill1.getText(), skill1ErrorLabel);}
 		if(skill2 != null) {skillSet1DataProcessing (skill2.getText(), skill2ErrorLabel);}
