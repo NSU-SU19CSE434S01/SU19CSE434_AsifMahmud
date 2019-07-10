@@ -275,6 +275,10 @@ public class MainController {
 	private int jobExperienceLabelCount = 0;
 	private String jobExperienceHtmlFormat = "";
 	
+	//Variables needed for Dynamic Reference Text-Fields
+	private int referenceLabelCount = 0;
+	private String referenceHtmlFormat = "";
+	
 	
 	
 	public void generateCv (ActionEvent event) throws IOException {
@@ -733,6 +737,34 @@ public class MainController {
 	}
 	
 	
+	
+	
+	//Reference dynamic Text-Fields generate button action method
+	public void referenceLabelGenerate (ActionEvent event) throws Exception {
+		
+		if (referenceLabelCount == 0) {
+			
+			reference1Name = new TextField();
+			reference1Institution = new TextField();
+			reference1Position = new TextField();
+			reference1Email = new TextField();
+			reference1NameErrorLabel = new Label();
+			reference1InstitutionErrorLabel = new Label();
+			reference1PositionErrorLabel = new Label();
+			reference1EmailErrorLabel = new Label();
+			reference1Name.setPromptText("Reference1 Name");
+			reference1Institution.setPromptText("Reference1 Institution");
+			reference1Position.setPromptText("Reference 1Position");
+			reference1Email.setPromptText("Reference1 Email");
+			reference1NameErrorLabel.getStyleClass().add("dynamic-labels");
+			reference1InstitutionErrorLabel.getStyleClass().add("dynamic-labels");
+			reference1PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			reference1EmailErrorLabel.getStyleClass().add("dynamic-labels");
+			referenceVbox.getChildren().addAll(reference1Name, reference1NameErrorLabel, reference1Institution, 
+					reference1InstitutionErrorLabel, reference1Position, reference1PositionErrorLabel, reference1Email, reference1EmailErrorLabel);
+		} 
+	
+	}
 	
 	//User input data processing methods
 	
