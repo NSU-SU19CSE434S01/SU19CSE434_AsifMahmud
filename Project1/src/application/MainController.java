@@ -1055,6 +1055,43 @@ public class MainController {
 	
 	
 	
+	public void referenceDataProcessing (String referenceName, String referenceInstitution, String referencePosition, String referenceEmail,
+			Label referenceNameErrorLabel, Label referenceInstitutionErrorLabel, Label referencePositionErrorLabel, Label referenceEmailErrorLabel) {
+		
+		
+			if(validText(referenceName) == false) {
+				referenceNameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else if(isEmpty(referenceName) == true) {
+				referenceNameErrorLabel.setText("Put in appropriate reference name");
+				noInputError = false;
+			}else {referenceNameErrorLabel.setText("");}
+			
+			if(validText(referenceInstitution) == false) {
+				referenceInstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else if(isEmpty(referenceInstitution) == true) {
+				referenceInstitutionErrorLabel.setText("Put in appropriate reference institution name");
+				noInputError = false;
+			}else {referenceInstitutionErrorLabel.setText("");}
+			
+			if(validText(referencePosition) == false) {
+				referencePositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else if(isEmpty(referencePosition) == true) {
+				referencePositionErrorLabel.setText("Put in appropriate position");
+				noInputError = false;
+			}else {referencePositionErrorLabel.setText("");}
+			
+			if(validEmail(referenceEmail) == false) {
+				referenceEmailErrorLabel.setText("Put in appropriate reference email");
+				noInputError = false;
+			}else {referenceEmailErrorLabel.setText("");}
+		
+	}
+	
+	
+	
 	
 	//Html Generator Methods
 	
