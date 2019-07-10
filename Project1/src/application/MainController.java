@@ -1191,6 +1191,23 @@ public class MainController {
 	
 	
 	
+	public String rferenceHtmlGenerator (String referenceName, String referenceInstitution, 
+			String referencePosition, String referenceEmail) {
+		
+		return
+				"					<div class=\"boxestoflex\">\r\n" + 
+				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
+				"                        <div>\r\n" + 
+				"                            <h3>"+referenceName+"</h3>\r\n" + 
+				"                            <p>Institution: "+referenceInstitution+"</p>\r\n" + 
+				"                            <p>Position: "+referencePosition+"</p>\r\n" + 
+				"                            <p>Mail: "+referenceEmail+"</p>\r\n" + 
+				"                        </div>\r\n" + 
+				"                    </div>";
+	}
+	
+	
+	
 	
 	
 	//Used to validate user name. Learned from stack overflow.
