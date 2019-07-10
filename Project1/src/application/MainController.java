@@ -318,8 +318,12 @@ public class MainController {
 		if(skill7 != null) {skillSet2DataProcessing (skill7.getText(), skill7ErrorLabel);}
 		if(skill8 != null) {skillSet2DataProcessing (skill8.getText(), skill8ErrorLabel);}
 		
-		reference1DataProcessing (reference1Name.getText(), reference1Institution.getText(), reference1Position.getText(), reference1Email.getText());
-		reference2DataProcessing (reference2Name.getText(), reference2Institution.getText(), reference2Position.getText(), reference2Email.getText());
+		if (reference1Name != null) {referenceDataProcessing(reference1Name.getText(), reference1Institution.getText(), 
+				reference1Position.getText(), reference1Email.getText(), reference1NameErrorLabel, reference1InstitutionErrorLabel,
+				reference1PositionErrorLabel, reference1EmailErrorLabel);}
+		if (reference2Name != null) {referenceDataProcessing(reference2Name.getText(), reference2Institution.getText(), 
+				reference2Position.getText(), reference2Email.getText(), reference2NameErrorLabel, reference2InstitutionErrorLabel,
+				reference2PositionErrorLabel, reference2EmailErrorLabel);}
 		
 		
 		if(noInputError == true) {
