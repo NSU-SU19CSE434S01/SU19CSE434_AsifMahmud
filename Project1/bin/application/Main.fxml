@@ -279,7 +279,7 @@
       <VBox fx:id="jobExperienceVbox2" layoutX="976.0" layoutY="29.0" prefHeight="150.0" prefWidth="300.0" />
       <VBox fx:id="referenceVbox" layoutX="976.0" layoutY="212.0" prefHeight="444.0" prefWidth="300.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
+            <Button mnemonicParsing="false" onAction="#referenceLabelGenerate" prefHeight="30.0" prefWidth="140.0" style="-fx-background-color: #77E18B; -fx-background-radius: 30;" text="GET TEXT-FIELD">
                <font>
                   <Font name="SansSerif Bold" size="14.0" />
                </font>

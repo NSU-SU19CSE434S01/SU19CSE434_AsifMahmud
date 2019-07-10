@@ -754,7 +754,7 @@ public class MainController {
 			reference1EmailErrorLabel = new Label();
 			reference1Name.setPromptText("Reference1 Name");
 			reference1Institution.setPromptText("Reference1 Institution");
-			reference1Position.setPromptText("Reference 1Position");
+			reference1Position.setPromptText("Reference1 Position");
 			reference1Email.setPromptText("Reference1 Email");
 			reference1NameErrorLabel.getStyleClass().add("dynamic-labels");
 			reference1InstitutionErrorLabel.getStyleClass().add("dynamic-labels");
@@ -763,6 +763,31 @@ public class MainController {
 			referenceVbox.getChildren().addAll(reference1Name, reference1NameErrorLabel, reference1Institution, 
 					reference1InstitutionErrorLabel, reference1Position, reference1PositionErrorLabel, reference1Email, reference1EmailErrorLabel);
 		} 
+		
+		if (referenceLabelCount == 1) {
+			
+			reference2Name = new TextField();
+			reference2Institution = new TextField();
+			reference2Position = new TextField();
+			reference2Email = new TextField();
+			reference2NameErrorLabel = new Label();
+			reference2InstitutionErrorLabel = new Label();
+			reference2PositionErrorLabel = new Label();
+			reference2EmailErrorLabel = new Label();
+			reference2Name.setPromptText("Reference2 Name");
+			reference2Institution.setPromptText("Reference2 Institution");
+			reference2Position.setPromptText("Reference2 Position");
+			reference2Email.setPromptText("Reference2 Email");
+			reference2NameErrorLabel.getStyleClass().add("dynamic-labels");
+			reference2InstitutionErrorLabel.getStyleClass().add("dynamic-labels");
+			reference2PositionErrorLabel.getStyleClass().add("dynamic-labels");
+			reference2EmailErrorLabel.getStyleClass().add("dynamic-labels");
+			referenceVbox.getChildren().addAll(reference2Name, reference2NameErrorLabel, reference2Institution, 
+					reference2InstitutionErrorLabel, reference2Position, reference2PositionErrorLabel, reference2Email, reference2EmailErrorLabel);
+		} 
+		
+		if(referenceLabelCount>1) {reference2EmailErrorLabel.setText("Mximum fields reached");}
+		referenceLabelCount++;
 	
 	}
 	
