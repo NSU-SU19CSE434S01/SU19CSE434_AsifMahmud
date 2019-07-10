@@ -455,25 +455,8 @@ public class MainController {
 				"            <div class=\"rightcontainerbox\">\r\n" + 
 				"                <h2 class=\"rightcontainerheader\">REFERENCES</h2>\r\n" + 
 				"                <hr>\r\n" + 
-				"                <div class=\"boxestoflex2\">\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h3>"+reference1Name.getText()+"</h3>\r\n" + 
-				"                            <p>Institution: "+reference1Institution.getText()+"</p>\r\n" + 
-				"                            <p>Position: "+reference1Position.getText()+"</p>\r\n" + 
-				"                            <p>Mail: "+reference1Email.getText()+"</p>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
-				"                        <div>\r\n" + 
-				"                            <h3>"+reference2Name.getText()+"</h3>\r\n" + 
-				"                            <p>Institution: "+reference2Institution.getText()+"</p>\r\n" + 
-				"                            <p>Position: "+reference2Position.getText()+"</p>\r\n" + 
-				"                            <p>Mail: "+reference2Email.getText()+"</p>\r\n" + 
-				"                        </div>\r\n" + 
-				"                    </div>\r\n" + 
+				"                <div class=\"boxestoflex2\">\r\n"  
+				                   +referenceHtmlFormat+ 
 				"                </div>\r\n" + 
 				"            <div>\r\n" + 
 				"        </div>\r\n" + 
@@ -496,6 +479,7 @@ public class MainController {
 		skillSet2HtmlFormat = "";
 		academicAchievementsHtmlFormat = "";
 		jobExperienceHtmlFormat = "";
+		referenceHtmlFormat = "";
 	}
 	
 	
@@ -1091,7 +1075,10 @@ public class MainController {
 				referenceEmailErrorLabel.setText("Put in appropriate reference email");
 				noInputError = false;
 			}else {referenceEmailErrorLabel.setText("");}
-		
+			
+			referenceHtmlFormat = referenceHtmlFormat +
+					rferenceHtmlGenerator(referenceName, referenceInstitution, referencePosition, referenceEmail);
+
 	}
 	
 	
