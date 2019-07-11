@@ -181,5 +181,14 @@ class MainControllerTest {
 		
 	}
 	
+	@Test
+	public void test_validName_Case4() {
+		
+		boolean actual = mc.validName("&#$ *&*%");
+		
+		assertFalse(actual); 	//Not a valid name so using assertFalse to evaluate	
+		
+	}
+	
 
 }
