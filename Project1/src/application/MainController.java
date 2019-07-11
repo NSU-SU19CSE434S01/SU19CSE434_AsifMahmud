@@ -1146,7 +1146,7 @@ public class MainController {
 				"                            <p>Position: "+referencePosition+"</p>\r\n" + 
 				"                            <p>Mail: "+referenceEmail+"</p>\r\n" + 
 				"                        </div>\r\n" + 
-				"                    </div>";
+				"                    </div>\r\n";
 	}
 	
 	
