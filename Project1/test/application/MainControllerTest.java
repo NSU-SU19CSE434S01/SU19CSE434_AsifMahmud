@@ -26,5 +26,21 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void test_skillHtmlGenerator_Case2() {
+		
+		String actual = mc.skillHtmlGenerator("Laravel");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>Laravel</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
 
 }
