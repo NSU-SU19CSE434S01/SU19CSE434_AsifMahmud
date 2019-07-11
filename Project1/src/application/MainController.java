@@ -1121,7 +1121,7 @@ public class MainController {
 	public String jobExperienceHtmlGenerator (String companyName, String companyPosition, String companyYearsWorked) {
 		
 		return 
-				"				<div class=\"boxestoflex\">\r\n" + 
+				"               <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 				"                    <div>\r\n" + 
 				"                        <h3>"+companyName+"</h3>\r\n" + 
@@ -1138,7 +1138,7 @@ public class MainController {
 			String referencePosition, String referenceEmail) {
 		
 		return
-				"					<div class=\"boxestoflex\">\r\n" + 
+				"                   <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 				"                        <div>\r\n" + 
 				"                            <h3>"+referenceName+"</h3>\r\n" + 
