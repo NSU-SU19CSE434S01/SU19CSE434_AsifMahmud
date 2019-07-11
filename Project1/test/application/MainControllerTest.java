@@ -163,7 +163,14 @@ class MainControllerTest {
 	}
 	
 	
-	
+	@Test
+	public void test_validName_Case2() {
+		
+		boolean actual = mc.validName("Asif Mahmud");
+		
+		assertTrue(actual);
+		
+	}
 	
 
 }
