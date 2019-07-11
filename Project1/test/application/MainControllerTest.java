@@ -156,9 +156,9 @@ class MainControllerTest {
 	@Test
 	public void test_validName_Case1() {
 		
-		boolean actual = mc.validName("Asif");
+		boolean actual = mc.validName("Asif");  
 		
-		assertTrue(actual);
+		assertTrue(actual);		//Valid name so using assertTrue to evaluate
 		
 	}
 	
@@ -168,7 +168,16 @@ class MainControllerTest {
 		
 		boolean actual = mc.validName("Asif Mahmud");
 		
-		assertTrue(actual);
+		assertTrue(actual);		//Valid name so using assertTrue to evaluate         
+		
+	}
+	
+	@Test
+	public void test_validName_Case3() {
+		
+		boolean actual = mc.validName("Asif Mahmud25");
+		
+		assertFalse(actual); 	//Not a valid name so using assertFalse to evaluate	
 		
 	}
 	
