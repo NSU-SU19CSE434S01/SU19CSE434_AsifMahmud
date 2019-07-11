@@ -190,5 +190,14 @@ class MainControllerTest {
 		
 	}
 	
+	@Test
+	public void test_validText_Case1() {
+		
+		boolean actual = mc.validText("This is a text");
+		
+		assertTrue(actual); 	//Valid text so using assertTrue to evaluate	
+		
+	}
+	
 
 }
