@@ -130,5 +130,23 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void test_rferenceHtmlGenerator_Case2() {
+		
+		String actual = mc.rferenceHtmlGenerator("Abdul Bari", "Youtuber", "Content creator", "Ab@gmail.com");
+		String expected = 
+				        "                   <div class=\"boxestoflex\">\r\n" + 
+						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
+						"                        <div>\r\n" + 
+						"                            <h3>Abdul Bari</h3>\r\n" + 
+						"                            <p>Institution: Youtuber</p>\r\n" + 
+						"                            <p>Position: Content creator</p>\r\n" + 
+						"                            <p>Mail: Ab@gmail.com</p>\r\n" + 
+						"                        </div>\r\n" + 
+						"                    </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
 
 }
