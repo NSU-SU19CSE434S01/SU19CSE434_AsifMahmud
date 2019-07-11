@@ -12,7 +12,7 @@ class MainControllerTest {
 	//Testing Html String generator methods
 	
 	@Test
-	void test_skillHtmlGenerator_Case1() {
+	public void test_skillHtmlGenerator_Case1() {
 		
 		String actual = mc.skillHtmlGenerator("php");
 		String expected = 
@@ -28,7 +28,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_skillHtmlGenerator_Case2() {
+	public void test_skillHtmlGenerator_Case2() {
 		
 		String actual = mc.skillHtmlGenerator("Laravel");
 		String expected = 
@@ -44,7 +44,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_academicAchievementHtmlGenerator_Case1() {
+	public void test_academicAchievementHtmlGenerator_Case1() {
 		
 		String actual = mc.academicAchievementHtmlGenerator("Youth Award", "2", "2011");
 		String expected = 
@@ -61,7 +61,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_academicAchievementHtmlGenerator_Case2() {
+	public void test_academicAchievementHtmlGenerator_Case2() {
 		
 		String actual = mc.academicAchievementHtmlGenerator("Gaming Champ Award", "3", "2018");
 		String expected = 
@@ -78,7 +78,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_jobExperienceHtmlGenerator_Case1() {
+	public void test_jobExperienceHtmlGenerator_Case1() {
 		
 		String actual = mc.jobExperienceHtmlGenerator("Uber", "Sofware Management", "2");
 		String expected = 
@@ -96,7 +96,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_jobExperienceHtmlGenerator_Case2() {
+	public void test_jobExperienceHtmlGenerator_Case2() {
 		
 		String actual = mc.jobExperienceHtmlGenerator("Brac IT", "Sofware Management", "3");
 		String expected = 
@@ -114,7 +114,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_rferenceHtmlGenerator_Case1() {
+	public void test_rferenceHtmlGenerator_Case1() {
 		
 		String actual = mc.rferenceHtmlGenerator("Abdul Hmid", "North South Uni", "Lecturer", "Ab@gmail.com");
 		String expected = 
@@ -132,7 +132,7 @@ class MainControllerTest {
 	}
 	
 	@Test
-	void test_rferenceHtmlGenerator_Case2() {
+	public void test_rferenceHtmlGenerator_Case2() {
 		
 		String actual = mc.rferenceHtmlGenerator("Abdul Bari", "Youtuber", "Content creator", "Ab@gmail.com");
 		String expected = 
@@ -148,5 +148,22 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+
+	
+	//Testing Validation methods
+	
+	@Test
+	public void test_validName_Case1() {
+		
+		boolean actual = mc.validName("Asif");
+		
+		assertTrue(actual);
+		
+	}
+	
+	
+	
+	
 
 }
