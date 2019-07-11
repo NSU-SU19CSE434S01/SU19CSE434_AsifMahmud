@@ -208,5 +208,14 @@ class MainControllerTest {
 		
 	}
 	
+	@Test
+	public void test_validText_Case3() {
+		
+		boolean actual = mc.validText("*&&%^%#@$%");
+		
+		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
+		
+	}
+	
 
 }
