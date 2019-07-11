@@ -199,5 +199,14 @@ class MainControllerTest {
 		
 	}
 	
+	@Test
+	public void test_validText_Case2() {
+		
+		boolean actual = mc.validText("This is-007");
+		
+		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
+		
+	}
+	
 
 }
