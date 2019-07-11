@@ -94,5 +94,23 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void test_jobExperienceHtmlGenerator_Case2() {
+		
+		String actual = mc.jobExperienceHtmlGenerator("Brac IT", "Sofware Management", "3");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <h3>Brac IT</h3>\r\n" + 
+						"                        <p>Position: Sofware Management</p>\r\n" + 
+						"                        <p>Years Worked: 3</p>\r\n" + 
+						"                        \r\n" + 
+						"                    </div>\r\n" + 
+						"                </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
 
 }
