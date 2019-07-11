@@ -42,5 +42,22 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void test_academicAchievementHtmlGenerator_Case1() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Youth Award", "2", "2011");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <p>Year: 2011</p>\r\n" + 
+						"                        <h3>Youth Award</h3>\r\n" + 
+						"                        <p>Position: 2</p>\r\n" + 
+						"                    </div>\r\n" + 
+						"               </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
 
 }
