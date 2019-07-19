@@ -217,18 +217,18 @@ class MainControllerTest {
 	@Test
 	public void test_validText_Case1() {
 		
-		boolean actual = mc.validText("This is a text");
+		boolean actual = mc.validText(null);
 		
-		assertTrue(actual); 	//Valid text so using assertTrue to evaluate	
+		assertFalse(actual); 	//Not Valid text so using assertFalse to evaluate	
 		
 	}
 	
 	@Test
 	public void test_validText_Case2() {
 		
-		boolean actual = mc.validText(null);
+		boolean actual = mc.validText("");
 		
-		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
+		assertTrue(actual); 	//Valid so using assertTrue to evaluate		
 		
 	}
 	
@@ -238,6 +238,24 @@ class MainControllerTest {
 		boolean actual = mc.validText("*&&%^%#@$%");
 		
 		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
+		
+	}
+	
+	@Test
+	public void test_validText_Case4() {
+		
+		boolean actual = mc.validText("123456");
+		
+		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
+		
+	}
+	
+	@Test
+	public void test_validText_Case5() {
+		
+		boolean actual = mc.validText("Asif Mahmud");
+		
+		assertTrue(actual); 	//Valid so using assertTrue to evaluate			
 		
 	}
 	
