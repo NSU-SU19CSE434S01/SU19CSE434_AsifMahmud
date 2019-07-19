@@ -153,6 +153,19 @@ class MainControllerTest {
 	
 	//Testing Validation methods
 	
+	//Input Space Partitioning 
+	
+	/* Interface based input domain modeling
+	 * Characteristic1: input is null
+	 * Characteristic2: input is empty
+	 * Characteristic3: input is not null or empty
+	 * 
+	 * Blocks: 
+	 * b1( special characters: !@#$%^&*()_-=+<>?|/.;':"[]{} )
+	 * b2( numbers: 0-1 )
+	 * b3( characters: A-Za-z )
+	 */
+	
 	@Test
 	public void test_validName_Case1() {
 		
