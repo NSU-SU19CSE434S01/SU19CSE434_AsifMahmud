@@ -1155,14 +1155,14 @@ public class MainController {
 	
 	//Used to validate user name. Learned from stack overflow.
 	public boolean validName (String input) {
-		
-		return Pattern.matches("^[\\p{L} .'-]+$", input);  
+		if (input == null) {return false;}
+		else {return Pattern.matches("^[\\p{L} .'-]+$", input);}  
 	}
 	
 	//Used to validate user text
 	public boolean validText (String input) {
-		
-		return Pattern.matches("^[a-zA-Z\\s]*$", input);
+		if (input == null) {return false;}
+		else {return Pattern.matches("^[a-zA-Z\\s]*$", input);}
 	}
 	
 	//Used to check empty string

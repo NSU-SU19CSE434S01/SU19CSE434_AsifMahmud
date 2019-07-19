@@ -156,22 +156,23 @@ class MainControllerTest {
 	//Input Space Partitioning 
 	
 	/* Interface based input domain modeling
-	 * Characteristic1: input is null
-	 * Characteristic2: input is empty
-	 * Characteristic3: input is not null or empty
+	 * Characteristic1: input is null (Case1)
+	 * Characteristic2: input is empty (Case2)
+	 * Characteristic3: input is not null or empty (Case3(b1), Case4(b2), Case5(b3))
 	 * 
 	 * Blocks: 
 	 * b1( special characters: !@#$%^&*()_-=+<>?|/.;':"[]{} )
-	 * b2( numbers: 0-1 )
+	 * b2( numbers: 0-9 )
 	 * b3( characters: A-Za-z )
 	 */
+	
 	
 	@Test
 	public void test_validName_Case1() {
 		
-		boolean actual = mc.validName("Asif");  
+		boolean actual = mc.validName(null);  
 		
-		assertTrue(actual);		//Valid name so using assertTrue to evaluate
+		assertFalse(actual);		//Not Valid name so using assertFalse to evaluate
 		
 	}
 	
@@ -179,27 +180,37 @@ class MainControllerTest {
 	@Test
 	public void test_validName_Case2() {
 		
-		boolean actual = mc.validName("Asif Mahmud");
+		boolean actual = mc.validName("");
 		
-		assertTrue(actual);		//Valid name so using assertTrue to evaluate         
+		assertFalse(actual);		//Not Valid name so using assertFalse to evaluate         
 		
 	}
 	
 	@Test
 	public void test_validName_Case3() {
 		
-		boolean actual = mc.validName("Asif Mahmud25");
+		boolean actual = mc.validName("!@#$%^&*");
 		
-		assertFalse(actual); 	//Not a valid name so using assertFalse to evaluate	
+		assertFalse(actual); 	//Not Valid name so using assertFalse to evaluate	
 		
 	}
 	
 	@Test
 	public void test_validName_Case4() {
 		
-		boolean actual = mc.validName("&#$ *&*%");
+		boolean actual = mc.validName("12345");
 		
-		assertFalse(actual); 	//Not a valid name so using assertFalse to evaluate	
+		assertFalse(actual); 	//Not Valid name so using assertFalse to evaluate	
+		
+	}
+	
+	
+	@Test
+	public void test_validName_Case5() {
+		
+		boolean actual = mc.validName("Asif Mahmud");
+		
+		assertTrue(actual); 	//Valid name so using assertTrue to evaluate	
 		
 	}
 	
@@ -215,7 +226,7 @@ class MainControllerTest {
 	@Test
 	public void test_validText_Case2() {
 		
-		boolean actual = mc.validText("This is-007");
+		boolean actual = mc.validText(null);
 		
 		assertFalse(actual); 	//Not a valid text so using assertFalse to evaluate		
 		
