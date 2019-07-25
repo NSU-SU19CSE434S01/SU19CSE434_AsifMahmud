@@ -575,5 +575,73 @@ class MainControllerTest {
 		
 	}
 	
+	
+	
+	//validGrade Method Tests
+	@Test
+	public void test_validGrade_Case1() {
+		
+		boolean actual = mc.validGrade(null);  
+		
+		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "4.0"
+	@Test
+	public void test_validGrade_Case2() {
+		
+		boolean actual = mc.validGrade("4.0");  
+		
+		assertTrue(actual);		//Valid Grade so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validGrade_Case3() {
+		
+		boolean actual = mc.validGrade("");  
+		
+		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "3.77"
+	@Test
+	public void test_validGrade_Case4() {
+		
+		boolean actual = mc.validGrade("3.77");  
+		
+		assertTrue(actual);		//Valid Grade so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validGrade_Case5() {
+		
+		boolean actual = mc.validGrade("!@#$%^&*()_-=+<>?|/.;':\\\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validGrade_Case6() {
+		
+		boolean actual = mc.validGrade("0123456789");  
+		
+		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validGrade_Case7() {
+		
+		boolean actual = mc.validGrade("Asif Mahmud");  
+		
+		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
 
 }
