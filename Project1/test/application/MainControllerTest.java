@@ -711,5 +711,73 @@ class MainControllerTest {
 		
 	}
 	
+	
+	
+	//validImageFile Method Tests
+	@Test
+	public void test_validImageFile_Case1() {
+		
+		boolean actual = mc.validImageFile(null);  
+		
+		assertFalse(actual);		//Not Valid Image File so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "pp.png"
+	@Test
+	public void test_validImageFile_Case2() {
+		
+		boolean actual = mc.validImageFile("pp.png");  
+		
+		assertTrue(actual);		//assertTrueValid Image File so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validImageFile_Case3() {
+		
+		boolean actual = mc.validImageFile("");  
+		
+		assertFalse(actual);		//Not Valid Image File so using assertFalse to evaluate
+		
+	}
+	
+	//Changing input value to "asif.jpeg"
+	@Test
+	public void test_validImageFile_Case4() {
+		
+		boolean actual = mc.validImageFile("asif.jpeg");  
+		
+		assertTrue(actual);		//Valid Image File so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validImageFile_Case5() {
+		
+		boolean actual = mc.validImageFile("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Image File so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validImageFile_Case6() {
+		
+		boolean actual = mc.validImageFile("0123456789");  
+		
+		assertFalse(actual);		//Not Valid Image File so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validImageFile_Case7() {
+		
+		boolean actual = mc.validImageFile("Asif Mahmud");  
+		
+		assertFalse(actual);		//Not Valid Image File so using assertFalse to evaluate
+		
+	}
+	
 
 }
