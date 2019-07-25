@@ -438,5 +438,74 @@ class MainControllerTest {
 		
 	}
 	
+	
+	
+	//validEmail Method Tests
+	@Test
+	public void test_validEmail_Case1() {
+		
+		boolean actual = mc.validEmail(null);  
+		
+		assertFalse(actual);		//Not Valid Email so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "asiffyy@gmail.com"
+	@Test
+	public void test_validEmail_Case2() {
+		
+		boolean actual = mc.validEmail("asiffyy@gmail.com");  
+		
+		assertTrue(actual);		//Valid Email so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validEmail_Case3() {
+		
+		boolean actual = mc.validEmail("");  
+		
+		assertFalse(actual);		//Not Valid Email so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "asifmahmud22@gmail.com"
+	@Test
+	public void test_validEmail_Case4() {
+		
+		boolean actual = mc.validEmail("asifmahmud22@gmail.com");  
+		
+		assertTrue(actual);		//Valid Email so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validEmail_Case5() {
+		
+		boolean actual = mc.validEmail("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Email so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validEmail_Case6() {
+		
+		boolean actual = mc.validEmail("0123456789");  
+		
+		assertFalse(actual);		//Not Valid Email so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to "abdul.hamid123@yahoo.com"
+	@Test
+	public void test_validEmail_Case7() {
+		
+		boolean actual = mc.validEmail("abdul.hamid123@yahoo.com");  
+		
+		assertTrue(actual);		//Valid Email so using assertTrue to evaluate
+		
+	}
+	
 
 }
