@@ -241,6 +241,7 @@ class MainControllerTest {
 	}
 	
 	
+	
 	//validText Method Tests
 	@Test
 	public void test_validText_Case1() {
@@ -302,6 +303,72 @@ class MainControllerTest {
 		boolean actual = mc.validText("Asif Mahmud");
 		
 		assertTrue(actual); 	//Valid so using assertTrue to evaluate			
+		
+	}
+	
+	
+	
+	//isEmpty Method Tests
+	@Test
+	public void test_isEmpty_Case1() {
+		
+		boolean actual = mc.isEmpty(null);
+		
+		assertTrue(actual); 	//Should return true	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case2() {
+		
+		boolean actual = mc.isEmpty("Asif123");
+		
+		assertFalse(actual); 	//Should return false	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case3() {
+		
+		boolean actual = mc.isEmpty("");
+		
+		assertTrue(actual); 	//Should return true	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case4() {
+		
+		boolean actual = mc.isEmpty("Asif");
+		
+		assertFalse(actual); 	//Should return false	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case5() {
+		
+		boolean actual = mc.isEmpty("!@#$%^&*()_-=+<>?|/.;':\"[]{}");
+		
+		assertFalse(actual); 	//Should return false	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case6() {
+		
+		boolean actual = mc.isEmpty("0123456789");
+		
+		assertFalse(actual); 	//Should return false	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Case7() {
+		
+		boolean actual = mc.isEmpty("Asif Mahmud");
+		
+		assertFalse(actual); 	//Should return false	
 		
 	}
 	
