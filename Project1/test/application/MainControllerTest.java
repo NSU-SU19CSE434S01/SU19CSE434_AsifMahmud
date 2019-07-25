@@ -507,5 +507,73 @@ class MainControllerTest {
 		
 	}
 	
+	
+	
+	//validYear Method Tests
+	@Test
+	public void test_validYear_Case1() {
+		
+		boolean actual = mc.validYear(null);  
+		
+		assertFalse(actual);		//Not Valid Year so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to 2019
+	@Test
+	public void test_validYear_Case2() {
+		
+		boolean actual = mc.validYear("2019");  
+		
+		assertTrue(actual);		//Valid Year so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validYear_Case3() {
+		
+		boolean actual = mc.validYear("");  
+		
+		assertFalse(actual);		//Not Valid Year so using assertFalse to evaluate
+		
+	}
+	
+	//Changing the input value to 1999
+	@Test
+	public void test_validYear_Case4() {
+		
+		boolean actual = mc.validYear("1999");  
+		
+		assertTrue(actual);		//Valid Year so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validYear_Case5() {
+		
+		boolean actual = mc.validYear("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Year so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validYear_Case6() {
+		
+		boolean actual = mc.validYear("0123456789");  
+		
+		assertFalse(actual);		//Not Valid Year so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validYear_Case7() {
+		
+		boolean actual = mc.validYear("Asif Mahmud");  
+		
+		assertFalse(actual);		//Not Valid Year so using assertFalse to evaluate
+		
+	}
+	
 
 }
