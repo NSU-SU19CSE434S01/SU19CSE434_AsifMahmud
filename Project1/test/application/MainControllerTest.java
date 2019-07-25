@@ -169,7 +169,7 @@ class MainControllerTest {
 	 * Block d: false (Value = "Asif") [Case4]
 	 * 
 	 * Input is not null or empty :
-	 * Block e: special characters (Value = "!@#$%^&*()_-=+<>?|/.;':"[]{}") [Case5]
+	 * Block e: special characters (Value = "!@#$%^&*()_-=+<>?|/.;':\"[]{}") [Case5]
 	 * Block f: numbers (Value = "0123456789") [Case6]
 	 * Block g: characters (Value = "Asif Mahmud") [Case7]
 	 */
@@ -619,7 +619,7 @@ class MainControllerTest {
 	@Test
 	public void test_validGrade_Case5() {
 		
-		boolean actual = mc.validGrade("!@#$%^&*()_-=+<>?|/.;':\\\"[]{}");  
+		boolean actual = mc.validGrade("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
 		
 		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
 		
@@ -640,6 +640,74 @@ class MainControllerTest {
 		boolean actual = mc.validGrade("Asif Mahmud");  
 		
 		assertFalse(actual);		//Not Valid Grade so using assertFalse to evaluate
+		
+	}
+	
+	
+	
+	//validTwoPlaceNum Method Tests
+	@Test
+	public void test_validTwoPlaceNum_Case1() {
+		
+		boolean actual = mc.validTwoPlaceNum(null);  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
+		
+	}
+	
+	//Changing input value to "7"
+	@Test
+	public void test_validTwoPlaceNum_Case2() {
+		
+		boolean actual = mc.validTwoPlaceNum("7");  
+		
+		assertTrue(actual);		//Valid Two Place Number so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validTwoPlaceNum_Case3() {
+		
+		boolean actual = mc.validTwoPlaceNum("");  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
+		
+	}
+	
+	//Changing input value to "12"
+	@Test
+	public void test_validTwoPlaceNum_Case4() {
+		
+		boolean actual = mc.validTwoPlaceNum("12");  
+		
+		assertTrue(actual);		//Valid Two Place Number so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validTwoPlaceNum_Case5() {
+		
+		boolean actual = mc.validTwoPlaceNum("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validTwoPlaceNum_Case6() {
+		
+		boolean actual = mc.validTwoPlaceNum("0123456789");  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validTwoPlaceNum_Case7() {
+		
+		boolean actual = mc.validTwoPlaceNum("Asif Mahmud");  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
 		
 	}
 	
