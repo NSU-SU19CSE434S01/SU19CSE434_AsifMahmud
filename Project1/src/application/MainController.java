@@ -1168,7 +1168,8 @@ public class MainController {
 	//Used to check empty string
 	public boolean isEmpty (String input) {
 		
-		if (input.equals("") == true) {
+		if (input == null) {return true;}
+		else if (input.equals("") == true) {
 			return true;
 		}else return false;
 	}
