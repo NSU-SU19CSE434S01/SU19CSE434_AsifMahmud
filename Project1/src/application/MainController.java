@@ -1177,49 +1177,67 @@ public class MainController {
 	//Used to validate phone number
 	public boolean validPhoneNumber (String input) {
 		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("[0-9]{9,13}");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 	}
 	
 	//Used to validate email
 	public boolean validEmail (String input) {
 		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("[A-Za-z0-9._-]+@[A-Za-z0-9._-]+\\.[A-Za-z]{2,4}");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 	}
 	
 	//Used to validate year
 	public boolean validYear (String input) {
 		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("20[0-9]{2}|19[0-9]{2}");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 	}
 	
 	//Used to validate user grade point
 	public boolean validGrade (String input) {
 		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("[0-5]{1}+\\.[0-9]{1,3}");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 	}
 	
 	//Used to validate two place number
 	public boolean validTwoPlaceNum (String input) {
-			
+		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("[0-9]{1,2}");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 		}
 	
 	//Check for valid image file
 	public boolean validImageFile (String input) {
 		
+		if (input == null) {return false;}
+		else {
 		Pattern p = Pattern.compile("[A-Za-z0-9._-]+\\.JPG|[A-Za-z0-9._-]+\\.jpeg|[A-Za-z0-9._-]+\\.png");
 		Matcher m = p.matcher(input);
 		return m.matches();
+		}
 	}
 		
 	

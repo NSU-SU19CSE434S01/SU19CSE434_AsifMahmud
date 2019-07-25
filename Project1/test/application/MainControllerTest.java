@@ -372,5 +372,71 @@ class MainControllerTest {
 		
 	}
 	
+	
+	
+	//validPhoneNumber Method Tests
+	@Test
+	public void test_validPhoneNumber_Case1() {
+		
+		boolean actual = mc.validPhoneNumber(null);  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case2() {
+		
+		boolean actual = mc.validPhoneNumber("Asif123");  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case3() {
+		
+		boolean actual = mc.validPhoneNumber("");  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case4() {
+		
+		boolean actual = mc.validPhoneNumber("Asif");  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case5() {
+		
+		boolean actual = mc.validPhoneNumber("!@#$%^&*()_-=+<>?|/.;':\"[]{}");  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case6() {
+		
+		boolean actual = mc.validPhoneNumber("0123456789");  
+		
+		assertTrue(actual);		//Valid Phone Number so using assertTrue to evaluate
+		
+	}
+	
+	@Test
+	public void test_validPhoneNumber_Case7() {
+		
+		boolean actual = mc.validPhoneNumber("Asif Mahmud");  
+		
+		assertFalse(actual);		//Not Valid Phone Number so using assertFalse to evaluate
+		
+	}
+	
 
 }
