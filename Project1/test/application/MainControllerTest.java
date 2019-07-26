@@ -9,39 +9,88 @@ class MainControllerTest {
 	MainController mc = new MainController();
 	
 	
-	//Testing Html String generator methods
+	//TESTING HTML GENERATOR METHODS
+	
+	//INPUT SPACE PARTITION TESTSTING
+	
+	
+	//Interface-Based Input Domain Modeling
+	
+	
+	/* 
+	 * Characteristics with blocks :
+	 * 
+	 * Weather input is null : 
+	 * Block a: true (Value = null) [Case1]
+	 * Block b: false (Value = "Asif123") [Case2] 
+	 * 
+	 * Weather input is empty : 
+	 * Block c: true (Value = "") [Case3] 
+	 * Block d: false (Value = "Asif") [Case4]
+	 * 
+	 * Input is not null or empty :
+	 * Block e: special characters (Value = "!@#$%^&*()_-=+<>?|/.;':\"[]{}") [Case5]
+	 * Block f: numbers (Value = "0123456789") [Case6]
+	 * Block g: characters (Value = "Asif Mahmud") [Case7]
+	 */
 	
 	@Test
 	public void test_skillHtmlGenerator_Case1() {
 		
-		String actual = mc.skillHtmlGenerator("php");
-		String expected = 
-				"                    <div class=\"boxestoflex\">\r\n" + 
-			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
-			    "                        <div>\r\n" + 
-			    "                            <h4>php</h4>\r\n" + 
-			    "                        </div>\r\n" + 
-			    "                    </div>\r\n" + 
-			    "";
-		
+		String actual = mc.skillHtmlGenerator(null);
+		String expected = "";
+				
 		assertEquals(expected, actual);
 	}
 	
 	@Test
 	public void test_skillHtmlGenerator_Case2() {
 		
-		String actual = mc.skillHtmlGenerator("Laravel");
+		String actual = mc.skillHtmlGenerator("Asif123");
 		String expected = 
 				"                    <div class=\"boxestoflex\">\r\n" + 
 			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
 			    "                        <div>\r\n" + 
-			    "                            <h4>Laravel</h4>\r\n" + 
+			    "                            <h4>Asif123</h4>\r\n" + 
 			    "                        </div>\r\n" + 
 			    "                    </div>\r\n" + 
 			    "";
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Case3() {
+		
+		String actual = mc.skillHtmlGenerator("");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4></h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Case4() {
+		
+		String actual = mc.skillHtmlGenerator("Asif");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>Asif</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
+
 	
 	@Test
 	public void test_academicAchievementHtmlGenerator_Case1() {
