@@ -1016,6 +1016,38 @@ class MainControllerTest {
 	}
 	
 	
+	
+	/*
+	 * Node 1 : Decision making node, weather input = null (Initial Node)
+	 * Node 2 : for input = null, return false (Final Node)
+	 * Node 3 : for input != null, a block of code
+	 * Node 4 : return result (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3,4]
+	 * 
+	 * For Prime Path 1 the input value = null
+	 * For Prime Path 2 the input value = "3"
+	 */
+	
+	@Test
+	public void test_validTwoPlaceNum_Path1() {
+		
+		boolean actual = mc.validTwoPlaceNum(null);  
+		
+		assertFalse(actual);		//Not Valid Two Place Number so using assertFalse to evaluate
+		
+	}
+	
+	@Test
+	public void test_validTwoPlaceNum_Path2() {
+		
+		boolean actual = mc.validTwoPlaceNum("3");  
+		
+		assertTrue(actual);		//Valid Two Place Number so using assertTrue to evaluate
+		
+	}
+	
+	
 
 	
 	
