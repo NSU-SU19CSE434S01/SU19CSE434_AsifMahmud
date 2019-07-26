@@ -1159,11 +1159,15 @@ public class MainController {
 		else {return Pattern.matches("^[\\p{L} .'-]+$", input);}  
 	}
 	
+	
+	
 	//Used to validate user text
 	public boolean validText (String input) {
 		if (input == null) {return false;}
 		else {return Pattern.matches("^[a-zA-Z\\s]*$", input);}
 	}
+	
+	
 	
 	//Used to check empty string
 	public boolean isEmpty (String input) {
@@ -1173,6 +1177,8 @@ public class MainController {
 			return true;
 		}else return false;
 	}
+	
+	
 	
 	//Used to validate phone number
 	public boolean validPhoneNumber (String input) {
@@ -1185,6 +1191,8 @@ public class MainController {
 		}
 	}
 	
+	
+	
 	//Used to validate email
 	public boolean validEmail (String input) {
 		
@@ -1195,6 +1203,8 @@ public class MainController {
 		return m.matches();
 		}
 	}
+	
+	
 	
 	//Used to validate year
 	public boolean validYear (String input) {
@@ -1207,6 +1217,8 @@ public class MainController {
 		}
 	}
 	
+	
+	
 	//Used to validate user grade point
 	public boolean validGrade (String input) {
 		
@@ -1218,6 +1230,8 @@ public class MainController {
 		}
 	}
 	
+	
+	
 	//Used to validate two place number
 	public boolean validTwoPlaceNum (String input) {
 		
@@ -1228,6 +1242,8 @@ public class MainController {
 		return m.matches();
 		}
 		}
+	
+	
 	
 	//Check for valid image file
 	public boolean validImageFile (String input) {
