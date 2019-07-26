@@ -278,6 +278,63 @@ class MainControllerTest {
 	}
 	
 	@Test
+	public void test_jobExperienceHtmlGenerator_Case3() {
+		
+		String actual = mc.jobExperienceHtmlGenerator("Asif123", "", "Asif Mahmud");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: </p>\r\n" + 
+						"                        <p>Years Worked: Asif Mahmud</p>\r\n" + 
+						"                        \r\n" + 
+						"                    </div>\r\n" + 
+						"                </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_jobExperienceHtmlGenerator_Case4() {
+		
+		String actual = mc.jobExperienceHtmlGenerator("Asif123", "Asif", "!@#$%^&*()_-=+<>?|/.;':\"[]{}");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
+						"                        <p>Years Worked: !@#$%^&*()_-=+<>?|/.;':\"[]{}</p>\r\n" + 
+						"                        \r\n" + 
+						"                    </div>\r\n" + 
+						"                </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_jobExperienceHtmlGenerator_Case5() {
+		
+		String actual = mc.jobExperienceHtmlGenerator("Asif123", "Asif", "0123456789");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
+						"                        <p>Years Worked: 0123456789</p>\r\n" + 
+						"                        \r\n" + 
+						"                    </div>\r\n" + 
+						"                </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+
+
+
+	
+	@Test
 	public void test_rferenceHtmlGenerator_Case1() {
 		
 		String actual = mc.rferenceHtmlGenerator("Abdul Hmid", "North South Uni", "Lecturer", "Ab@gmail.com");
