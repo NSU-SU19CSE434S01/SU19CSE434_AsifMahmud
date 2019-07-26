@@ -415,11 +415,55 @@ class MainControllerTest {
 		assertEquals(expected, actual);
 	}
 
+	
+	
+	//GRAPH TESTING
+	
+	//Structural Coverage Criteria
+	//Prime Path Coverage
+	
+	
+	/*
+	 * Node 1 : Decision making node, weather input = null (Initial Node)
+	 * Node 2 : for input = null, return "" (Final Node)
+	 * Node 3 : for input != null, return generated HTML block (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3]
+	 * 
+	 * For Prime Path 1 the input value = null
+	 * For Prime Path 2 the input value = "Asif"
+	 */
+	
+	@Test
+	public void test_skillHtmlGenerator_Path1() {
+		
+		String actual = mc.skillHtmlGenerator(null);
+		String expected = "";
+				
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Path2() {
+		
+		String actual = mc.skillHtmlGenerator("Asif");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>Asif</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
 
 
 	
 
 	
+	//TESTING VALIDATION METHODS 
 	
 	
 	//INPUT SPACE PARTITION
@@ -1050,7 +1094,11 @@ class MainControllerTest {
 	
 	
 	
-	//GRAPH COVERAGE TESTING
+	
+	
+	//GRAPH TESTING
+	
+	//Structural Coverage Criteria
 	
 	
 	/*
