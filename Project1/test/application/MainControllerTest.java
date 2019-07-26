@@ -90,6 +90,57 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Case5() {
+		
+		String actual = mc.skillHtmlGenerator("!@#$%^&*()_-=+<>?|/.;':\"[]{}");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>!@#$%^&*()_-=+<>?|/.;':\"[]{}</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Case6() {
+		
+		String actual = mc.skillHtmlGenerator("0123456789");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>0123456789</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_skillHtmlGenerator_Case7() {
+		
+		String actual = mc.skillHtmlGenerator("Asif Mahmud");
+		String expected = 
+				"                    <div class=\"boxestoflex\">\r\n" + 
+			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
+			    "                        <div>\r\n" + 
+			    "                            <h4>Asif Mahmud</h4>\r\n" + 
+			    "                        </div>\r\n" + 
+			    "                    </div>\r\n" + 
+			    "";
+		
+		assertEquals(expected, actual);
+	}
+
+
+
 
 	
 	@Test
