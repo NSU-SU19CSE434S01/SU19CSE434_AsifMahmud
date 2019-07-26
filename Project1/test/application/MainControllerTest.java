@@ -587,14 +587,87 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
-
-
-
-
-
-
-
 	
+	
+	
+	/*
+	 * Node 1 : Decision making node, weather input1 = null (Initial Node)
+	 * Node 2 : for input1 = null, return "" (Final Node)
+	 * Node 3 : for input1 != null, Decision making node, weather input2 = null
+	 * Node 4 : for input2 = null, return "" (Final Node)
+	 * Node 5 : for input2 != null, Decision making node, weather input3 = null
+	 * Node 6 : for input3 = null, return "" (Final Node)
+	 * Node 7 : for input3 != null, Decision making node, weather input4 = null
+	 * Node 8 : for input4 = null, return "" (Final Node)
+	 * Node 9 : for input4 != null, return generated HTML block (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3,4], [1,3,5,6], [1,3,5,7,8], [1,3,5,7,9]
+	 * 
+	 * For Prime Path 1 the input values = null, "Asif", "NSU", "CSE"
+	 * For Prime Path 2 the input values = "Asif", null, "NSU", "CSE"
+	 * For Prime Path 3 the input values = "Asif", "NSU", null, "CSE"
+	 * For Prime Path 4 the input values = "Asif", "NSU", "CSE", null
+	 * For Prime Path 4 the input values = "Asif", "NSU", "CSE", "2019"
+	 */
+	
+	@Test
+	public void test_rferenceHtmlGenerator_Path1() {
+		
+		String actual = mc.rferenceHtmlGenerator(null, "Asif", "NSU", "CSE");
+		String expected = "";
+		
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_rferenceHtmlGenerator_Path2() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif", null, "NSU", "CSE");
+		String expected = "";
+		
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_rferenceHtmlGenerator_Path3() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif", "NSU", null, "CSE");
+		String expected = "";
+		
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_rferenceHtmlGenerator_Path4() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif", "NSU", "CSE", null);
+		String expected = "";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_rferenceHtmlGenerator_Path5() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif", "NSU", "CSE", "2019");
+		String expected = 
+				        "                   <div class=\"boxestoflex\">\r\n" + 
+						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
+						"                        <div>\r\n" + 
+						"                            <h3>Asif</h3>\r\n" + 
+						"                            <p>Institution: NSU</p>\r\n" + 
+						"                            <p>Position: CSE</p>\r\n" + 
+						"                            <p>Mail: 2019</p>\r\n" + 
+						"                        </div>\r\n" + 
+						"                    </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+
+
+
+
+
 
 	
 	//TESTING VALIDATION METHODS 
