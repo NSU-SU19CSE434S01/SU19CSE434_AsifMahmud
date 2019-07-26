@@ -138,22 +138,48 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
-
-
-
-
 	
+	
+	
+	/* 
+	 * Characteristics with blocks :
+	 * 
+	 * Weather input is null : 
+	 * Block a: true (Value = null) 
+	 * Block b: false (Value = "Asif123") [Base]
+	 * 
+	 * Weather input is empty : 
+	 * Block c: true (Value = "")  
+	 * Block d: false (Value = "Asif") [Base]
+	 * 
+	 * Input is not null or empty :
+	 * Block e: special characters (Value = "!@#$%^&*()_-=+<>?|/.;':\"[]{}") 
+	 * Block f: numbers (Value = "0123456789") 
+	 * Block g: characters (Value = "Asif Mahmud") [Base]
+	 * 
+	 * 
+	 * Base Choice Coverage :
+	 * 
+	 * Base Choice test : (b, d, g) [Case 1]
+	 * Additional tests :
+	 * 
+	 * (a, d, g) [Case 2]
+	 * (b, c, g) [Case 3]
+	 * (b, d, e) [Case 4]
+	 * (b, d, f) [Case 5]
+	 */
+
 	@Test
 	public void test_academicAchievementHtmlGenerator_Case1() {
 		
-		String actual = mc.academicAchievementHtmlGenerator("Youth Award", "2", "2011");
+		String actual = mc.academicAchievementHtmlGenerator("Asif123", "Asif", "Asif Mahmud");
 		String expected = 
 				        "               <div class=\"boxestoflex\">\r\n" + 
 						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 						"                    <div>\r\n" + 
-						"                        <p>Year: 2011</p>\r\n" + 
-						"                        <h3>Youth Award</h3>\r\n" + 
-						"                        <p>Position: 2</p>\r\n" + 
+						"                        <p>Year: Asif Mahmud</p>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
 						"                    </div>\r\n" + 
 						"               </div>\r\n";
 		
@@ -163,14 +189,23 @@ class MainControllerTest {
 	@Test
 	public void test_academicAchievementHtmlGenerator_Case2() {
 		
-		String actual = mc.academicAchievementHtmlGenerator("Gaming Champ Award", "3", "2018");
+		String actual = mc.academicAchievementHtmlGenerator(null, "Asif", "Asif Mahmud");
+		String expected = "";				        
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_academicAchievementHtmlGenerator_Case3() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif123", "", "Asif Mahmud");
 		String expected = 
 				        "               <div class=\"boxestoflex\">\r\n" + 
 						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
 						"                    <div>\r\n" + 
-						"                        <p>Year: 2018</p>\r\n" + 
-						"                        <h3>Gaming Champ Award</h3>\r\n" + 
-						"                        <p>Position: 3</p>\r\n" + 
+						"                        <p>Year: Asif Mahmud</p>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: </p>\r\n" + 
 						"                    </div>\r\n" + 
 						"               </div>\r\n";
 		
@@ -178,16 +213,54 @@ class MainControllerTest {
 	}
 	
 	@Test
+	public void test_academicAchievementHtmlGenerator_Case4() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif123", "Asif", "!@#$%^&*()_-=+<>?|/.;':\"[]{}");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <p>Year: !@#$%^&*()_-=+<>?|/.;':\"[]{}</p>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
+						"                    </div>\r\n" + 
+						"               </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_academicAchievementHtmlGenerator_Case5() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif123", "Asif", "0123456789");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <p>Year: 0123456789</p>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
+						"                    </div>\r\n" + 
+						"               </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+
+
+
+	
+	
+	@Test
 	public void test_jobExperienceHtmlGenerator_Case1() {
 		
-		String actual = mc.jobExperienceHtmlGenerator("Uber", "Sofware Management", "2");
+		String actual = mc.jobExperienceHtmlGenerator("Asif123", "Asif", "Asif Mahmud");
 		String expected = 
 				        "               <div class=\"boxestoflex\">\r\n" + 
 						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
 						"                    <div>\r\n" + 
-						"                        <h3>Uber</h3>\r\n" + 
-						"                        <p>Position: Sofware Management</p>\r\n" + 
-						"                        <p>Years Worked: 2</p>\r\n" + 
+						"                        <h3>Asif123</h3>\r\n" + 
+						"                        <p>Position: Asif</p>\r\n" + 
+						"                        <p>Years Worked: Asif Mahmud</p>\r\n" + 
 						"                        \r\n" + 
 						"                    </div>\r\n" + 
 						"                </div>\r\n";
@@ -198,17 +271,8 @@ class MainControllerTest {
 	@Test
 	public void test_jobExperienceHtmlGenerator_Case2() {
 		
-		String actual = mc.jobExperienceHtmlGenerator("Brac IT", "Sofware Management", "3");
-		String expected = 
-				        "               <div class=\"boxestoflex\">\r\n" + 
-						"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
-						"                    <div>\r\n" + 
-						"                        <h3>Brac IT</h3>\r\n" + 
-						"                        <p>Position: Sofware Management</p>\r\n" + 
-						"                        <p>Years Worked: 3</p>\r\n" + 
-						"                        \r\n" + 
-						"                    </div>\r\n" + 
-						"                </div>\r\n";
+		String actual = mc.jobExperienceHtmlGenerator(null, "Asif", "Asif Mahmud");
+		String expected = "";				        
 		
 		assertEquals(expected, actual);
 	}
