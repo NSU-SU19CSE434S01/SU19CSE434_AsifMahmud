@@ -458,6 +458,74 @@ class MainControllerTest {
 		
 		assertEquals(expected, actual);
 	}
+	
+	
+	
+	/*
+	 * Node 1 : Decision making node, weather input1 = null (Initial Node)
+	 * Node 2 : for input1 = null, return "" (Final Node)
+	 * Node 3 : for input1 != null, Decision making node, weather input2 = null
+	 * Node 4 : for input2 = null, return "" (Final Node)
+	 * Node 5 : for input2 != null, Decision making node, weather input3 = null
+	 * Node 6 : for input3 = null, return "" (Final Node)
+	 * Node 7 : for input3 != null, return generated HTML block (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3,4], [1,3,5,6], [1,3,5,7]
+	 * 
+	 * For Prime Path 1 the input values = null, "Asif", "NSU"
+	 * For Prime Path 2 the input values = "Asif", null, "NSU"
+	 * For Prime Path 3 the input values = "Asif", "NSU", null
+	 * For Prime Path 4 the input values = "Asif", "NSU", "CSE"
+	 */
+	
+	@Test
+	public void test_academicAchievementHtmlGenerator_Path1() {
+		
+		String actual = mc.academicAchievementHtmlGenerator(null, "Asif", "NSU");
+		String expected = "";				        
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_academicAchievementHtmlGenerator_Path2() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif", null, "NSU");
+		String expected = "";				        
+		
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_academicAchievementHtmlGenerator_Path3() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif", "NSU", null);
+		String expected = "";				        
+		
+		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void test_academicAchievementHtmlGenerator_Path4() {
+		
+		String actual = mc.academicAchievementHtmlGenerator("Asif", "NSU", "CSE");
+		String expected = 
+				        "               <div class=\"boxestoflex\">\r\n" + 
+						"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
+						"                    <div>\r\n" + 
+						"                        <p>Year: CSE</p>\r\n" + 
+						"                        <h3>Asif</h3>\r\n" + 
+						"                        <p>Position: NSU</p>\r\n" + 
+						"                    </div>\r\n" + 
+						"               </div>\r\n";
+		
+		assertEquals(expected, actual);
+
+		
+	}
+
+
+
 
 
 	
