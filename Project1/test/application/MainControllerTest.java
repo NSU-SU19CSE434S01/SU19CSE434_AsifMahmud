@@ -846,6 +846,49 @@ class MainControllerTest {
 	
 	
 	
+	/*
+	 * Node 1 : Decision making node, weather input = null (Initial Node)
+	 * Node 2 : for input = null, return true (Final Node)
+	 * Node 3 : for input != null, Decision making node, weather input = ""
+	 * Node 4 : for input = "", return true (Final Node)
+	 * Node 5 : for input != "", return false (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3,4], [1,3,5]
+	 * 
+	 * For Prime Path 1 the input value = null
+	 * For Prime Path 2 the input value = ""
+	 * For Prime Path 3 the input value = "Asif"
+	 */
+	
+	@Test
+	public void test_isEmpty_Path1() {
+		
+		boolean actual = mc.isEmpty(null);
+		
+		assertTrue(actual); 	//Should return true	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Path2() {
+		
+		boolean actual = mc.isEmpty("");
+		
+		assertTrue(actual); 	//Should return true	
+		
+	}
+	
+	@Test
+	public void test_isEmpty_Path3() {
+		
+		boolean actual = mc.isEmpty("Asif");
+		
+		assertFalse(actual); 	//Should return false	
+		
+	}
+	
+	
+	
 
 	
 	
