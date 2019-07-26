@@ -337,14 +337,14 @@ class MainControllerTest {
 	@Test
 	public void test_rferenceHtmlGenerator_Case1() {
 		
-		String actual = mc.rferenceHtmlGenerator("Abdul Hmid", "North South Uni", "Lecturer", "Ab@gmail.com");
+		String actual = mc.rferenceHtmlGenerator("Asif123", "Asif", "Asif Mahmud", "Ab@gmail.com");
 		String expected = 
 				        "                   <div class=\"boxestoflex\">\r\n" + 
 						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 						"                        <div>\r\n" + 
-						"                            <h3>Abdul Hmid</h3>\r\n" + 
-						"                            <p>Institution: North South Uni</p>\r\n" + 
-						"                            <p>Position: Lecturer</p>\r\n" + 
+						"                            <h3>Asif123</h3>\r\n" + 
+						"                            <p>Institution: Asif</p>\r\n" + 
+						"                            <p>Position: Asif Mahmud</p>\r\n" + 
 						"                            <p>Mail: Ab@gmail.com</p>\r\n" + 
 						"                        </div>\r\n" + 
 						"                    </div>\r\n";
@@ -355,20 +355,68 @@ class MainControllerTest {
 	@Test
 	public void test_rferenceHtmlGenerator_Case2() {
 		
-		String actual = mc.rferenceHtmlGenerator("Abdul Bari", "Youtuber", "Content creator", "Ab@gmail.com");
+		String actual = mc.rferenceHtmlGenerator(null, "Asif", "Asif Mahmud", "Ab@gmail.com");
+		String expected = "";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_rferenceHtmlGenerator_Case3() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif123", "", "Asif Mahmud", "Ab@gmail.com");
 		String expected = 
 				        "                   <div class=\"boxestoflex\">\r\n" + 
 						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
 						"                        <div>\r\n" + 
-						"                            <h3>Abdul Bari</h3>\r\n" + 
-						"                            <p>Institution: Youtuber</p>\r\n" + 
-						"                            <p>Position: Content creator</p>\r\n" + 
+						"                            <h3>Asif123</h3>\r\n" + 
+						"                            <p>Institution: </p>\r\n" + 
+						"                            <p>Position: Asif Mahmud</p>\r\n" + 
 						"                            <p>Mail: Ab@gmail.com</p>\r\n" + 
 						"                        </div>\r\n" + 
 						"                    </div>\r\n";
 		
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	public void test_rferenceHtmlGenerator_Case4() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif123", "Asif", "!@#$%^&*()_-=+<>?|/.;':\"[]{}", "Ab@gmail.com");
+		String expected = 
+				        "                   <div class=\"boxestoflex\">\r\n" + 
+						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
+						"                        <div>\r\n" + 
+						"                            <h3>Asif123</h3>\r\n" + 
+						"                            <p>Institution: Asif</p>\r\n" + 
+						"                            <p>Position: !@#$%^&*()_-=+<>?|/.;':\"[]{}</p>\r\n" + 
+						"                            <p>Mail: Ab@gmail.com</p>\r\n" + 
+						"                        </div>\r\n" + 
+						"                    </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void test_rferenceHtmlGenerator_Case5() {
+		
+		String actual = mc.rferenceHtmlGenerator("Asif123", "Asif", "0123456789", "Ab@gmail.com");
+		String expected = 
+				        "                   <div class=\"boxestoflex\">\r\n" + 
+						"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
+						"                        <div>\r\n" + 
+						"                            <h3>Asif123</h3>\r\n" + 
+						"                            <p>Institution: Asif</p>\r\n" + 
+						"                            <p>Position: 0123456789</p>\r\n" + 
+						"                            <p>Mail: Ab@gmail.com</p>\r\n" + 
+						"                        </div>\r\n" + 
+						"                    </div>\r\n";
+		
+		assertEquals(expected, actual);
+	}
+
+
+
 	
 
 	
