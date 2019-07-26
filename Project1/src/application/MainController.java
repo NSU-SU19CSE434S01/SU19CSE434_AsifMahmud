@@ -1088,6 +1088,8 @@ public class MainController {
 	
 	public String skillHtmlGenerator (String skill) {
 		
+		if (skill == null) {return "";}
+		else {
 		return  
 			    "                    <div class=\"boxestoflex\">\r\n" + 
 			    "                        <div><img src=\"Images/skills.png\" alt=\"\"></div>\r\n" + 
@@ -1096,14 +1098,18 @@ public class MainController {
 			    "                        </div>\r\n" + 
 			    "                    </div>\r\n" + 
 			    "";
-				
-     }
+		 }
+	}
 	
 	
 	
 	
 	public String academicAchievementHtmlGenerator (String awardName, String awardPosition, String awardYear) {
 		
+		if (awardName == null) {return "";}
+		else if (awardPosition == null) {return "";}
+		else if (awardYear == null) {return "";}
+		else {
 		return 
 				"               <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/star.png\" alt=\"\"></div>\r\n" + 
@@ -1114,12 +1120,17 @@ public class MainController {
 				"                    </div>\r\n" + 
 				"               </div>\r\n";
 		}
+	}
 	
 	
 	
 	
 	public String jobExperienceHtmlGenerator (String companyName, String companyPosition, String companyYearsWorked) {
 		
+		if (companyName == null) {return "";}
+		else if (companyPosition == null) {return "";}
+		else if (companyYearsWorked == null) {return "";}
+		else {
 		return 
 				"               <div class=\"boxestoflex\">\r\n" + 
 				"                    <div><img src=\"Images/job.png\" alt=\"\"></div>\r\n" + 
@@ -1130,6 +1141,7 @@ public class MainController {
 				"                        \r\n" + 
 				"                    </div>\r\n" + 
 				"                </div>\r\n";
+		}
 	}
 	
 	
@@ -1137,6 +1149,11 @@ public class MainController {
 	public String rferenceHtmlGenerator (String referenceName, String referenceInstitution, 
 			String referencePosition, String referenceEmail) {
 		
+		if (referenceName == null) {return "";}
+		else if (referenceInstitution == null) {return "";}
+		else if (referencePosition == null) {return "";}
+		else if (referenceEmail == null) {return "";}
+		else {
 		return
 				"                   <div class=\"boxestoflex\">\r\n" + 
 				"                        <div><img src=\"Images/ref.png\" alt=\"\"></div>\r\n" + 
@@ -1147,6 +1164,7 @@ public class MainController {
 				"                            <p>Mail: "+referenceEmail+"</p>\r\n" + 
 				"                        </div>\r\n" + 
 				"                    </div>\r\n";
+		}
 	}
 	
 	
