@@ -815,5 +815,40 @@ class MainControllerTest {
 	
 	
 	
+	/*
+	 * Node 1 : Decision making node, weather input = null (Initial Node)
+	 * Node 2 : for input = null, return false (Final Node)
+	 * Node 3 : for input != null, return result (Final Node)
+	 * 
+	 * Prime Paths : [1,2], [1,3]
+	 * 
+	 * For Prime Path 1 the input value = null
+	 * For Prime Path 2 the input value = "Asif"
+	 */
+	
+	@Test
+	public void test_validText_Path1() {
+		
+		boolean actual = mc.validText(null);
+		
+		assertFalse(actual); 	//Not Valid text so using assertFalse to evaluate	
+		
+	}
+	
+	@Test
+	public void test_validText_Path2() {
+		
+		boolean actual = mc.validText("Asif");
+		
+		assertTrue(actual); 	//Valid text so using assertTrue to evaluate	
+		
+	}
+	
+	
+	
+
+	
+	
+	
 
 }
