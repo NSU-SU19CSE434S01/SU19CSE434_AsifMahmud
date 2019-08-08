@@ -85,6 +85,66 @@ public class LoginTest {
 		assertEquals(loginErrorAlertMsg,"Invalid Email or Password");
 		
 		}
+	
+	
+	@Test
+	public void loginSuccessTest() {
+		
+		//Going into login
+		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a")).click();
+		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/ul/li[1]/a")).click();
+		
+		//Slow Scroll
+		for (int i=0; i < 10; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		try {
+			Thread.sleep(40);
+			} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+		}
+
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//Sending valid login inputs
+		driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[1]/input")).sendKeys("user@phptravels.com");
+		driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[2]/input")).sendKeys("demouser");
+		
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		//Clicking login button
+		driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
+		
+		try {
+			Thread.sleep(2500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//Checking login success
+		boolean userDahsboardTitle = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div[1]/h3")).isDisplayed();
+		String userDahsboardTitleText = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div[1]/h3")).getText();
+		System.out.println(userDahsboardTitle);
+		System.out.println(userDahsboardTitleText);
+		
+		assertTrue(userDahsboardTitle);
+		assertEquals(userDahsboardTitleText,"Hi, Demo User");
+		
+		}
+
 
 
 	
