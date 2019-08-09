@@ -5,8 +5,8 @@
     <classes>
       <class name="SignupTest">
         <methods>
-          <include name="invalidNameSignupFailedTest"/>
           <include name="shutDown"/>
+          <include name="signupSuccessTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- SignupTest -->
