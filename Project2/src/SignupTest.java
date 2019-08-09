@@ -28,7 +28,7 @@ public class SignupTest {
 	}
 
 	
-	@Test
+	@Test(priority = 1)
 	public void invalidNameSignupFailedTest() {
 		//Going into signup page
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a")).click();
@@ -115,7 +115,7 @@ public class SignupTest {
 	}
 	
 
-	@Test
+	@Test(priority = 2)
 	public void invalidEmailSignupFailedTest() {
 		//Going into signup page
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a")).click();
@@ -201,7 +201,7 @@ public class SignupTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 3)
 	public void signupSuccessTest() {
 		//Going into signup page
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[2]/ul/li[1]/a")).click();
@@ -230,7 +230,7 @@ public class SignupTest {
 		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[3]/input")).sendKeys("Asif");
 		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[4]/input")).sendKeys("Mahmud");
 		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[5]/input")).sendKeys("01671324427");
-		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("asifmahmud@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[6]/input")).sendKeys("asifmahmud22@gmail.com");
 		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[7]/input")).sendKeys("25051994");
 		driver.findElement(By.xpath("//*[@id=\"headersignupform\"]/div[8]/input")).sendKeys("25051994");
 
