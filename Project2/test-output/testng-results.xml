@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="147688" started-at="2019-08-10T11:08:35Z" finished-at="2019-08-10T11:11:03Z">
+  <suite name="Default suite" duration-ms="133123" started-at="2019-08-10T11:20:53Z" finished-at="2019-08-10T11:23:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="147688" started-at="2019-08-10T11:08:35Z" finished-at="2019-08-10T11:11:03Z">
+    <test name="Default test" duration-ms="133123" started-at="2019-08-10T11:20:53Z" finished-at="2019-08-10T11:23:06Z">
       <class name="TourBookingTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:TourBookingTest@58651fd0]" name="setUp" is-config="true" duration-ms="29102" started-at="2019-08-10T11:08:35Z" finished-at="2019-08-10T11:09:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TourBookingTest@58651fd0]" name="setUp" is-config="true" duration-ms="15609" started-at="2019-08-10T11:20:53Z" finished-at="2019-08-10T11:21:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="successfulTourBookingTest()[pri:1, instance:TourBookingTest@58651fd0]" name="successfulTourBookingTest" duration-ms="53529" started-at="2019-08-10T11:09:04Z" finished-at="2019-08-10T11:09:58Z">
+        <test-method status="PASS" signature="successfulTourBookingTest()[pri:1, instance:TourBookingTest@58651fd0]" name="successfulTourBookingTest" duration-ms="53758" started-at="2019-08-10T11:21:08Z" finished-at="2019-08-10T11:22:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulTourBookingTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:TourBookingTest@58651fd0]" name="shutDown" is-config="true" duration-ms="809" started-at="2019-08-10T11:09:58Z" finished-at="2019-08-10T11:09:58Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:TourBookingTest@58651fd0]" name="shutDown" is-config="true" duration-ms="749" started-at="2019-08-10T11:22:02Z" finished-at="2019-08-10T11:22:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:TourBookingTest@58651fd0]" name="setUp" is-config="true" duration-ms="14742" started-at="2019-08-10T11:09:58Z" finished-at="2019-08-10T11:10:13Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TourBookingTest@58651fd0]" name="setUp" is-config="true" duration-ms="13750" started-at="2019-08-10T11:22:03Z" finished-at="2019-08-10T11:22:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="unsuccessfulTourBookingTest()[pri:2, instance:TourBookingTest@58651fd0]" name="unsuccessfulTourBookingTest" duration-ms="48738" started-at="2019-08-10T11:10:13Z" finished-at="2019-08-10T11:11:02Z">
+        <test-method status="PASS" signature="unsuccessfulTourBookingTest()[pri:2, instance:TourBookingTest@58651fd0]" name="unsuccessfulTourBookingTest" duration-ms="48471" started-at="2019-08-10T11:22:16Z" finished-at="2019-08-10T11:23:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- unsuccessfulTourBookingTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:TourBookingTest@58651fd0]" name="shutDown" is-config="true" duration-ms="735" started-at="2019-08-10T11:11:02Z" finished-at="2019-08-10T11:11:03Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:TourBookingTest@58651fd0]" name="shutDown" is-config="true" duration-ms="750" started-at="2019-08-10T11:23:05Z" finished-at="2019-08-10T11:23:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
