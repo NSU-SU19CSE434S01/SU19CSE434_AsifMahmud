@@ -27,7 +27,7 @@ public class HotelBookingTest {
 	
 	@Test
 	public void hotelBookingTest() {
-
+		
 		//Slow Scroll
 		for (int i=0; i < 8; i++) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -39,6 +39,7 @@ public class HotelBookingTest {
 			e.printStackTrace();
 			}
 		}
+		
 		
 		//Putting in booking informations
 		driver.findElement(By.xpath("//*[@id=\"s2id_location\"]")).click();
@@ -99,6 +100,76 @@ public class HotelBookingTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		//Clicking on a hotel
+		driver.findElement(By.xpath("//*[@id=\"listing\"]/tbody/tr[1]/td/div[3]/form/button")).click();
+	
+		//Slow Scroll
+		for (int i=0; i < 50; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		try {
+			Thread.sleep(40);
+			} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+		}
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		driver.findElement(By.xpath("//*[@id=\"rooms\"]/div[3]/div/div[1]/div/div/div/div[3]/form/button")).click();
+	
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		driver.findElement(By.xpath("//*[@id=\"thhotels\"]/div[1]/div[2]/div[2]/a")).click();
+
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//Slow Scroll
+		for (int i=0; i < 8; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		try {
+			Thread.sleep(40);
+			} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			}
+		}
+		
+		driver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys("Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"phone_number\"]")).sendKeys("01671324427");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"country_code\"]")).click();
+		
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		driver.findElement(By.xpath("//*[@id=\"country_code\"]/option[22]")).click();
+		
+		
+
 
 	}
 
@@ -108,7 +179,7 @@ public class HotelBookingTest {
 	@AfterMethod
 	public void shutDown() {
 		
-		driver.quit();
+		//driver.quit();
 	}
 
 }
