@@ -430,6 +430,13 @@ public class TourBookingTest {
 		WebElement alert = (new WebDriverWait(driver, 10))
 				  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div/div[1]/div[2]/div[1]/div")));
 
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		//Checking alert
 		boolean alertMsgVisible = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div/div[1]/div[2]/div[1]/div")).isDisplayed();
 		System.out.println(alertMsgVisible);
@@ -438,12 +445,11 @@ public class TourBookingTest {
 		
 		assertTrue(alertMsgVisible);
 		assertEquals(alertMsg,
-				"The Email field must contain a valid email address\r\n" + 
-				"Email not matching with confirm email\r\n" + 
-				"First Name is required\r\n" + 
-				"Last Name is required");
+						"The Email field must contain a valid email address\n" + 
+						"Email not matching with confirm email\n" + 
+						"First Name is required\n" + 
+						"Last Name is required");
 		
-
 	}
 
 
@@ -452,7 +458,7 @@ public class TourBookingTest {
 	@AfterMethod
 	public void shutDown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 
