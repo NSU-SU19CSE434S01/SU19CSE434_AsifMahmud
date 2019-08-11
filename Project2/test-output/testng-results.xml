@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39958" started-at="2019-08-11T05:18:11Z" finished-at="2019-08-11T05:18:51Z">
+  <suite name="Default suite" duration-ms="70550" started-at="2019-08-11T05:30:25Z" finished-at="2019-08-11T05:31:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39958" started-at="2019-08-11T05:18:11Z" finished-at="2019-08-11T05:18:51Z">
+    <test name="Default test" duration-ms="70550" started-at="2019-08-11T05:30:25Z" finished-at="2019-08-11T05:31:36Z">
       <class name="HomePageNavigationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:HomePageNavigationTest@d2cc05a]" name="setUp" is-config="true" duration-ms="17040" started-at="2019-08-11T05:18:11Z" finished-at="2019-08-11T05:18:28Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:HomePageNavigationTest@58651fd0]" name="setUp" is-config="true" duration-ms="16020" started-at="2019-08-11T05:30:25Z" finished-at="2019-08-11T05:30:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageBlogsTest()[pri:0, instance:HomePageNavigationTest@d2cc05a]" name="homePageBlogsTest" duration-ms="22864" started-at="2019-08-11T05:18:28Z" finished-at="2019-08-11T05:18:51Z">
+        <test-method status="PASS" signature="homePageBlogsTest()[pri:1, instance:HomePageNavigationTest@58651fd0]" name="homePageBlogsTest" duration-ms="25562" started-at="2019-08-11T05:30:41Z" finished-at="2019-08-11T05:31:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageBlogsTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:HomePageNavigationTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="1" started-at="2019-08-11T05:18:51Z" finished-at="2019-08-11T05:18:51Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:HomePageNavigationTest@58651fd0]" name="shutDown" is-config="true" duration-ms="941" started-at="2019-08-11T05:31:07Z" finished-at="2019-08-11T05:31:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:HomePageNavigationTest@58651fd0]" name="setUp" is-config="true" duration-ms="15904" started-at="2019-08-11T05:31:08Z" finished-at="2019-08-11T05:31:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="homePageOfferTest()[pri:2, instance:HomePageNavigationTest@58651fd0]" name="homePageOfferTest" duration-ms="11006" started-at="2019-08-11T05:31:24Z" finished-at="2019-08-11T05:31:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homePageOfferTest -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:HomePageNavigationTest@58651fd0]" name="shutDown" is-config="true" duration-ms="1064" started-at="2019-08-11T05:31:35Z" finished-at="2019-08-11T05:31:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->

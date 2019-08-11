@@ -25,7 +25,8 @@ public class HomePageNavigationTest {
 		driver.navigate().to("https://www.phptravels.net/");
 	}
 	
-	@Test
+	
+	@Test(priority = 1)
 	public void homePageBlogsTest() throws InterruptedException {
 		
 		for (int i=0; i < 20; i++) {
@@ -56,16 +57,29 @@ public class HomePageNavigationTest {
 	}
 	
 	
-	@Test
-	public void homePageOfferTest() {
+	@Test(priority = 2)
+	public void homePageOfferTest() throws InterruptedException {
 		
-	}
+		for (int i=0; i < 90; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[4]/div/div[2]/a")).click();
+		Thread.sleep(2000);
+		String url1 = driver.getCurrentUrl();
+		
+		assertEquals(url1, "https://www.phptravels.net/offers");
+
+		}
 
 	
 	@AfterMethod
 	public void shutDown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }
