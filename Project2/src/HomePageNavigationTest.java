@@ -10,7 +10,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class HomePageNavigation {
+public class HomePageNavigationTest {
 	WebDriver driver;
 	
 	@BeforeMethod
@@ -53,6 +53,12 @@ public class HomePageNavigation {
 		String url2 = driver.getCurrentUrl();
 		
 		assertEquals(url2, "https://www.phptravels.net/blog/Flavio-Al-Velavevodetto-in-Testaccio");
+	}
+	
+	
+	@Test
+	public void homePageOfferTest() {
+		
 	}
 
 	
