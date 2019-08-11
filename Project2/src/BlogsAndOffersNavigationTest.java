@@ -27,7 +27,7 @@ public class BlogsAndOffersNavigationTest {
 	
 	
 	@Test
-	public void blogsNavigation() throws InterruptedException {
+	public void blogsNavigationTest() throws InterruptedException {
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[1]/a")).click();
 		Thread.sleep(2000);
 		
@@ -68,10 +68,49 @@ public class BlogsAndOffersNavigationTest {
 		
 		//Testng
 		assertEquals(url3, "https://www.phptravels.net/blog/Virgin-Gorda-beaches-and-lobste");
-
-
+	
+	}
 	
 	
+	@Test
+	public void offersNavigationTest() throws InterruptedException {
+		
+		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[2]/a")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/div[3]/div[2]/a[2]")).click();
+		Thread.sleep(2000);
+		String url1 = driver.getCurrentUrl();
+		
+		//Testng
+		assertEquals(url1, "https://www.phptravels.net/offers/Lunch-Discount");
+		
+		for (int i=0; i < 50; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Messaging 
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/form/fieldset/div[1]/input")).sendKeys("Asif Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/form/fieldset/div[2]/input")).sendKeys("01671324427");
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/form/fieldset/div[4]/textarea")).sendKeys("Hello World!");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/form/fieldset/div[6]/input[3]")).click();
+		Thread.sleep(2000);
+		
+		driver.navigate().back();
+		driver.navigate().back();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[6]/div/div[3]/div[1]/a[2]")).click();
+		Thread.sleep(2000);
+		String url2 = driver.getCurrentUrl();
+		
+		//Testng
+		assertEquals(url2, "https://www.phptravels.net/offers/Dubai-Special-Packages");
+
 	}
 
 	
