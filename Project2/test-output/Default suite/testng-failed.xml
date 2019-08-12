@@ -5,8 +5,8 @@
     <classes>
       <class name="FooterNavigationTest">
         <methods>
-          <include name="supplierLoginTest"/>
           <include name="shutDown"/>
+          <include name="supplierSignupTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- FooterNavigationTest -->
