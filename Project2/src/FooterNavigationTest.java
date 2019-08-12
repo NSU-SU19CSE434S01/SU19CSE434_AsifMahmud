@@ -6,7 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -226,6 +229,56 @@ public class FooterNavigationTest {
 
 		
 	}
+	
+	
+	@Test
+	public void supplierLoginTest() throws InterruptedException {
+		
+		for (int i=0; i < 150; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		// Store the current window handle
+		String winHandleBefore = driver.getWindowHandle();
+
+		// Perform the click operation that opens new window
+		//Clicking Supplier Login
+		driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[3]/ul/li[2]/a")).click();
+		Thread.sleep(2000);
+
+		// Switch to new window opened
+		for(String winHandle : driver.getWindowHandles()){
+		    driver.switchTo().window(winHandle);
+		}
+		
+		// Perform the actions on new window
+
+		driver.findElement(By.xpath("/html/body/div[1]/form[1]/div[1]/input[1]")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("/html/body/div[1]/form[1]/div[1]/input[2]")).sendKeys("25051994");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/form[1]/button")).click();
+
+		//Wait for alert
+		WebElement alert = (new WebDriverWait(driver, 10))
+				 .until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/div[1]/form[1]/div[2]/div")));
+
+		boolean alertVisible = driver.findElement(By.xpath("/html/body/div[1]/form[1]/div[2]/div")).isDisplayed();
+		System.out.println(alertVisible);
+		
+		//Testing
+		assertTrue(alertVisible);
+		
+		Thread.sleep(2000);
+		// Close the new window, if that window no more required
+		driver.close();
+		// Switch back to original browser (first window)
+		driver.switchTo().window(winHandleBefore);
+		
+	}
+
 
 
 	
@@ -234,7 +287,7 @@ public class FooterNavigationTest {
 	@AfterMethod
 	public void shutDown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }

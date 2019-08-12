@@ -5,7 +5,7 @@
     <classes>
       <class name="FooterNavigationTest">
         <methods>
-          <include name="howToBookTest"/>
+          <include name="supplierLoginTest"/>
           <include name="shutDown"/>
           <include name="setUp"/>
         </methods>
