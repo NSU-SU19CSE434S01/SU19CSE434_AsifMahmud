@@ -208,6 +208,7 @@ public class CarBookingTest {
 		
 		//Confirm Book
 		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div/div[1]/div/div[1]/div[2]/div[4]/button")).click();
+		Thread.sleep(2000);
 		
 		//Checking alert
 		boolean alertMsgVisible = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div/div[1]/div/div[1]/div[2]/div[1]/div")).isDisplayed();
