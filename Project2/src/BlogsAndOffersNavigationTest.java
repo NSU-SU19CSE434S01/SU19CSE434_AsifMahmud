@@ -118,7 +118,7 @@ public class BlogsAndOffersNavigationTest {
 	@AfterMethod
 	public void shutDown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }
