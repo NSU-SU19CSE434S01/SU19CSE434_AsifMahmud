@@ -5,9 +5,9 @@
     <classes>
       <class name="FooterNavigationTest">
         <methods>
-          <include name="newslatterSubscriptionSuccessTest"/>
           <include name="shutDown"/>
           <include name="setUp"/>
+          <include name="newslatterSubscriptionFailTest"/>
         </methods>
       </class> <!-- FooterNavigationTest -->
     </classes>

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="10" total="11" passed="1">
+<testng-results skipped="0" failed="0" ignored="11" total="12" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32614" started-at="2019-08-12T18:02:49Z" finished-at="2019-08-12T18:03:21Z">
+  <suite name="Default suite" duration-ms="35229" started-at="2019-08-12T18:09:18Z" finished-at="2019-08-12T18:09:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32614" started-at="2019-08-12T18:02:49Z" finished-at="2019-08-12T18:03:21Z">
+    <test name="Default test" duration-ms="35229" started-at="2019-08-12T18:09:18Z" finished-at="2019-08-12T18:09:54Z">
       <class name="FooterNavigationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:FooterNavigationTest@4f933fd1]" name="setUp" is-config="true" duration-ms="15747" started-at="2019-08-12T18:02:49Z" finished-at="2019-08-12T18:03:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:FooterNavigationTest@4f933fd1]" name="setUp" is-config="true" duration-ms="17955" started-at="2019-08-12T18:09:18Z" finished-at="2019-08-12T18:09:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="newslatterSubscriptionSuccessTest()[pri:11, instance:FooterNavigationTest@4f933fd1]" name="newslatterSubscriptionSuccessTest" duration-ms="16013" started-at="2019-08-12T18:03:04Z" finished-at="2019-08-12T18:03:20Z">
+        <test-method status="PASS" signature="newslatterSubscriptionFailTest()[pri:12, instance:FooterNavigationTest@4f933fd1]" name="newslatterSubscriptionFailTest" duration-ms="16415" started-at="2019-08-12T18:09:36Z" finished-at="2019-08-12T18:09:53Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newslatterSubscriptionSuccessTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:FooterNavigationTest@4f933fd1]" name="shutDown" is-config="true" duration-ms="817" started-at="2019-08-12T18:03:20Z" finished-at="2019-08-12T18:03:21Z">
+        </test-method> <!-- newslatterSubscriptionFailTest -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:FooterNavigationTest@4f933fd1]" name="shutDown" is-config="true" duration-ms="843" started-at="2019-08-12T18:09:53Z" finished-at="2019-08-12T18:09:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->

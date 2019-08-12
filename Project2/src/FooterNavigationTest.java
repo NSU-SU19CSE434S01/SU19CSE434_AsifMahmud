@@ -389,6 +389,33 @@ public class FooterNavigationTest {
 	}
 
 
+	@Test(priority = 12)
+	public void newslatterSubscriptionFailTest() throws InterruptedException {
+		
+		for (int i=0; i < 150; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"exampleInputEmail1\"]")).sendKeys("asifmahmudgmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/div[2]/button")).click();
+		Thread.sleep(1500);
+		
+		boolean alertSuccessVisible = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/ul/li/a/div")).isDisplayed();
+		String alertSuccessText = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/ul/li/a/div")).getText();
+		System.out.println(alertSuccessVisible);
+		System.out.println(alertSuccessText);
+		
+		//Testing
+		assertTrue(alertSuccessVisible);
+		assertEquals(alertSuccessText, "KINDLY ENTER A VALID EMAIL ADDRESS.");
+		
+		Thread.sleep(2000);
+
+	}
 	
 	
 	
