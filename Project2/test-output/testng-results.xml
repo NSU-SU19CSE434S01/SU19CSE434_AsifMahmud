@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35448" started-at="2019-08-12T12:29:06Z" finished-at="2019-08-12T12:29:41Z">
+  <suite name="Default suite" duration-ms="49152" started-at="2019-08-12T12:37:28Z" finished-at="2019-08-12T12:38:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35448" started-at="2019-08-12T12:29:06Z" finished-at="2019-08-12T12:29:41Z">
+    <test name="Default test" duration-ms="49152" started-at="2019-08-12T12:37:28Z" finished-at="2019-08-12T12:38:17Z">
       <class name="FooterNavigationTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="setUp" is-config="true" duration-ms="14400" started-at="2019-08-12T12:29:06Z" finished-at="2019-08-12T12:29:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="setUp" is-config="true" duration-ms="35565" started-at="2019-08-12T12:37:28Z" finished-at="2019-08-12T12:38:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="contactTest()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="contactTest" duration-ms="21012" started-at="2019-08-12T12:29:20Z" finished-at="2019-08-12T12:29:41Z">
+        <test-method status="PASS" signature="aboutTest()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="aboutTest" duration-ms="13542" started-at="2019-08-12T12:38:04Z" finished-at="2019-08-12T12:38:17Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- contactTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="0" started-at="2019-08-12T12:29:41Z" finished-at="2019-08-12T12:29:41Z">
+        </test-method> <!-- aboutTest -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:FooterNavigationTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="1" started-at="2019-08-12T12:38:17Z" finished-at="2019-08-12T12:38:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
