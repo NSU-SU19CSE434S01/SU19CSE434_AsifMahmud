@@ -30,7 +30,7 @@ public class FooterNavigationTest {
 	}
 
 	
-	@Test
+	@Test(priority = 1)
 	public void contactTest() throws InterruptedException {
 		for (int i=0; i < 150; i++) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -71,7 +71,7 @@ public class FooterNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 2)
 	public void aboutTest() throws InterruptedException {
 		for (int i=0; i < 150; i++) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -92,7 +92,7 @@ public class FooterNavigationTest {
 		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void howToBookTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -115,7 +115,7 @@ public class FooterNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 4)
 	public void bookingTipsTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -138,7 +138,7 @@ public class FooterNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 5)
 	public void ourPartnersTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -162,7 +162,7 @@ public class FooterNavigationTest {
 
 	
 	
-	@Test
+	@Test(priority = 6)
 	public void privacyPolicyTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -185,7 +185,7 @@ public class FooterNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 7)
 	public void termsOfUseTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -208,7 +208,7 @@ public class FooterNavigationTest {
 	}
 
 	
-	@Test
+	@Test(priority = 8)
 	public void faqTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -231,7 +231,7 @@ public class FooterNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 9)
 	public void supplierLoginTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -280,7 +280,7 @@ public class FooterNavigationTest {
 	}
 
 
-	@Test
+	@Test(priority = 10)
 	public void supplierSignupTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
@@ -357,6 +357,35 @@ public class FooterNavigationTest {
 		// Switch back to original browser (first window)
 		driver.switchTo().window(winHandleBefore);
 		
+	}
+	
+	
+	@Test(priority = 11)
+	public void newslatterSubscriptionSuccessTest() throws InterruptedException {
+		
+		for (int i=0; i < 150; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"exampleInputEmail1\"]")).sendKeys("asifmahmud21@gmail.com");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/div[2]/button")).click();
+		Thread.sleep(1500);
+		
+		boolean alertSuccessVisible = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/ul/li/a/div")).isDisplayed();
+		String alertSuccessText = driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[5]/div/ul/li/a/div")).getText();
+		System.out.println(alertSuccessVisible);
+		System.out.println(alertSuccessText);
+		
+		//Testing
+		assertTrue(alertSuccessVisible);
+		assertEquals(alertSuccessText, "SUBSCRIBED SUCCESSFULLY");
+		
+		Thread.sleep(2000);
+
 	}
 
 
