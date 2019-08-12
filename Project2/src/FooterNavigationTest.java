@@ -136,6 +136,30 @@ public class FooterNavigationTest {
 	
 	
 	@Test
+	public void ourPartnersTest() throws InterruptedException {
+		
+		for (int i=0; i < 150; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Clicking Contact
+		driver.findElement(By.xpath("/html/body/div[6]/div[2]/div[1]/div/div[2]/ul/li[1]/a")).click();
+		Thread.sleep(2000);
+		
+		String url = driver.getCurrentUrl();
+		
+		//Testing
+		assertEquals(url, "https://www.phptravels.net/Our-Partners");
+
+		
+	}
+
+	
+	
+	@Test
 	public void privacyPolicyTest() throws InterruptedException {
 		
 		for (int i=0; i < 150; i++) {
