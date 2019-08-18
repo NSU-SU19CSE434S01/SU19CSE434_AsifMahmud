@@ -1,9 +1,14 @@
+import static org.testng.Assert.assertEquals;
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -62,8 +67,74 @@ public class FeaturedToursAndCarsBookingTest {
 		
 		//Clicking Book Now
 		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[2]/div[2]/div/form/div[4]/button")).click();
-
-
+		Thread.sleep(2000);
+		
+		//Filling up user info
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[1]/div[2]/input")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[1]/div[3]/input")).sendKeys("Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[2]/div[2]/input")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[2]/div[3]/input")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[3]/div[2]/input")).sendKeys("01671324427");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[4]/div[2]/input")).sendKeys("Dhaka");
+		
+		//Slow Scroll
+		for (int i=0; i < 35; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[2]/table/tbody/tr[1]/td[4]/label/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[2]/table/tbody/tr[3]/td[4]/label/span")).click();
+		Thread.sleep(2000);
+		
+		//Slow Scroll
+		for (int i=0; i < 20; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		//Passport details
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[1]/div[1]/input")).sendKeys("Asif Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[1]/div[2]/input")).sendKeys("11111111");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[1]/div[3]/input")).sendKeys("24");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[2]/div[1]/input")).sendKeys("Abdullah");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[2]/div[2]/input")).sendKeys("22222222");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[2]/div[3]/input")).sendKeys("24");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[3]/div[1]/input")).sendKeys("Jaber");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[3]/div[2]/input")).sendKeys("33333333");
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[7]/div[2]/div/div[3]/div[3]/input")).sendKeys("1");
+		
+		//Slow Scroll
+		for (int i=0; i < 20; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Confirm booking
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div/div/div/div[1]/div[2]/div[4]/button")).click();
+		
+		//Wait for invoice
+		WebElement invoice = (new WebDriverWait(driver, 10))
+				  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[2]/td/div[1]/table/tbody/tr/td/div[3]")));
+		
+		//Slow Scroll
+		for (int i=0; i < 20; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Checking Invoice
+		String invoiceName = driver.findElement(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[4]/td/table/tbody/tr[2]/td/table[2]/tbody/tr/td[1]")).getText();
+		System.out.println(invoiceName);
+		String invoicePassport = driver.findElement(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[4]/td/table/tbody/tr[2]/td/table[2]/tbody/tr/td[2]")).getText();
+		System.out.println(invoicePassport);
+		
+		//Testing
+		assertEquals(invoiceName,"Asif Mahmud");
+		assertEquals(invoicePassport,"11111111");
 
 	}
 
