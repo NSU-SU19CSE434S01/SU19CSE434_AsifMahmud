@@ -69,7 +69,7 @@ public class LoginTest {
 		driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
 		
 		try {
-			Thread.sleep(2500);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -128,7 +128,7 @@ public class LoginTest {
 		driver.findElement(By.xpath("//*[@id=\"loginfrm\"]/button")).click();
 		
 		try {
-			Thread.sleep(2500);
+			Thread.sleep(3000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
