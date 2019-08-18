@@ -26,7 +26,7 @@ public class BlogsAndOffersNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 1)
 	public void blogsNavigationTest() throws InterruptedException {
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[1]/a")).click();
 		Thread.sleep(2000);
@@ -72,7 +72,7 @@ public class BlogsAndOffersNavigationTest {
 	}
 	
 	
-	@Test
+	@Test(priority = 2)
 	public void offersNavigationTest() throws InterruptedException {
 		
 		driver.findElement(By.xpath("/html/body/nav/div/div[2]/ul[1]/li[2]/a")).click();
