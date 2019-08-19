@@ -5,9 +5,11 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -238,8 +240,63 @@ public class FeaturedToursAndCarsBookingTest {
 		assertEquals(errorAlertMsg, "The Comment field is required.\n" + 
 				"The Email field is required.\n" + 
 				"The Name field is required.");
+		
+		Thread.sleep(2000);
 
 	}
+	
+	
+	@Test(priority = 4)
+	public void successfulFeaturedCarBookingTest() throws InterruptedException {
+	
+		//Slow Scroll
+		for (int i=0; i < 110; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//move mouse to element
+		Actions action = new Actions(driver);
+		WebElement element = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[5]/div/div[2]/div/div[1]/div[2]/div/div/a"));
+		action.moveToElement(element).perform();
+		
+		Thread.sleep(2000);
+		
+		//Clicking Book Now
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[5]/div/div[2]/div/div[1]/div[2]/div/div/a")).click();
+		Thread.sleep(2000);
+		
+		//Slow Scroll
+		for (int i=0; i < 55; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Putting in informations
+		driver.findElement(By.xpath("/html/body/div[5]/div[4]/div/div[2]/form/div[1]/div[1]/div[2]/div/a")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"select2-drop\"]/div/input")).sendKeys("Muscat");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"select2-drop\"]/div/input")).sendKeys(Keys.RETURN);
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"departcar2\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[10]/div[1]/table/tbody/tr[5]/td[6]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[11]/div[1]/table/tbody/tr[5]/td[7]")).click();
+		Thread.sleep(2000);
+		
+		//Clicking Book Now
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[4]/div/div[2]/form/button")).click();
+		Thread.sleep(2000);
+		
+
+
+
+	}
+
 
 
 	
