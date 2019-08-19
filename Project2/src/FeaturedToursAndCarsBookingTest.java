@@ -138,8 +138,29 @@ public class FeaturedToursAndCarsBookingTest {
 		//Testing
 		assertEquals(invoiceName,"Asif Mahmud");
 		assertEquals(invoicePassport,"11111111");
-
-	}
+		
+		//Slow Scroll
+		for (int i=0; i < 20; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,-20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Clicking pay on arrival
+		driver.findElement(By.xpath("//*[@id=\"8\"]")).click();
+		Thread.sleep(2000);
+		
+		driver.switchTo().alert().accept();
+		Thread.sleep(4000);
+		
+		//Checking
+		boolean alert = driver.findElement(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[1]/td/div")).isDisplayed();
+		System.out.println(alert);
+		
+		//Testing
+		assertTrue(alert);
+		
+		}
 	
 	@Test(priority = 2)
 	public void successfulTourReviewTest() throws InterruptedException {
@@ -292,10 +313,96 @@ public class FeaturedToursAndCarsBookingTest {
 		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[4]/div/div[2]/form/button")).click();
 		Thread.sleep(2000);
 		
-
-
-
-	}
+		//Filling up user info
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[1]/div[2]/input")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[1]/div[3]/input")).sendKeys("Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[2]/div[2]/input")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[2]/div[3]/input")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[3]/div[2]/input")).sendKeys("01671324427");
+		driver.findElement(By.xpath("//*[@id=\"guestform\"]/div[4]/div[2]/input")).sendKeys("Dhaka");
+		
+		for (int i=0; i < 30; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[2]/table/tbody/tr[1]/td[4]/label/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"bookingdetails\"]/div[2]/table/tbody/tr[3]/td[4]/label/span")).click();
+		Thread.sleep(2000);
+		
+		for (int i=0; i < 25; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		//Confirm Book
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div/div/div[1]/div/div[1]/div[2]/div[4]/button")).click();
+		
+		//Wait for invoice
+		WebElement invoice = (new WebDriverWait(driver, 10))
+				  .until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[2]/td/div[1]/table/tbody/tr/td/div[3]")));
+		
+		for (int i=0; i < 8; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Check Invoice
+		String invoiceName = driver.findElement(By.xpath("//*[@id=\"invoiceTable\"]/tbody/tr[2]/td/div[2]/table/tbody/tr/td/div[2]")).getText();
+		System.out.println(invoiceName);
+		
+		//Testing
+		assertEquals(invoiceName,"ASIF MAHMUD");
+		
+		for (int i=0; i < 8; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,-20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Pay Now
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div[2]/div[2]/center/button[2]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"gateway\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"gateway\"]/option[5]")).click();
+		for (int i=0; i < 10; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"card-holder-firstname\"]")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"card-holder-lastname\"]")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"card-number\"]")).sendKeys("1111-1111-1111-1111");
+		driver.findElement(By.xpath("//*[@id=\"cvv\"]")).sendKeys("111");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"expiry-month\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"expiry-month\"]/option[2]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"expiry-year\"]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//*[@id=\"expiry-year\"]/option[3]")).click();
+		Thread.sleep(2000);
+		
+		//Pay now
+		driver.findElement(By.xpath("//*[@id=\"pay\"]/div/div[2]/div[1]/div[4]/form/fieldset/div[3]/button")).click();
+		Thread.sleep(4000);
+		
+		//Checking alert
+		boolean alert = driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div[2]/div[1]")).isDisplayed();
+		System.out.println(alert);
+		
+		//Testing
+		assertTrue(alert);
+		
+		}
 
 
 
@@ -305,7 +412,7 @@ public class FeaturedToursAndCarsBookingTest {
 	@AfterMethod
 	public void shutDown() {
 		
-		//driver.quit();
+		driver.quit();
 	}
 
 }
