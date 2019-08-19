@@ -137,6 +137,51 @@ public class FeaturedToursAndCarsBookingTest {
 		assertEquals(invoicePassport,"11111111");
 
 	}
+	
+	@Test(priority = 2)
+	public void successfulTourReviewTest() throws InterruptedException {
+		
+		//Slow Scroll
+		for (int i=0; i < 50; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Clicking Book Now
+		driver.findElement(By.xpath("//*[@id=\"tour-36\"]/div/div[3]/div[2]/a")).click();
+		Thread.sleep(2000);
+		
+		//Slow Scroll
+		for (int i=0; i < 140; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Clicking Write Review
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[4]/div[1]/div[2]/div[2]/button")).click();
+		Thread.sleep(2000);
+		
+		//Writing Review
+		driver.findElement(By.xpath("//*[@id=\"reviews-form-36\"]/div[3]/div[1]/div[1]/input")).sendKeys("Asif Mahmud");
+		driver.findElement(By.xpath("//*[@id=\"reviews-form-36\"]/div[3]/div[1]/div[2]/input")).sendKeys("asifmahmud22@gmail.com");
+		driver.findElement(By.xpath("//*[@id=\"reviews-form-36\"]/div[3]/textarea")).sendKeys("Good Tour!");
+		Thread.sleep(2000);
+		
+		//Slow Scroll
+		for (int i=0; i < 20; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Clicking Submit
+		driver.findElement(By.xpath("//*[@id=\"36\"]")).click();
+		Thread.sleep(2000);
+
+		}
 
 	
 	
