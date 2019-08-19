@@ -168,10 +168,7 @@ public class HotelBookingTest {
 		
 		driver.findElement(By.xpath("//*[@id=\"country_code\"]/option[22]")).click();
 		
-		
-
-
-	}
+		}
 
 	
 	

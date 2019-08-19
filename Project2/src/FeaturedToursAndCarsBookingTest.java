@@ -1,4 +1,5 @@
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
@@ -171,7 +172,7 @@ public class FeaturedToursAndCarsBookingTest {
 		Thread.sleep(2000);
 		
 		//Slow Scroll
-		for (int i=0; i < 20; i++) {
+		for (int i=0; i < 15; i++) {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 		jse.executeScript("window.scrollBy(0,20)");
 		Thread.sleep(40);}
@@ -182,6 +183,64 @@ public class FeaturedToursAndCarsBookingTest {
 		Thread.sleep(2000);
 
 		}
+	
+	
+	@Test(priority = 3)
+	public void unsuccessfulTourReviewTest() throws InterruptedException {
+		
+		//Slow Scroll
+		for (int i=0; i < 50; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		
+		Thread.sleep(2000);
+		
+		//Clicking Book Now
+		driver.findElement(By.xpath("//*[@id=\"tour-36\"]/div/div[3]/div[2]/a")).click();
+		Thread.sleep(2000);
+		
+		//Slow Scroll
+		for (int i=0; i < 140; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Clicking Write Review
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[3]/div[4]/div[1]/div[2]/div[2]/button")).click();
+		Thread.sleep(2000);
+		
+		
+		//Slow Scroll
+		for (int i=0; i < 10; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		//Clicking Submit
+		driver.findElement(By.xpath("//*[@id=\"36\"]")).click();
+		
+		//Slow Scroll
+		for (int i=0; i < 10; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,-20)");
+		Thread.sleep(40);}
+		
+		//Checking alert
+		boolean errorAlert = driver.findElement(By.xpath("//*[@id=\"review_result36\"]/div")).isDisplayed();
+		String errorAlertMsg = driver.findElement(By.xpath("//*[@id=\"review_result36\"]/div")).getText();
+		System.out.println(errorAlert);
+		System.out.println(errorAlertMsg);
+		
+		assertTrue(errorAlert);
+		assertEquals(errorAlertMsg, "The Comment field is required.\n" + 
+				"The Email field is required.\n" + 
+				"The Name field is required.");
+
+	}
+
 
 	
 	
