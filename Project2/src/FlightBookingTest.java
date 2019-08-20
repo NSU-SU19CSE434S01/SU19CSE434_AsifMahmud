@@ -70,9 +70,28 @@ public class FlightBookingTest {
 	    //Book Now
 	    driver.findElement(By.xpath("//*[@id=\"form_0\"]/div/button")).click();
 	    Thread.sleep(2000);
+	    
+	    //Guest Booking 
+	    driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[2]/div[1]/div[2]/div[2]/a")).click();
+	    Thread.sleep(2000);
+	    
+		//Slow Scroll
+		for (int i=0; i < 22; i++) {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,20)");
+		Thread.sleep(40);}
+		Thread.sleep(2000);
+		
+		driver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys("Asif");
+		driver.findElement(By.xpath("//*[@id=\"surname\"]")).sendKeys("Mahmud");
+		
+		driver.findElement(By.xpath("//*[@id=\"phone\"]")).sendKeys("01671324427");
+		driver.findElement(By.xpath("//*[@id=\"birthday\"]")).sendKeys("1995-05-25");
+		driver.findElement(By.xpath("//*[@id=\"cardno\"]")).sendKeys("11111111");
+		driver.findElement(By.xpath("//*[@id=\"expiration\"]")).sendKeys("2022-05-05");
+		driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys("asifmahmud22@gmail.com");
 
 	    
-
 	}
 	
 	

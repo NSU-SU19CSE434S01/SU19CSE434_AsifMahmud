@@ -2,36 +2,34 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="36289" started-at="2019-08-20T04:59:06Z" finished-at="2019-08-20T04:59:43Z">
+  <suite name="Default suite" duration-ms="74075" started-at="2019-08-20T05:18:14Z" finished-at="2019-08-20T05:19:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="36289" started-at="2019-08-20T04:59:06Z" finished-at="2019-08-20T04:59:43Z">
+    <test name="Default test" duration-ms="74075" started-at="2019-08-20T05:18:14Z" finished-at="2019-08-20T05:19:28Z">
       <class name="FlightBookingTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:FlightBookingTest@d2cc05a]" name="setUp" is-config="true" duration-ms="35880" started-at="2019-08-20T04:59:06Z" finished-at="2019-08-20T04:59:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:FlightBookingTest@d2cc05a]" name="setUp" is-config="true" duration-ms="17852" started-at="2019-08-20T05:18:14Z" finished-at="2019-08-20T05:18:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="flightsBookingTest()[pri:0, instance:FlightBookingTest@d2cc05a]" name="flightsBookingTest" duration-ms="370" started-at="2019-08-20T04:59:42Z" finished-at="2019-08-20T04:59:43Z">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+        <test-method status="FAIL" signature="flightsBookingTest()[pri:0, instance:FlightBookingTest@d2cc05a]" name="flightsBookingTest" duration-ms="56208" started-at="2019-08-20T05:18:32Z" finished-at="2019-08-20T05:19:28Z">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
+              <![CDATA[element not interactable
   (Session info: chrome=76.0.3809.100)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-1AOJSSB', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\asiff\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64848}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c7d4bebdf38a7d5347fd5e4758e76bc4]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\asiff\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49198}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 181892670f6c9f3c707a64ae7fdf8b55]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=76.0.3809.100)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-1AOJSSB', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\asiff\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64848}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: c7d4bebdf38a7d5347fd5e4758e76bc4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.68 (420c9498db8ce..., userDataDir: C:\Users\asiff\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49198}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 181892670f6c9f3c707a64ae7fdf8b55
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -42,8 +40,9 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
-at FlightBookingTest.flightsBookingTest(FlightBookingTest.java:34)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
+at FlightBookingTest.flightsBookingTest(FlightBookingTest.java:92)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -71,11 +70,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flightsBookingTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:FlightBookingTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="0" started-at="2019-08-20T04:59:43Z" finished-at="2019-08-20T04:59:43Z">
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:FlightBookingTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="0" started-at="2019-08-20T05:19:28Z" finished-at="2019-08-20T05:19:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
