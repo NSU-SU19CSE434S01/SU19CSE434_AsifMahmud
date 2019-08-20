@@ -3,16 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="FeaturedToursAndCarsBookingTest">
+      <class name="FlightBookingTest">
         <methods>
-          <include name="setUp"/>
-          <include name="successfulFeaturedCarBookingTest"/>
-          <include name="successfulTourReviewTest"/>
+          <include name="flightsBookingTest"/>
           <include name="shutDown"/>
-          <include name="unsuccessfulTourReviewTest"/>
-          <include name="successfulFeaturedTourBookingTest"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- FeaturedToursAndCarsBookingTest -->
+      </class> <!-- FlightBookingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
