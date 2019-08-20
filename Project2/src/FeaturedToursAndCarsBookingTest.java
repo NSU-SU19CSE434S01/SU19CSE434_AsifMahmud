@@ -32,6 +32,8 @@ public class FeaturedToursAndCarsBookingTest {
 		driver.navigate().to("https://www.phptravels.net/");
 	}
 	
+	
+	
 	@Test(priority = 1)
 	public void successfulFeaturedTourBookingTest() throws InterruptedException {
 		

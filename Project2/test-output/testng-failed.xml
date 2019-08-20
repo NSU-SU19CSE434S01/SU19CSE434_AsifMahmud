@@ -7,7 +7,10 @@
         <methods>
           <include name="setUp"/>
           <include name="successfulFeaturedCarBookingTest"/>
+          <include name="successfulTourReviewTest"/>
           <include name="shutDown"/>
+          <include name="unsuccessfulTourReviewTest"/>
+          <include name="successfulFeaturedTourBookingTest"/>
         </methods>
       </class> <!-- FeaturedToursAndCarsBookingTest -->
     </classes>

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="76022" started-at="2019-08-19T17:29:24Z" finished-at="2019-08-19T17:30:40Z">
+  <suite name="Default suite" duration-ms="67149" started-at="2019-08-20T04:25:16Z" finished-at="2019-08-20T04:26:24Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="76022" started-at="2019-08-19T17:29:24Z" finished-at="2019-08-19T17:30:40Z">
-      <class name="FeaturedToursAndCarsBookingTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:FeaturedToursAndCarsBookingTest@d2cc05a]" name="setUp" is-config="true" duration-ms="17902" started-at="2019-08-19T17:29:24Z" finished-at="2019-08-19T17:29:42Z">
+    <test name="Default test" duration-ms="67149" started-at="2019-08-20T04:25:16Z" finished-at="2019-08-20T04:26:24Z">
+      <class name="CarBookingTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:CarBookingTest@d2cc05a]" name="setUp" is-config="true" duration-ms="18250" started-at="2019-08-20T04:25:16Z" finished-at="2019-08-20T04:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="successfulFeaturedTourBookingTest()[pri:1, instance:FeaturedToursAndCarsBookingTest@d2cc05a]" name="successfulFeaturedTourBookingTest" duration-ms="58090" started-at="2019-08-19T17:29:42Z" finished-at="2019-08-19T17:30:40Z">
+        <test-method status="PASS" signature="successfulCarsBookingTest()[pri:1, instance:CarBookingTest@d2cc05a]" name="successfulCarsBookingTest" duration-ms="48004" started-at="2019-08-20T04:25:35Z" finished-at="2019-08-20T04:26:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- successfulFeaturedTourBookingTest -->
-        <test-method status="PASS" signature="shutDown()[pri:0, instance:FeaturedToursAndCarsBookingTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="1" started-at="2019-08-19T17:30:40Z" finished-at="2019-08-19T17:30:40Z">
+        </test-method> <!-- successfulCarsBookingTest -->
+        <test-method status="PASS" signature="shutDown()[pri:0, instance:CarBookingTest@d2cc05a]" name="shutDown" is-config="true" duration-ms="872" started-at="2019-08-20T04:26:23Z" finished-at="2019-08-20T04:26:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- shutDown -->
-      </class> <!-- FeaturedToursAndCarsBookingTest -->
+      </class> <!-- CarBookingTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
