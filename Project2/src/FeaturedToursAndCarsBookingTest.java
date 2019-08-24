@@ -149,7 +149,7 @@ public class FeaturedToursAndCarsBookingTest {
 		Thread.sleep(2000);
 		
 		//Clicking pay on arrival
-		driver.findElement(By.xpath("//*[@id=\"8\"]")).click();
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div[2]/div[2]/center/button[1]")).click();
 		Thread.sleep(2000);
 		
 		driver.switchTo().alert().accept();
@@ -394,7 +394,7 @@ public class FeaturedToursAndCarsBookingTest {
 		Thread.sleep(2000);
 		
 		//Pay now
-		driver.findElement(By.xpath("//*[@id=\"pay\"]/div/div[2]/div[1]/div[4]/form/fieldset/div[3]/button")).click();
+		driver.findElement(By.xpath("//*[@id=\"body-section\"]/div[1]/div[2]/div[2]/center/button[2]")).click();
 		Thread.sleep(4000);
 		
 		//Checking alert
