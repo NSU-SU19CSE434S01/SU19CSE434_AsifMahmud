@@ -1,13 +1,14 @@
-<center> 
+<p allign = "center">
 <img src = "Report_images/nsulogo.png">
-<div allign = "center">
+</p>
+<div>
 <h1> Project 2 Report </h1>
 <h3>Name: Asif Mahmud</h3>
 <h3>ID: 1511190642</h3>
 <h3>Course: CSE434</h3>
 <h3>Faculty Member: SAS3</h3>
 </div>     
-</center>
+
 
 ___
 ___
@@ -39,6 +40,64 @@ Each features and their corresponding ui element of the website [PHPTRAVELS](htt
 * Footer Links Navigation Test
 
 Below every ui element that was tested are shown as screenshots:
+
+#### Login
+![](Report_images/login.PNG)
+Alert was also tested
+![](Report_images/loginalert.PNG)
+
+### Signup
+![](Report_images/signup.PNG)
+Alert was also tested
+![](Report_images/signupalert.PNG)
+
+### Booking Tests
+The UI elements those were tested in Hotel, Flight, Tour and Car booking tests are shown below:
+
+##### Booking Fields
+![](Report_images/bookings.PNG)
+##### Calenders
+![](Report_images/calender.PNG)
+##### Dropdowns
+![](Report_images/dropdowns.PNG)
+##### New Windows
+![](Report_images/newwindow.PNG)
+##### Radio Buttons
+![](Report_images/radiobuttons.PNG)
+##### Inputs Fields
+1.
+![](Report_images/bookingoptions.PNG)
+2.
+![](Report_images/tourbookingoptions.PNG)
+3.
+![](Report_images/inputfields.PNG)
+4.
+![](Report_images/switches.PNG)
+5.
+![](Report_images/passport.PNG)
+##### Booking Alerts
+![](Report_images/bookingalert.PNG)
+##### Invoice
+![](Report_images/invoice.PNG)
+##### Featured Tour Book
+![](Report_images/featuredtours.PNG)
+##### Featured Car Book
+![](Report_images/featuredcar.PNG)
+
+### Home Page Navigation
+##### Blogs
+![](Report_images/blogs.PNG)
+##### Sidebar
+![](Report_images/blogsidebar.PNG)
+##### Offers
+![](Report_images/offer.PNG)
+
+### Footer Links Test
+![](Report_images/footer.PNG)
+##### Supplier Signup
+![](Report_images/suppliersignup.PNG)
+
+
 
 
 
