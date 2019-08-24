@@ -1,6 +1,6 @@
 <center> 
 <img src = "Report_images/nsulogo.png">
-<div>
+<div allign = "center">
 <h1> Project 2 Report </h1>
 <h3>Name: Asif Mahmud</h3>
 <h3>ID: 1511190642</h3>
