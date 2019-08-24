@@ -1,6 +1,4 @@
-<p allign = "center">
 <img src = "Report_images/nsulogo.png">
-</p>
 <div>
 <h1> Project 2 Report </h1>
 <h3>Name: Asif Mahmud</h3>
@@ -41,14 +39,14 @@ Each features and their corresponding ui element of the website [PHPTRAVELS](htt
 
 Below every ui element that was tested are shown as screenshots:
 
-#### Login
+### Login
 ![](Report_images/login.PNG)
-Alert was also tested
+##### Alert
 ![](Report_images/loginalert.PNG)
 
 ### Signup
 ![](Report_images/signup.PNG)
-Alert was also tested
+##### Alert
 ![](Report_images/signupalert.PNG)
 
 ### Booking Tests
@@ -63,17 +61,12 @@ The UI elements those were tested in Hotel, Flight, Tour and Car booking tests a
 ##### New Windows
 ![](Report_images/newwindow.PNG)
 ##### Radio Buttons
-![](Report_images/radiobuttons.PNG)
+![](Report_images/radiobutton.PNG)
 ##### Inputs Fields
-1.
 ![](Report_images/bookingoptions.PNG)
-2.
 ![](Report_images/tourbookingoptions.PNG)
-3.
 ![](Report_images/inputfields.PNG)
-4.
 ![](Report_images/switches.PNG)
-5.
 ![](Report_images/passport.PNG)
 ##### Booking Alerts
 ![](Report_images/bookingalert.PNG)
@@ -96,6 +89,9 @@ The UI elements those were tested in Hotel, Flight, Tour and Car booking tests a
 ![](Report_images/footer.PNG)
 ##### Supplier Signup
 ![](Report_images/suppliersignup.PNG)
+
+## Conclusion
+The project 2 is completed after testing all the ui features of [PHPTRAVELS](https://www.phptravels.net/) successfully.
 
 
 
