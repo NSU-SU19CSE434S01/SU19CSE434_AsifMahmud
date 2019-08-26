@@ -1,3 +1,4 @@
+<div align="center">
 <img src = "Report_images/nsulogo.png">
 <div>
 <h1> Project 2 Report </h1>
@@ -5,7 +6,8 @@
 <h3>ID: 1511190642</h3>
 <h3>Course: CSE434</h3>
 <h3>Faculty Member: SAS3</h3>
-</div>     
+</div> 
+</div>    
 
 
 ___
@@ -36,58 +38,66 @@ Each features and their corresponding ui element of the website [PHPTRAVELS](htt
 * Home Page Navigation Test
 * Blogs and Offer Pages Navigation Test
 * Footer Links Navigation Test
+* Supplier Signup Test
 
 Below every ui element that was tested are shown as screenshots:
 
 ### Login
 ![](Report_images/login.PNG)
-##### Alert
+#### Alert
 ![](Report_images/loginalert.PNG)
 
 ### Signup
 ![](Report_images/signup.PNG)
-##### Alert
+#### Alert
 ![](Report_images/signupalert.PNG)
 
 ### Booking Tests
 The UI elements those were tested in Hotel, Flight, Tour and Car booking tests are shown below:
 
-##### Booking Fields
+#### Booking Fields
 ![](Report_images/bookings.PNG)
-##### Calenders
+#### Calenders
 ![](Report_images/calender.PNG)
-##### Dropdowns
+#### Dropdowns
 ![](Report_images/dropdowns.PNG)
-##### New Windows
+#### New Windows
 ![](Report_images/newwindow.PNG)
-##### Radio Buttons
+#### Radio Buttons
 ![](Report_images/radiobutton.PNG)
-##### Inputs Fields
+#### Inputs Fields
+##### Booking Options Fields
 ![](Report_images/bookingoptions.PNG)
+##### Booking Options Fields
 ![](Report_images/tourbookingoptions.PNG)
+##### Information For Invoice Fields
 ![](Report_images/inputfields.PNG)
 ![](Report_images/switches.PNG)
 ![](Report_images/passport.PNG)
-##### Booking Alerts
+##### Tour Review Input Fields
+![](Report_images/tourreview.PNG)
+#### Booking Alerts
 ![](Report_images/bookingalert.PNG)
-##### Invoice
+#### Invoice
 ![](Report_images/invoice.PNG)
-##### Featured Tour Book
+#### Payments
+![](Report_images/payment.PNG)
+#### Featured Tour Book
 ![](Report_images/featuredtours.PNG)
-##### Featured Car Book
+#### Featured Car Book
 ![](Report_images/featuredcar.PNG)
 
 ### Home Page Navigation
-##### Blogs
+#### Blogs
 ![](Report_images/blogs.PNG)
-##### Sidebar
+#### Sidebar
 ![](Report_images/blogsidebar.PNG)
-##### Offers
+#### Offers
 ![](Report_images/offer.PNG)
 
 ### Footer Links Test
 ![](Report_images/footer.PNG)
-##### Supplier Signup
+#### Supplier Signup
 ![](Report_images/suppliersignup.PNG)
 
 ## Conclusion
